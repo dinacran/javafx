@@ -1,0 +1,113 @@
+.root{
+    -fx-font-family: 'Courier New', monospace;
+}
+
+#inputHeader{
+    -fx-padding: 10;
+    padding: 10;
+    -fx-font-family: 'Courier New', monospace;
+
+}
+
+.input{
+    -fx-pref-width: 300px;
+    -fx-pref-height: 40px;
+    -fx-background-color: rgba(30, 30, 30, 0.842);
+    -fx-text-fill: rgb(116, 116, 116);
+    -fx-prompt-text-fill: rgb(116, 116, 116);
+    border-color: #5c5c5c;
+    -fx-border-color: #5c5c5c;
+    -fx-border-width: 1;
+    border-width: 1;
+    border-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+#comboBox{
+    -fx-pref-height: 40px;
+    -fx-background-color: rgba(30, 30, 30, 0.842);
+    -fx-text-fill: rgb(147, 147, 147);
+    -fx-prompt-text-fill: rgb(180, 180, 180);
+    border-color: #5c5c5c;
+    -fx-border-color: #5c5c5c;
+    -fx-border-width: 1;
+    border-width: 1;
+    border-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+#fetchButton{
+    -fx-pref-height: 38px;
+    -fx-background-color: #4377cb;
+    -fx-text-fill: white;
+    -fx-border-color: #4377cb;
+    -fx-border-width: 1;
+    border-width: 1;
+    border-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.radio-container {
+    -fx-border-color: #7a7a7a96;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-padding: 2px;
+    -fx-spacing: 5px; 
+    -fx-display: inline-flex; 
+    -fx-max-height: 30px;
+}
+
+.custom-radio-button {
+    -fx-padding: 7px;
+    -fx-background-color: transparent; 
+    -fx-cursor: pointer;
+    -fx-border-radius: 2px; 
+    -fx-text-fill: #5c5c5c; 
+}
+
+.custom-radio-button:selected {
+    -fx-background-color: #7a7a7a96;
+    -fx-background-radius: 2px;
+    -fx-text-fill: white;
+}
+
+.custom-radio-button .radio-button {
+    -fx-opacity: 0; 
+    -fx-max-height: 30;
+}
+
+.custom-radio-button:selected .radio-button {
+    -fx-opacity: 0;
+    -fx-max-height: 30;
+}
+
+.stack-pane {
+    -fx-opacity: 0;
+    -fx-cursor: default;
+    -fx-focus-traversable: false;
+}
+
+.arrow-button{
+    -fx-opacity: 0;
+}
+
+.dot{
+    -fx-opacity: 0;
+}
+
+.radio{
+    -fx-preferred-height: 0; 
+    -fx-preferred-width: 0;
+    -fx-max-height: 0;
+    -fx-max-width: 0;
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+    -fx-opacity: 0;
+    -fx-cursor: default;
+    -fx-focus-traversable: false;
+}

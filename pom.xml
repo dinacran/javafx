@@ -25,7 +25,11 @@
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
         </dependency>
-<!-- https://mvnrepository.com/artifact/net.raumzeitfalle.fx/scenic-view -->
+<dependency>
+    <groupId>org.controlsfx</groupId>
+    <artifactId>controlsfx</artifactId>
+    <version>11.0.2</version>
+</dependency>
 <dependency>
     <groupId>net.raumzeitfalle.fx</groupId>
     <artifactId>scenic-view</artifactId>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+
+<HBox xmlns:fx="http://javafx.com/fxml" fx:id="inputHeader" spacing="10" fx:controller="com.newapp.controller.VisualizeResponseController" alignment="TOP_LEFT" stylesheets="@visualizeResponse.css">
+    <TextField styleClass="input" fx:id="docIdField" promptText="Enter DocId" />
+    <ComboBox fx:id="comboBox" promptText="Select Client" >
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="auto find"/>      <String fx:value="accGen/385386"/>      <String fx:value="acmic/176516"/>  
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <Button fx:id="fetchButton" text="Fetch Data" onAction="#fetchData"/>
+
+    <HBox fx:id="viewModeContainer" styleClass="radio-container" >
+        <RadioButton fx:id="jsonView" mnemonicParsing="false" selected="true" text="JSON" styleClass="custom-radio-button">
+            <toggleGroup>
+                <ToggleGroup fx:id="viewModeGroup"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="tableView" mnemonicParsing="false" text="Table" styleClass="custom-radio-button" toggleGroup="$viewModeGroup"/>
+    </HBox>
+
+    <HBox fx:id="dataToViewContainer" styleClass="radio-container">
+        <RadioButton fx:id="responseRadio" mnemonicParsing="false" selected="true" text="Response" styleClass="custom-radio-button">
+            <toggleGroup>
+                <ToggleGroup fx:id="dataToViewGroup"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="requestRadio" mnemonicParsing="false" text="Request" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup"/>
+        <RadioButton fx:id="bundlerRadio" mnemonicParsing="false" text="Bundler" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup"/>
+    </HBox>
+    
+
+    <VBox fx:id="dataContainer" />
+</HBox>
