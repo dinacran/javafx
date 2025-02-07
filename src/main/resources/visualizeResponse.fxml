@@ -14,9 +14,9 @@
 <?import java.lang.String?>
 
 
-<HBox xmlns:fx="http://javafx.com/fxml" fx:id="inputHeader" spacing="10" fx:controller="com.newapp.controller.VisualizeResponseController" alignment="TOP_LEFT" stylesheets="@visualizeResponse.css">
+<HBox xmlns:fx="http://javafx.com/fxml" fx:id="inputHeader" spacing="10" fx:controller="com.newapp.controller.VisualizeResponseController" alignment="TOP_LEFT" stylesheets="@css/visualizeResponse.css">
     <TextField styleClass="input" fx:id="docIdField" promptText="Enter DocId" />
-    <ComboBox fx:id="comboBox" promptText="Select Client" >
+    <ComboBox fx:id="comboBox" promptText="Select Client" editable="true" >
         <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="auto find"/>      <String fx:value="accGen/385386"/>      <String fx:value="acmic/176516"/>  
@@ -44,6 +44,5 @@
         <RadioButton fx:id="bundlerRadio" mnemonicParsing="false" text="Bundler" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup"/>
     </HBox>
     
-
     <VBox fx:id="dataContainer" />
 </HBox>

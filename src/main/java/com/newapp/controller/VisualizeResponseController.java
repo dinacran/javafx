@@ -5,29 +5,53 @@ import com.newapp.services.TokenService;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 
-public class VisualizeResponseController {
-    
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+
+public class VisualizeResponseController {    
 
     @FXML
     private TextField docIdField;
 
     @FXML
-    private TextField clientsField;
+    private ComboBox<String> comboBox;
 
-    private ApiService apiService;
+    @FXML
+    private ToggleGroup viewModeGroup;
 
+    @FXML
+    private ToggleGroup dataToViewGroup;   
+    
     private TokenService tokenService;
 
+    public JSONArray response;
+    
+    public JSONObject request;
+
+    public JSONObject bundler;
+
     public VisualizeResponseController() {
-        this.apiService = new ApiService();
     }
 
     @FXML
-    private void fetchData() {
+    public void initialize() {
+
+    }
+
+    @FXML
+    private void fetchData() throws Exception {
+        request = null;
+        response = null;
+        bundler = null;
+
         String doc = docIdField.getText();
-        String client = clientsField.getText();
+        String client = comboBox.getValue();
 
         if (doc == null || doc.isEmpty()) {
             showAlert("Enter a DocId");
@@ -40,15 +64,22 @@ public class VisualizeResponseController {
         }
 
         if ("auto find".equals(client)) {
-            client = apiService.findClient(doc, token); 
+            client = ApiService.findClient(doc, token); 
         }
 
         if (client == null || client.isEmpty() || !client.matches("^[a-zA-Z]+/\\d+$")) {
             showAlert("Select a Valid Client");
             return;
         }
+        
+        response = ApiService.getResponse(doc, client, token); 
+        request = ApiService.getRequest(doc, client, token);
+        bundler = ApiService.getBundler(doc, client, token);
+        RadioButton selectedViewMode = (RadioButton) viewModeGroup.getSelectedToggle();
+        RadioButton selectedDataToView = (RadioButton) dataToViewGroup.getSelectedToggle();
 
-        apiService.fetchData(client, doc, token); 
+
+        
     }
 
     private void showAlert(String message) {
