@@ -3,7 +3,6 @@ package com.newapp.services;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.URI;
 import java.net.URL;
 
 import org.json.JSONArray;
@@ -25,12 +24,7 @@ public class ApiService {
     public static JSONArray getResponse(String doc, String client, String token) throws Exception {
         String apiResponse = "";
 
-        URI uri = new URI(
-                "https",
-                "rbr-qa.nonprod.aws.casualty.cccis.com",
-                "/service-gateway/api/requests/" + client + "/" + doc + "/withRecs",
-                null);
-        URL url = uri.toURL();
+        URL url = new URL("http://127.0.0.1:5000/response/"+ client + "/" + token);
 
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
@@ -65,12 +59,8 @@ public class ApiService {
     public static JSONObject getRequest(String doc, String client, String token) throws Exception {
         JSONObject obj = null;
         try {
-            URL url = new URI(
-                    "https",
-                    "rbr-qa.nonprod.aws.casualty.cccis.com",
-                    "/service-gateway/api/requests/" + client + "/" + doc,
-                    "?inflateBills=true&inflateHistoryBills=true&inflateHistoryRecommendations=false&includeAllRequests=true",
-                    null).toURL();
+
+            URL url = new URL("http://127.0.0.1:5000/request/" + token);
 
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
@@ -112,9 +102,7 @@ public class ApiService {
         JSONObject obj = null;
         try {
 
-
-            URI uri = new URI("https", "rbr-qa.nonprod.aws.casualty.cccis.com", "/service-gateway/api/recommendations/" + client, "docId=" + doc + "&category=bundlerRecommendation", null);
-            URL url = uri.toURL();
+            URL url = new URL("http://127.0.0.1:5000/bundler/" + token);
 
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 

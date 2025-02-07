@@ -1,0 +1,263 @@
+{
+"docId": "GE0003286",
+  "requestId": null,
+  "s3Url": null,
+  "recommendationSets": [
+    {
+      "_id": "0b2a0000-447a-46fd-e97b-08dd353634e7",
+      "schema": "http://cccis.com/casualty/v8.2.0/medical-bill-review-response.schema.json",
+      "metadata": {
+        "createdDateTime": "2025-01-15T07:28:28.8595235+00:00",
+        "userId": "bundler",
+        "category": "bundlerRecommendation",
+        "clientCode": "geico",
+        "profileId": 13,
+        "requestId": "6bb90000-dca5-dec9-0587-08dd353632b3",
+        "correlationId": "034135d8-926c-4516-a900-f08a5d186c66",
+        "s3url": "s3://cccis-casualty-qa-recommendation-sets/recommendationService/geico/13/034135d8-926c-4516-a900-f08a5d186c66_6bb90000-dca5-dec9-0587-08dd353632b3_f79dae01-a8cf-43fe-aec5-0aa3fdee5893_BundlerRecommendation.json",
+        "artifactId": "com.ccc.casualty.bundler:bundler-engine:3.0.0-SNAPSHOT",
+        "originalSchemaUri": "http://cccis.com/casualty/v8.2.0/medical-bill-review-response.schema.json"
+      },
+      "recommendations": [
+        {
+          "id": "660f2e7e-0697-4539-bdd5-e40f4e0a9fb5",
+          "type": "flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-2a2b-08dd353632b3'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "bundler_flag_ABP_Pend_AB01_FCC04",
+          "message": "ABP Off Pend.",
+          "rule": {
+            "id": "4b94ddbbc2dd5516d11ab16e8137ad78",
+            "name": "bundlerFlagAbpPendAb01",
+            "pathId": "01f4b868d34c9d01c80f1f90b917326f",
+            "path": "TTTTTF"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "abpFlagType",
+              "type": "string",
+              "value": "ABP"
+            },
+            {
+              "key": "bundlerSequence",
+              "type": "number",
+              "value": 5000
+            },
+            {
+              "key": "dateOfService",
+              "type": "date",
+              "value": "2024-02-02"
+            },
+            {
+              "key": "messageCode",
+              "type": "string",
+              "value": "AB01"
+            },
+            {
+              "key": "procCode",
+              "type": "string",
+              "value": "70450"
+            },
+            {
+              "key": "providerName",
+              "type": "string",
+              "value": "BONE AND JOINT SURGERY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "string",
+              "value": "Certified Chiropractic Physician Assistant"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "string",
+              "value": "82-4609933"
+            }
+          ]
+        },
+        {
+          "id": "8e3b2cc1-b446-4a22-bd13-c3b1d9c4d532",
+          "type": "flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-2a2b-08dd353632b3'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "bundler_flag_ABP_Pend_AB06_MI_Current",
+          "message": "MI Full Bill Outside Submission Timeframe Pend.",
+          "rule": {
+            "id": "25eac2002d8c4f557c7e37842396ec80",
+            "name": "bundlerFlagAbpPendAb06MiCurrent",
+            "pathId": "44b49c1ff771648cf612646e74cce35b",
+            "path": "TTTTTTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "abpFlagType",
+              "type": "string",
+              "value": "ABP"
+            },
+            {
+              "key": "bundlerSequence",
+              "type": "number",
+              "value": 6500
+            },
+            {
+              "key": "dateOfService",
+              "type": "date",
+              "value": "2024-02-02"
+            },
+            {
+              "key": "messageCode",
+              "type": "string",
+              "value": "AB06"
+            },
+            {
+              "key": "procCode",
+              "type": "string",
+              "value": "70450"
+            },
+            {
+              "key": "providerName",
+              "type": "string",
+              "value": "BONE AND JOINT SURGERY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "string",
+              "value": "Certified Chiropractic Physician Assistant"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "string",
+              "value": "82-4609933"
+            }
+          ]
+        },
+        {
+          "id": "5fc1e8d5-f6c2-41ea-8093-caa8dd8b9153",
+          "type": "flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-2a2b-08dd353632b3'].pages[0].lines[@.metadata.id=='4e255b68-dfe1-45a2-ad99-70d3d5784853']",
+          "reasonCode": "bundler_flag_ABP_Pend_AB01_FCC04",
+          "message": "ABP Off Pend.",
+          "rule": {
+            "id": "4b94ddbbc2dd5516d11ab16e8137ad78",
+            "name": "bundlerFlagAbpPendAb01",
+            "pathId": "01f4b868d34c9d01c80f1f90b917326f",
+            "path": "TTTTTF"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "abpFlagType",
+              "type": "string",
+              "value": "ABP"
+            },
+            {
+              "key": "bundlerSequence",
+              "type": "number",
+              "value": 5000
+            },
+            {
+              "key": "dateOfService",
+              "type": "date",
+              "value": "2023-01-29"
+            },
+            {
+              "key": "messageCode",
+              "type": "string",
+              "value": "AB01"
+            },
+            {
+              "key": "procCode",
+              "type": "string",
+              "value": "70450"
+            },
+            {
+              "key": "providerName",
+              "type": "string",
+              "value": "BONE AND JOINT SURGERY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "string",
+              "value": "Certified Chiropractic Physician Assistant"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "string",
+              "value": "82-4609933"
+            }
+          ]
+        },
+        {
+          "id": "09203608-c0b2-4109-9f8b-ebc9faf459e3",
+          "type": "flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-2a2b-08dd353632b3'].pages[0].lines[@.metadata.id=='4e255b68-dfe1-45a2-ad99-70d3d5784853']",
+          "reasonCode": "bundler_flag_ABP_Pend_AB06_MI_Current",
+          "message": "MI Full Bill Outside Submission Timeframe Pend.",
+          "rule": {
+            "id": "25eac2002d8c4f557c7e37842396ec80",
+            "name": "bundlerFlagAbpPendAb06MiCurrent",
+            "pathId": "44b49c1ff771648cf612646e74cce35b",
+            "path": "TTTTTTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "abpFlagType",
+              "type": "string",
+              "value": "ABP"
+            },
+            {
+              "key": "bundlerSequence",
+              "type": "number",
+              "value": 6500
+            },
+            {
+              "key": "dateOfService",
+              "type": "date",
+              "value": "2023-01-29"
+            },
+            {
+              "key": "messageCode",
+              "type": "string",
+              "value": "AB06"
+            },
+            {
+              "key": "procCode",
+              "type": "string",
+              "value": "70450"
+            },
+            {
+              "key": "providerName",
+              "type": "string",
+              "value": "BONE AND JOINT SURGERY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "string",
+              "value": "Certified Chiropractic Physician Assistant"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "string",
+              "value": "82-4609933"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "clientCode": "geico",
+  "clientProfileId": 13
+}

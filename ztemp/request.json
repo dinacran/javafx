@@ -1,0 +1,632 @@
+
+{
+  "docId": "GE0003286",
+  "request": [
+    {
+      "schema": "http://cccis.com/casualty/v3.4.0/medical-bill-review-request.schema.json",
+      "_id": "6bb90000-dca5-dec9-0587-08dd353632b3",
+      "metadata": {
+        "createdDateTime": "2025-01-15T07:28:25.1585802+00:00",
+        "clientCode": "geico",
+        "profileId": 13,
+        "correlationId": "034135d8-926c-4516-a900-f08a5d186c66",
+        "priority": 10,
+        "username": "0oatvfbmq5ShgJe9K0h7",
+        "billLines": 2,
+        "editCount": 0,
+        "historyLines": 0,
+        "friendlyUsername": "CCC-CASReliance-DRE",
+        "completedDateTime": "2025-01-15T07:28:29.127+00:00"
+      },
+      "supportingInformation": {
+        "claim": {
+          "schema": "http://cccis.com/casualty/v0.2.1/claim.schema.json",
+          "claimId": 106145,
+          "patientId": 131109,
+          "policyCoverageType": "PIP",
+          "remainingLimitPerPerson": 0,
+          "remainingLimitPerOccurrence": 0,
+          "partyIndicator": "1st party",
+          "policyState": "MI",
+          "dateOfLoss": "2023-01-01",
+          "relatedBills": [],
+          "companyCode": "04",
+          "companyName": "GEICO",
+          "policyLimit": 0,
+          "medExpoIndicator": "N",
+          "claimHandlingSystem": "A",
+          "policyEffectiveDate": "1900-01-01"
+        },
+        "history": []
+      },
+      "bills": [
+        {
+          "schema": "http://cccis.com/casualty/v5.8.0/bill.schema.json",
+          "_id": "6bb90000-dca5-dec9-2a2b-08dd353632b3",
+          "metadata": {
+            "createdDateTime": "2025-01-15T07:28:25.1595746+00:00",
+            "clientCode": "geico",
+            "docId": "GE0003286",
+            "claimId": 106145,
+            "patientId": 131109,
+            "profileId": 13,
+            "correlationId": "034135d8-926c-4516-a900-f08a5d186c66",
+            "username": "0oatvfbmq5ShgJe9K0h7",
+            "friendlyUsername": "CCC-CASReliance-DRE"
+          },
+          "sourceInfo": {
+            "profileId": 3
+          },
+          "supportingInformation": {
+            "patientName": "",
+            "serviceProviderName": "BONE AND JOINT SURGERY",
+            "billProviderName": "HAMILTON HEALTHCARE CENTER  P C",
+            "tin": "82-4609933",
+            "billType": "Medical",
+            "facilityIndicator": false,
+            "providerTitle": "Chiropractor",
+            "providerSpecialty": "Certified Chiropractic Physician Assistant",
+            "treatmentState": "MI",
+            "treatmentZip": "48103",
+            "pointOfPickUpZipCode": "",
+            "aob": "Y",
+            "Box31": "",
+            "Box32": "",
+            "cpRate": 0.5,
+            "lossSt": "MI",
+            "ClaimFcc": "04",
+            "areaType": "",
+            "hipNoEob": "No",
+            "oonpRate": 0.3,
+            "opCertNo": "",
+            "RiskState": "MI",
+            "abpStatus": "Off",
+            "ambulette": 0,
+            "imeNoShow": "N",
+            "noShowInd": "N",
+            "tinSuffix": "",
+            "LicenseNum": "",
+            "billStatus": "inprocess",
+            "medicareNo": "",
+            "notesToMer": "",
+            "policyType": "Auto",
+            "typeOfBill": "",
+            "AdjusterFcc": "04",
+            "dateScanned": "2025-01-15",
+            "docDtls_FCC": "04",
+            "medExposure": "PIP",
+            "sectionCode": "L302",
+            "LicenseAvail": "",
+            "LicenseValid": "",
+            "caseVerified": "Y",
+            "dateOfInjury": "1900-01-01",
+            "exhaustedInd": "N",
+            "emgMedCondInd": "N",
+            "imeSpeciality": "Physical medicine and rehabilitation",
+            "notesAttached": 0,
+            "numberOfPages": 0,
+            "documentSource": "M",
+            "atlasSpeciality": "Chiropractic",
+            "biofeedbackCert": "",
+            "geicoProviderId": "0001",
+            "policyAmendment": "E",
+            "deptOfVetAffairs": 0,
+            "imeDenialSpecInd": "N",
+            "ipNotEligibleInd": "N",
+            "convertedClaimInd": "N",
+            "clientReceivedDate": "2024-01-31",
+            "ny_nf10DenialCodes": "Separate date verification requested and date verification received with (;).",
+            "fpmEligibilityStatus": "Eligible",
+            "billingProviderTaxCode": "82-4609933",
+            "totalAmountOfBenefitsRem": 0
+          },
+          "pages": [
+            {
+              "_id": "GE0003286-1",
+              "lines": [
+                {
+                  "lineNo": 1,
+                  "charges": "1000.00",
+                  "cptHcpcs": "70450",
+                  "metadata": {
+                    "id": "4e255b68-dfe1-45a2-ad99-70d3d5784853",
+                    "displayLineNo": "1"
+                  },
+                  "daysOrUnits": "1.000",
+                  "serviceDateTo": {
+                    "day": "29",
+                    "year": "2023",
+                    "month": "01"
+                  },
+                  "inferredValues": [],
+                  "serviceDateFrom": {
+                    "day": "29",
+                    "year": "2023",
+                    "month": "01"
+                  },
+                  "diagnosisPointer": "A"
+                },
+                {
+                  "lineNo": 2,
+                  "charges": "1000.00",
+                  "cptHcpcs": "70450",
+                  "metadata": {
+                    "id": "23dcd7f8-ad17-4779-ad41-967fa35a5346",
+                    "displayLineNo": "2"
+                  },
+                  "daysOrUnits": "1.000",
+                  "serviceDateTo": {
+                    "day": "02",
+                    "year": "2024",
+                    "month": "02"
+                  },
+                  "inferredValues": [],
+                  "serviceDateFrom": {
+                    "day": "02",
+                    "year": "2024",
+                    "month": "02"
+                  },
+                  "diagnosisPointer": "A"
+                }
+              ],
+              "schema": "http://cccis.com/casualty/v4.2.0/cms1500.schema.json",
+              "metadata": {
+                "docId": "GE0003286",
+                "pageNo": 1,
+                "clientId": 1
+              },
+              "diagnosis": {
+                "icdCodeA": "A31.8",
+                "icdIndicator": "0"
+              },
+              "patientSex": {
+                "male": true,
+                "female": false
+              },
+              "patientName": "",
+              "totalCharge": "2000.00",
+              "originalLines": [],
+              "inferredValues": [],
+              "patientAddress": {
+                "city": "Ann Arbor",
+                "state": "MI",
+                "street": "test st\r",
+                "zipCode": "48103"
+              },
+              "patientAccountNo": "",
+              "patientBirthDate": {
+                "day": "24",
+                "year": "1977",
+                "month": "11"
+              },
+              "otherProviderInfo": {
+                "npi": "1164403861"
+              },
+              "federalTaxIdNumber": "82-4609933",
+              "billingProviderInfo": {
+                "name": "HAMILTON HEALTHCARE CENTER  P C",
+                "street": "2103 WHITEHORSE MERCERVILLE RD",
+                "cityStateZip": "TRENTON, MI 48103"
+              },
+              "patientConditionRelatedTo": {
+                "autoAccident": {
+                  "no": false,
+                  "yes": true
+                }
+              },
+              "serviceFacilityLocationInfo": {
+                "street": "test st",
+                "cityStateZip": "Ann Arbor, MI 48103"
+              },
+              "signatureOfPhysicianOrSupplier": {
+                "signed": "BONE AND JOINT SURGERY"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "http://cccis.com/casualty/v3.4.0/medical-bill-review-request.schema.json",
+      "_id": "fb7c0000-adbd-52ef-ee8a-08dd35359bb4",
+      "metadata": {
+        "createdDateTime": "2025-01-15T07:24:11.8350394+00:00",
+        "clientCode": "geico",
+        "profileId": 13,
+        "correlationId": "df3723c9-82bb-492f-9bf8-536ca0fdb34e",
+        "sEdit": "FPM",
+        "priority": 10,
+        "username": "0oatvfbmq5ShgJe9K0h7",
+        "billLines": 2,
+        "editCount": 0,
+        "historyLines": 0,
+        "friendlyUsername": "CCC-CASReliance-DRE",
+        "completedDateTime": "2025-01-15T07:24:14.582+00:00"
+      },
+      "supportingInformation": {
+        "claim": {
+          "schema": "http://cccis.com/casualty/v0.2.1/claim.schema.json",
+          "claimId": 106145,
+          "patientId": 131108,
+          "policyCoverageType": "PIP",
+          "remainingLimitPerPerson": 0,
+          "remainingLimitPerOccurrence": 0,
+          "partyIndicator": "1st party",
+          "dateOfLoss": "2023-01-04",
+          "relatedBills": [],
+          "companyCode": "04",
+          "companyName": "GEICO",
+          "medExpoIndicator": "Y",
+          "claimHandlingSystem": "A"
+        },
+        "history": []
+      },
+      "bills": [
+        {
+          "schema": "http://cccis.com/casualty/v5.8.0/bill.schema.json",
+          "_id": "fb7c0000-adbd-52ef-0dcf-08dd35359bb5",
+          "metadata": {
+            "createdDateTime": "2025-01-15T07:24:11.8358228+00:00",
+            "clientCode": "geico",
+            "docId": "GE0003286",
+            "claimId": 106145,
+            "patientId": 131108,
+            "profileId": 13,
+            "correlationId": "df3723c9-82bb-492f-9bf8-536ca0fdb34e",
+            "username": "0oatvfbmq5ShgJe9K0h7",
+            "friendlyUsername": "CCC-CASReliance-DRE"
+          },
+          "sourceInfo": {
+            "profileId": 3
+          },
+          "supportingInformation": {
+            "patientName": "TESTLN, TESTFN",
+            "serviceProviderName": "BONE AND JOINT SURGERY",
+            "billProviderName": "BONE AND JOINT SURGERY",
+            "tin": "82-4609933",
+            "billType": "Medical",
+            "facilityIndicator": false,
+            "providerTitle": "MD",
+            "providerSpecialty": "General Surgery",
+            "treatmentState": "MI",
+            "treatmentZip": "48103",
+            "pointOfPickUpZipCode": "",
+            "aob": "No signature in box",
+            "Box31": "",
+            "Box32": "",
+            "cpRate": 0.5,
+            "areaType": "",
+            "hipNoEob": "No",
+            "oonpRate": 0.3,
+            "opCertNo": "",
+            "ambulette": 0,
+            "tinSuffix": "",
+            "LicenseNum": "",
+            "medicareNo": "",
+            "notesToMer": "",
+            "typeOfBill": "",
+            "dateScanned": "2025-01-15",
+            "docDtls_FCC": "04",
+            "sectionCode": "L302",
+            "LicenseAvail": "",
+            "LicenseValid": "",
+            "notesAttached": 0,
+            "numberOfPages": 0,
+            "documentSource": "M",
+            "atlasSpeciality": "General Surgeon",
+            "biofeedbackCert": "",
+            "geicoProviderId": "Prov1",
+            "deptOfVetAffairs": 0,
+            "clientReceivedDate": "2024-01-31",
+            "billingProviderTaxCode": "82-4609933"
+          },
+          "pages": [
+            {
+              "_id": "GE0003286-1",
+              "lines": [
+                {
+                  "lineNo": 1,
+                  "charges": "1000.00",
+                  "cptHcpcs": "70450",
+                  "metadata": {
+                    "id": "f5835b8f-3b7e-42ff-ace7-d137167b15ba",
+                    "displayLineNo": "1"
+                  },
+                  "daysOrUnits": "1.000",
+                  "serviceDateTo": {
+                    "day": "29",
+                    "year": "2023",
+                    "month": "01"
+                  },
+                  "inferredValues": [],
+                  "serviceDateFrom": {
+                    "day": "29",
+                    "year": "2023",
+                    "month": "01"
+                  },
+                  "diagnosisPointer": "A"
+                },
+                {
+                  "lineNo": 2,
+                  "charges": "1000.00",
+                  "cptHcpcs": "70450",
+                  "metadata": {
+                    "id": "301e9f08-c59b-4570-a572-902d020f6c86",
+                    "displayLineNo": "2"
+                  },
+                  "daysOrUnits": "1.000",
+                  "serviceDateTo": {
+                    "day": "02",
+                    "year": "2024",
+                    "month": "02"
+                  },
+                  "inferredValues": [],
+                  "serviceDateFrom": {
+                    "day": "02",
+                    "year": "2024",
+                    "month": "02"
+                  },
+                  "diagnosisPointer": "A"
+                }
+              ],
+              "schema": "http://cccis.com/casualty/v4.2.0/cms1500.schema.json",
+              "metadata": {
+                "docId": "GE0003286",
+                "pageNo": 1,
+                "clientId": 1
+              },
+              "diagnosis": {
+                "icdCodeA": "A31.8",
+                "icdIndicator": "0"
+              },
+              "patientSex": {
+                "male": true,
+                "female": false
+              },
+              "patientName": "TESTLN, TESTFN",
+              "totalCharge": "2000.00",
+              "originalLines": [],
+              "inferredValues": [],
+              "patientAddress": {
+                "city": "",
+                "state": "",
+                "street": "\r",
+                "zipCode": ""
+              },
+              "patientAccountNo": "",
+              "patientBirthDate": {
+                "day": "01",
+                "year": "2000",
+                "month": "01"
+              },
+              "otherProviderInfo": {
+                "npi": "1164403861"
+              },
+              "federalTaxIdNumber": "82-4609933",
+              "billingProviderInfo": {
+                "name": "BONE AND JOINT SURGERY",
+                "street": "test st",
+                "cityStateZip": "Ann Arbor, MI 48103"
+              },
+              "patientConditionRelatedTo": {
+                "autoAccident": {
+                  "no": false,
+                  "yes": true
+                }
+              },
+              "serviceFacilityLocationInfo": {
+                "street": "test st",
+                "cityStateZip": "Ann Arbor, MI 48103"
+              },
+              "signatureOfPhysicianOrSupplier": {
+                "signed": "BONE AND JOINT SURGERY"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "http://cccis.com/casualty/v3.4.0/medical-bill-review-request.schema.json",
+      "_id": "6bb90000-dca5-dec9-0468-08dd35359aaf",
+      "metadata": {
+        "createdDateTime": "2025-01-15T07:24:10.1185863+00:00",
+        "clientCode": "geico",
+        "profileId": 13,
+        "correlationId": "00605625-3b99-4fb9-ae4a-9f6f6c8de8f1",
+        "sEdit": "FPM",
+        "priority": 10,
+        "username": "0oatvfbmq5ShgJe9K0h7",
+        "billLines": 2,
+        "editCount": 0,
+        "historyLines": 0,
+        "friendlyUsername": "CCC-CASReliance-DRE",
+        "completedDateTime": "2025-01-15T07:24:13.417+00:00"
+      },
+      "supportingInformation": {
+        "claim": {
+          "schema": "http://cccis.com/casualty/v0.2.1/claim.schema.json",
+          "claimId": 106145,
+          "patientId": 131108,
+          "policyCoverageType": "PIP",
+          "remainingLimitPerPerson": 0,
+          "remainingLimitPerOccurrence": 0,
+          "partyIndicator": "1st party",
+          "dateOfLoss": "2023-01-04",
+          "relatedBills": [],
+          "companyCode": "04",
+          "companyName": "GEICO",
+          "medExpoIndicator": "Y",
+          "claimHandlingSystem": "A"
+        },
+        "history": []
+      },
+      "bills": [
+        {
+          "schema": "http://cccis.com/casualty/v5.8.0/bill.schema.json",
+          "_id": "6bb90000-dca5-dec9-2567-08dd35359aaf",
+          "metadata": {
+            "createdDateTime": "2025-01-15T07:24:10.119439+00:00",
+            "clientCode": "geico",
+            "docId": "GE0003286",
+            "claimId": 106145,
+            "patientId": 131108,
+            "profileId": 13,
+            "correlationId": "00605625-3b99-4fb9-ae4a-9f6f6c8de8f1",
+            "username": "0oatvfbmq5ShgJe9K0h7",
+            "friendlyUsername": "CCC-CASReliance-DRE"
+          },
+          "sourceInfo": {
+            "profileId": 3
+          },
+          "supportingInformation": {
+            "patientName": "TESTLN, TESTFN",
+            "serviceProviderName": "BONE AND JOINT SURGERY",
+            "billProviderName": "BONE AND JOINT SURGERY",
+            "tin": "82-4609933",
+            "billType": "Medical",
+            "facilityIndicator": false,
+            "providerTitle": "MD",
+            "providerSpecialty": "General Surgery",
+            "treatmentState": "MI",
+            "treatmentZip": "48103",
+            "pointOfPickUpZipCode": "",
+            "aob": "No signature in box",
+            "Box31": "",
+            "Box32": "",
+            "cpRate": 0.5,
+            "areaType": "",
+            "hipNoEob": "No",
+            "oonpRate": 0.3,
+            "opCertNo": "",
+            "ambulette": 0,
+            "tinSuffix": "",
+            "LicenseNum": "",
+            "medicareNo": "",
+            "notesToMer": "",
+            "typeOfBill": "",
+            "dateScanned": "2025-01-15",
+            "docDtls_FCC": "04",
+            "sectionCode": "L302",
+            "LicenseAvail": "",
+            "LicenseValid": "",
+            "notesAttached": 0,
+            "numberOfPages": 0,
+            "documentSource": "M",
+            "atlasSpeciality": "General Surgeon",
+            "biofeedbackCert": "",
+            "geicoProviderId": "Prov1",
+            "deptOfVetAffairs": 0,
+            "clientReceivedDate": "2024-01-31",
+            "billingProviderTaxCode": "82-4609933"
+          },
+          "pages": [
+            {
+              "_id": "GE0003286-1",
+              "lines": [
+                {
+                  "lineNo": 1,
+                  "charges": "1000.00",
+                  "cptHcpcs": "70450",
+                  "metadata": {
+                    "id": "ba0eb80d-15ab-445e-a388-bcb43d8e8733",
+                    "displayLineNo": "1"
+                  },
+                  "daysOrUnits": "1.000",
+                  "serviceDateTo": {
+                    "day": "29",
+                    "year": "2023",
+                    "month": "01"
+                  },
+                  "inferredValues": [],
+                  "serviceDateFrom": {
+                    "day": "29",
+                    "year": "2023",
+                    "month": "01"
+                  },
+                  "diagnosisPointer": "A"
+                },
+                {
+                  "lineNo": 2,
+                  "charges": "1000.00",
+                  "cptHcpcs": "70450",
+                  "metadata": {
+                    "id": "178c3a71-78e9-4639-83ac-2c44fb6af2fc",
+                    "displayLineNo": "2"
+                  },
+                  "daysOrUnits": "1.000",
+                  "serviceDateTo": {
+                    "day": "02",
+                    "year": "2024",
+                    "month": "02"
+                  },
+                  "inferredValues": [],
+                  "serviceDateFrom": {
+                    "day": "02",
+                    "year": "2024",
+                    "month": "02"
+                  },
+                  "diagnosisPointer": "A"
+                }
+              ],
+              "schema": "http://cccis.com/casualty/v4.2.0/cms1500.schema.json",
+              "metadata": {
+                "docId": "GE0003286",
+                "pageNo": 1,
+                "clientId": 1
+              },
+              "diagnosis": {
+                "icdCodeA": "A31.8",
+                "icdIndicator": "0"
+              },
+              "patientSex": {
+                "male": true,
+                "female": false
+              },
+              "patientName": "TESTLN, TESTFN",
+              "totalCharge": "2000.00",
+              "originalLines": [],
+              "inferredValues": [],
+              "patientAddress": {
+                "city": "",
+                "state": "",
+                "street": "\r",
+                "zipCode": ""
+              },
+              "patientAccountNo": "",
+              "patientBirthDate": {
+                "day": "01",
+                "year": "2000",
+                "month": "01"
+              },
+              "otherProviderInfo": {
+                "npi": "1164403861"
+              },
+              "federalTaxIdNumber": "82-4609933",
+              "billingProviderInfo": {
+                "name": "BONE AND JOINT SURGERY",
+                "street": "test st",
+                "cityStateZip": "Ann Arbor, MI 48103"
+              },
+              "patientConditionRelatedTo": {
+                "autoAccident": {
+                  "no": false,
+                  "yes": true
+                }
+              },
+              "serviceFacilityLocationInfo": {
+                "street": "test st",
+                "cityStateZip": "Ann Arbor, MI 48103"
+              },
+              "signatureOfPhysicianOrSupplier": {
+                "signed": "BONE AND JOINT SURGERY"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "clientCode": "geico",
+  "clientProfileId": 13
+}
