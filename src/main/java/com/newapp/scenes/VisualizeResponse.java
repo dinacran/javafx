@@ -6,11 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-public class VisulaizeResponse {
+public class VisualizeResponse {
 
     private Scene visualizeResponseScene;
 
-    public VisulaizeResponse() {
+    public VisualizeResponse() {
         visualizeResponseScene = build();
     }
 
@@ -27,7 +27,6 @@ public class VisulaizeResponse {
         Scene scene = new Scene(root, 800, 600);
 
         scene.getStylesheets().add("/css/dark-theme.css");
-
 
         return scene;
 

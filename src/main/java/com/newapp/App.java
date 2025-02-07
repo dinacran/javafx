@@ -3,7 +3,6 @@ package com.newapp;
 import org.scenicview.ScenicView;
 
 import com.newapp.controller.HomeController;
-import com.newapp.scenes.VisulaizeResponse;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,8 +13,6 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     Stage homeStage;
-
-    VisulaizeResponse visulaizeResponse = new VisulaizeResponse();
 
     @Override
     public void start(Stage homeStage) {
@@ -40,7 +37,7 @@ public class App extends Application {
         homeStage.setMaximized(true);
 
         homeStage.setTitle("JavaFX Application");
-        ScenicView.show(sceneFromFxml);
+        // ScenicView.show(sceneFromFxml);
         homeStage.show();
     }
     public static void main(String[] args) {

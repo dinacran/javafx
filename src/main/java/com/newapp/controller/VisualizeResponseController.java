@@ -1,18 +1,23 @@
 package com.newapp.controller;
 
+import java.io.BufferedReader;
+
+import org.json.JSONArray;
+import org.json.simple.parser.JSONParser;
+
 import com.newapp.services.ApiService;
 import com.newapp.services.TokenService;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
+import javafx.scene.layout.VBox;
 
 public class VisualizeResponseController {    
 
@@ -23,18 +28,22 @@ public class VisualizeResponseController {
     private ComboBox<String> comboBox;
 
     @FXML
+    private Button fetchButton;
+
+    @FXML
     private ToggleGroup viewModeGroup;
 
     @FXML
-    private ToggleGroup dataToViewGroup;   
+    private ToggleGroup dataToViewGroup;
     
-    private TokenService tokenService;
+    @FXML
+    private VBox dataContainer;
 
-    public JSONArray response;
+    public BufferedReader response;
     
-    public JSONObject request;
+    public BufferedReader request;
 
-    public JSONObject bundler;
+    public BufferedReader bundler;
 
     public VisualizeResponseController() {
     }
@@ -58,9 +67,9 @@ public class VisualizeResponseController {
             return;
         }
 
-        String token = tokenService.getToken(); 
+        String token = TokenService.getToken(); 
         if (token == null) {
-            token = tokenService.promptForToken(); 
+            token = TokenService.promptForToken(); 
         }
 
         if ("auto find".equals(client)) {
@@ -75,16 +84,38 @@ public class VisualizeResponseController {
         response = ApiService.getResponse(doc, client, token); 
         request = ApiService.getRequest(doc, client, token);
         bundler = ApiService.getBundler(doc, client, token);
-        RadioButton selectedViewMode = (RadioButton) viewModeGroup.getSelectedToggle();
-        RadioButton selectedDataToView = (RadioButton) dataToViewGroup.getSelectedToggle();
 
+        String selectedViewMode = ((RadioButton) viewModeGroup.getSelectedToggle()).getText();
+        String selectedDataToView = ((RadioButton) dataToViewGroup.getSelectedToggle()).getText();
 
-        
+        switch (selectedDataToView) {
+            case "Response":
+                setDataToContainer(response, selectedViewMode);                
+                break;
+            case "Request":
+                setDataToContainer(request, selectedViewMode);  
+                break;
+            case "Bundler":
+                setDataToContainer(bundler, selectedViewMode);                      
+                break;
+        }
+
     }
 
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    private void setDataToContainer(BufferedReader jsonData, String viewMode) throws Exception{
+        String inputLine;
+
+        while ((inputLine = jsonData.readLine()) != null) {
+
+            dataContainer.getChildren().add(new Label(inputLine));
+
+        }
+
     }
 }

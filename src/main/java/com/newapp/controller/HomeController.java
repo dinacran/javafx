@@ -1,6 +1,6 @@
 package com.newapp.controller;
 
-import com.newapp.scenes.VisulaizeResponse;
+import com.newapp.scenes.VisualizeResponse;
 
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
@@ -35,7 +35,7 @@ public class HomeController {
     private ImageView testRuleImage;
 
     private Stage homeStage;
-    private VisulaizeResponse visulaizeResponse = new VisulaizeResponse();
+    private VisualizeResponse visulaizeResponse = new VisualizeResponse();
 
     @FXML
     public void initialize() {
@@ -48,6 +48,9 @@ public class HomeController {
     @FXML
     private void handleVisualizeResponseClick() {
         homeStage.setScene(visulaizeResponse.getScene());
+        homeStage.setMaximized(true);
+        homeStage.show();
+
     }
 
     public void setHomeStage(Stage homeStage) {

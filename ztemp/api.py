@@ -30,7 +30,7 @@ def get_bundler():
 
     return data
 
-@app.route('/token', methods=['POST'])
+@app.route('/token', methods=['GET'])
 def get_token():
     return jsonify(access_token=token)
 
