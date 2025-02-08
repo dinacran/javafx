@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" styleClass="homeGrid" fx:controller="com.newapp.controller.HomeController" alignment="CENTER" hgap="100" vgap="100" prefWidth="800" prefHeight="600">
+    <VBox fx:id="visualizeResponseBox" onMouseClicked="#handleVisualizeResponseClick" GridPane.columnIndex="0" GridPane.rowIndex="0" minWidth="150" minHeight="120" maxWidth="150" maxHeight="120" styleClass="tile">
+        <ImageView fx:id="visualizeResponseImage" fitWidth="64" fitHeight="64" preserveRatio="true" />
+        <Label text="Visualize Response" />
+    </VBox>
+    <VBox fx:id="openXmindBox" GridPane.columnIndex="1" GridPane.rowIndex="0" minWidth="150" minHeight="120" maxWidth="150" maxHeight="120" styleClass="tile">
+        <ImageView fx:id="openXmindImage" fitWidth="64" fitHeight="64" preserveRatio="true" />
+        <Label text="Open Xmind" />
+    </VBox>
+    <VBox fx:id="searchCodeBox" GridPane.columnIndex="0" GridPane.rowIndex="1" minWidth="150" minHeight="120" maxWidth="150" maxHeight="120" styleClass="tile">
+        <ImageView fx:id="searchCodeImage" fitWidth="64" fitHeight="64" preserveRatio="true" />
+        <Label text="Search Code" />
+    </VBox>
+    <VBox fx:id="testRuleBox" GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="150" minHeight="120" maxWidth="150" maxHeight="120" styleClass="tile">
+        <ImageView fx:id="testRuleImage" fitWidth="64" fitHeight="64" preserveRatio="true" />
+        <Label text="Test Rule" />
+    </VBox>
+</GridPane>

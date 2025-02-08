@@ -1,0 +1,3879 @@
+[
+  {
+    "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16",
+    "createTime": "2025-01-07T07:52:07.3560129+00:00",
+    "completedTime": "2025-01-07T07:52:13.835+00:00",
+    "requestComplete": true,
+    "clientCode": "kentuckyNat",
+    "billId": "6bb90000-dca5-dec9-411f-08dd2ef02f4d",
+    "correlationId": "8f0aa572-53a4-4708-b83d-a57b2bcc98cb",
+    "packageId": null,
+    "docId": "KN1412069",
+    "formType": "http://cccis.com/casualty/v5.1.0/cms.schema.json",
+    "lineId": "59603ca3-7607-4271-a2ab-8ffdf47cbd4e",
+    "displayLineNo": "1",
+    "appliedRecommendations": [
+      {
+        "recommendationId": "fa189748-ba20-43ed-9d24-81a9b1841aa0",
+        "type": "Reimburse",
+        "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+        "reasonCode": "FS_NY",
+        "supportingValues": [
+          {
+            "key": "codeCategory",
+            "type": "String",
+            "value": "Medical"
+          },
+          {
+            "key": "dataSource",
+            "type": "String",
+            "value": "FS.NY"
+          },
+          {
+            "key": "dateOfService",
+            "type": "Date",
+            "value": "2024-12-02"
+          },
+          {
+            "key": "discountType",
+            "type": "String",
+            "value": "FS"
+          },
+          {
+            "key": "factor",
+            "type": "Number",
+            "value": 1.0
+          },
+          {
+            "key": "fee",
+            "type": "Money",
+            "value": 62.5
+          },
+          {
+            "key": "procCode",
+            "type": "String",
+            "value": "D0140"
+          },
+          {
+            "key": "providerName",
+            "type": "String",
+            "value": "A PROVIDER IN NY"
+          },
+          {
+            "key": "providerSpecialty",
+            "type": "String",
+            "value": "Oral Surgery (Dentists only)"
+          },
+          {
+            "key": "providerTaxCode",
+            "type": "String",
+            "value": "66-5666994"
+          },
+          {
+            "key": "revCode",
+            "type": "String",
+            "value": "320"
+          },
+          {
+            "key": "rvu",
+            "type": "Number",
+            "value": 62.5
+          },
+          {
+            "key": "units",
+            "type": "Number",
+            "value": 1.0
+          }
+        ],
+        "dependsOn": [],
+        "ruleName": "nyDental_TTTTTTTTTTTF",
+        "reimburse": "62.5"
+      },
+      {
+        "recommendationId": "be4d8e14-587f-475d-9f99-30e1d5b79e1d",
+        "type": "Flag",
+        "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+        "reasonCode": "BM_ICD_FLAG",
+        "supportingValues": [
+          {
+            "key": "dateOfService",
+            "type": "Date",
+            "value": "2024-12-02"
+          },
+          {
+            "key": "flagType",
+            "type": "String",
+            "value": "NR"
+          },
+          {
+            "key": "procCode",
+            "type": "String",
+            "value": "D0140"
+          },
+          {
+            "key": "providerName",
+            "type": "String",
+            "value": "A PROVIDER IN NY"
+          },
+          {
+            "key": "providerSpecialty",
+            "type": "String",
+            "value": "Oral Surgery (Dentists only)"
+          },
+          {
+            "key": "providerTaxCode",
+            "type": "String",
+            "value": "66-5666994"
+          },
+          {
+            "key": "revCode",
+            "type": "String",
+            "value": "320"
+          }
+        ],
+        "dependsOn": [],
+        "ruleName": "class2Or3IcdBm_FTTTTT",
+        "reimburse": ""
+      }
+    ],
+    "bundlerRecommendation": "",
+    "dreRecommendationAvailable": [
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "15196445-4c6d-4a1c-a4d1-b27319702cac",
+          "type": "Reimburse",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "BA",
+          "message": "Billed Amount",
+          "rule": {
+            "_id": "c8a13742b84ba15278c155bb56e737d7",
+            "name": "billedAmount",
+            "pathId": "049752f0b73dc4b5c8603b039f954635",
+            "path": "FTT"
+          },
+          "values": [
+            {
+              "pathReference": null,
+              "key": "reimbursement",
+              "type": "Money",
+              "value": 500.0
+            }
+          ],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "charges",
+              "type": "Money",
+              "value": 500.0
+            },
+            {
+              "key": "codeCategory",
+              "type": "String",
+              "value": "Medical"
+            },
+            {
+              "key": "dataSource",
+              "type": "String",
+              "value": "BA.DEFAULT"
+            },
+            {
+              "key": "dataSourceSubCategory",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "discountType",
+              "type": "String",
+              "value": "BA"
+            },
+            {
+              "key": "fee",
+              "type": "Money",
+              "value": 500.0
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            },
+            {
+              "key": "units",
+              "type": "Number",
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "fa189748-ba20-43ed-9d24-81a9b1841aa0",
+          "type": "Reimburse",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "FS_NY",
+          "message": "Reimbursed at $62.50",
+          "rule": {
+            "_id": "cebd423a41bd8caced3e628c1466b7cc",
+            "name": "nyDental",
+            "pathId": "9e6a1413e3c4b5a0ec2a9dd1e8e7eb1b",
+            "path": "TTTTTTTTTTTF"
+          },
+          "values": [
+            {
+              "pathReference": null,
+              "key": "reimbursement",
+              "type": "Money",
+              "value": 62.5
+            }
+          ],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "codeCategory",
+              "type": "String",
+              "value": "Medical"
+            },
+            {
+              "key": "dataSource",
+              "type": "String",
+              "value": "FS.NY"
+            },
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "discountType",
+              "type": "String",
+              "value": "FS"
+            },
+            {
+              "key": "factor",
+              "type": "Number",
+              "value": 1.0
+            },
+            {
+              "key": "fee",
+              "type": "Money",
+              "value": 62.5
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            },
+            {
+              "key": "rvu",
+              "type": "Number",
+              "value": 62.5
+            },
+            {
+              "key": "units",
+              "type": "Number",
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "06a8676c-d42d-462b-a1f1-77cd9b5f2732",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "3M_NY_INPATIENT",
+          "message": "This bill is eligible to send to 3M.",
+          "rule": {
+            "_id": "f3b67bd0322bb53ddd10231d1e760cfd",
+            "name": "3mNyInpatient",
+            "pathId": "9e7d26da081bfa9d1044cf72c291eaf6",
+            "path": "TTTTTTTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "allowReimburseGreaterThanCharge",
+              "type": "String",
+              "value": "TRUE"
+            },
+            {
+              "key": "dataSource",
+              "type": "String",
+              "value": "3M.NY.DRG"
+            },
+            {
+              "key": "defaultIfBlank.admittingDx",
+              "type": "String",
+              "value": "A31.8"
+            },
+            {
+              "key": "defaultIfBlank.dischargeStatus",
+              "type": "String",
+              "value": "01"
+            },
+            {
+              "key": "defaultIfBlank.dx67.code",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "defaultIfBlank.dxCodes.presentOnAdmission",
+              "type": "String",
+              "value": "Y"
+            },
+            {
+              "key": "defaultIfBlank.dxQualifier",
+              "type": "String",
+              "value": "0"
+            },
+            {
+              "key": "defaultIfBlank.icdCodes.poaIndicator",
+              "type": "String",
+              "value": "Y"
+            },
+            {
+              "key": "defaultIfBlank.icdIndicator",
+              "type": "String",
+              "value": "0"
+            },
+            {
+              "key": "defaultIfBlank.patientSex",
+              "type": "String",
+              "value": "U"
+            },
+            {
+              "key": "defaultifBlank.typeOfBill",
+              "type": "String",
+              "value": "0111"
+            },
+            {
+              "key": "fee",
+              "type": "String",
+              "value": "<totalPayment>"
+            },
+            {
+              "key": "message",
+              "type": "String",
+              "value": "Reimbursement is calculated based on New York Workers Compensation Inpatient Case Rates for this facility."
+            },
+            {
+              "key": "mmmInput.birthWeightOption",
+              "type": "String",
+              "value": "7"
+            },
+            {
+              "key": "mmmInput.grouperType",
+              "type": "String",
+              "value": "NY_APR"
+            },
+            {
+              "key": "mmmInput.payerFlag",
+              "type": "String",
+              "value": "4"
+            },
+            {
+              "key": "mmmInput.paymentPortionType",
+              "type": "String",
+              "value": "APR_WITH_SURCHARGE_WITH_DIRECT_PAYMENT_TO_POOL"
+            },
+            {
+              "key": "mmmInput.reorder",
+              "type": "String",
+              "value": "0"
+            },
+            {
+              "key": "mmmInput.scheduleType",
+              "type": "String",
+              "value": "NYIPT"
+            },
+            {
+              "key": "mmmOutput.alternateLevelOfCarePayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.costOutlierPayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.drg",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.drgBasePayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.paymentStatus",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.returnCode",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.soi",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.surchargePayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.totalOperatingPayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.totalPayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmminput.hospitalType",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "npi",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerTaxId",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "reasonCode",
+              "type": "String",
+              "value": "NY_INP"
+            },
+            {
+              "key": "reimbursementFormula",
+              "type": "String",
+              "value": "<totalPayment>"
+            },
+            {
+              "key": "requiredProviderInput1.providerTaxId+tinSuffix",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "requiredProviderInput2.providerTaxId",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "statementCoversPeriod.from",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "statementCoversPeriod.through",
+              "type": "Date",
+              "value": "2024-12-06"
+            },
+            {
+              "key": "tinSuffix",
+              "type": "String",
+              "value": ""
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "c51d6916-ef90-4d31-b817-277ab6e2956a",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "3Months_Gap_Flag",
+          "message": "There is either a 3-month gap between the DOL and DOS, or a 3-month lapse of treatment between the last approved DOS and the current DOS.Submit bill to Nurse Review.",
+          "rule": {
+            "_id": "13326e7713381608ccbb6bb4ad2f7b42",
+            "name": "3MonthGap",
+            "pathId": "8703580b9909715bbeb0325a0307f262",
+            "path": "TFT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [
+            "$.supportingInformation.history[@._id=='6bb90000-dca5-dec9-4211-08dd2ef02f17'].pages[0].lines[@.metadata.id=='e488734a-ab0c-4cfe-a1af-874f1f6874bd']"
+          ],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "06afc9c7-7ab0-4fca-b8cf-d4061d8697d2",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "4WEEKS_GAP_FLAG",
+          "message": "There is a 4 week lapse of treatment between two dates of service. Please submit to nurse review.",
+          "rule": {
+            "_id": "bed5322b20f5516935d1bab1cf2bf2b1",
+            "name": "4WeeksGap",
+            "pathId": "12d411e19a83aad3c2e6324738dc4087",
+            "path": "FTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [
+            "$.supportingInformation.history[@._id=='6bb90000-dca5-dec9-4211-08dd2ef02f17'].pages[0].lines[@.metadata.id=='e488734a-ab0c-4cfe-a1af-874f1f6874bd']"
+          ],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "reasonCode",
+              "type": "String",
+              "value": "4WEEKS_GAP_FLAG"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "be4d8e14-587f-475d-9f99-30e1d5b79e1d",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "BM_ICD_FLAG",
+          "message": "The Diagnosis code may not be causally related to the loss. Review records to determine if the diagnosis was causally related to the loss.",
+          "rule": {
+            "_id": "18f715ebbc6b8504ea3fc8f121d57f93",
+            "name": "class2Or3IcdBm",
+            "pathId": "29c5586b9267a60b0a3b10160b2c5c10",
+            "path": "FTTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "ba115df4-fb3c-4348-8d67-1af7213bf911",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "BUNDLER_debitRuleSuppFlagGlobalFac",
+          "message": "A global procedure was billed.",
+          "rule": {
+            "_id": "90a13b1587bfb1fbadcf78ab96a89a81",
+            "name": "bundlerDebitRuleSuppFlagGlobalFac",
+            "pathId": "c5c4b046569a384a274f08755fd090c6",
+            "path": "TTTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "0411b260-ad94-48df-b0e1-36ee2723c12c",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "CLAIM_TYPE_FLAG",
+          "message": "Refer to the supporting information for the coverage type assigned to the claim on this bill",
+          "rule": {
+            "_id": "3b94aefa6e3e5a6fd8099787f9d9a24e",
+            "name": "claimTypeSuppFlag",
+            "pathId": "04e59c5fe2657b7f33c067264a311f7f",
+            "path": "FTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NULL"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "1b3ad288-eab6-4458-918f-d74812ccb556",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "Consecutive_Days_Same_Treatment_Flag",
+          "message": "Identical CPT codes were rendered on consecutive days. Please review to make sure the procedures were medically necessary.",
+          "rule": {
+            "_id": "9fa49bc37c684b8a1f5a1f176975c845",
+            "name": "consecutiveDaysSameTx",
+            "pathId": "64174752a5278131b7b107b630637879",
+            "path": "FTTTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [
+            "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']"
+          ],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "435fadea-5724-4fcf-b759-1b7b53ff1e42",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "DENTIST_FLAG",
+          "message": "Dental procedure was performed. Professional nurse review may be appropriate. Submit to nurse review.",
+          "rule": {
+            "_id": "0cc29039e3c8123d53e20e3bc272f576",
+            "name": "dentalProcedure",
+            "pathId": "e38ed78ea9e932ce636c0ff54c3b68dd",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "22a7860c-2bd1-4e40-8652-3daa92767f20",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "Dental_Flag",
+          "message": "A Dental procedure was presented on this claim. Consideration should be given for referral to the Nationwide Medical Support Unit.",
+          "rule": {
+            "_id": "af13f9e32ec41211965149accef91a7f",
+            "name": "dentalCodes",
+            "pathId": "c123f5ed814ac8b8cd0e25e301dcc01a",
+            "path": "FTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "83359be4-3239-40bb-90e4-0df6b4a81e48",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "MI_POLICY_STATE_FLAG",
+          "message": "The bill is marked Policy State Michigan but not Treatment State Michigan, please review.",
+          "rule": {
+            "_id": "982d9274911242a80382736156be0829",
+            "name": "miPolicyNotMiTx",
+            "pathId": "a904cfdc35f49bda1b58ec207439500b",
+            "path": "TTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "ADJ"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "027b491b-fe97-411e-ab1f-86fbdaa447d8",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "NON_UM_CLAIM_TYPE_FLAG",
+          "message": "This is not a UM claim",
+          "rule": {
+            "_id": "15dac0eb3a764358692d4c0018c7eaae",
+            "name": "nonUmClaimTypeSuppFlag",
+            "pathId": "969fb52cc17f0af2ea0ab97d28978402",
+            "path": "TT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "policyCoverageType",
+              "type": "String",
+              "value": "PIP"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "0776c2b5-52b4-46e8-82c4-cec3cb4a0df5",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "bluefireMedicareExclusionFlag",
+          "message": "A bill with treatment state other than Texas was received.",
+          "rule": {
+            "_id": "4d293ecaa5d371188b968d9dc118e094",
+            "name": "bluefireMedicareExclusionFlag",
+            "pathId": "6fc31bc0b650143ad36f711500e014b4",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "295875b5-ecb4-4e70-8836-62d9bc05570b",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "covidTestingSuppFlag",
+          "message": "A non-COVID-19 Testing procedure code was billed.",
+          "rule": {
+            "_id": "3fdfab61106923cda8f4288cc34a2193",
+            "name": "covidTestingSuppFlag",
+            "pathId": "00d1d5d3950d1b2e243d1ad73234807d",
+            "path": "FTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "e3f951d0-7f32-4d5f-b297-bd3f58689cb7",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "flWithoutFeeScheduleSuppFlag",
+          "message": "Florida policy with fee schedule is not selected.",
+          "rule": {
+            "_id": "0b77cf39d686b5034479212229d6ac6f",
+            "name": "flWithoutFeeScheduleSuppFlag",
+            "pathId": "ab9cef68b916e642a6e69299c6036660",
+            "path": "T"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "3efebd1b-da60-4109-8f4b-a43433d80a94",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "hmNonUcrPolicyState",
+          "message": "Policy State is not CT, DC, IL, KS, MD, NC, ND, OR, SD, TX, UT, VA, WA",
+          "rule": {
+            "_id": "92090ee325f90fb593d28ad974c01508",
+            "name": "hmNonUcrPolicyState",
+            "pathId": "9ae4f28e7b55bbec01fec26fdd55e11a",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "80804a6a-c9f2-4c31-97a5-6266989efe0f",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "ipOpErFacBill",
+          "message": "This is an Inpatient, Outpatient or Emergency Room facility bill.",
+          "rule": {
+            "_id": "10a915c3b1869df1f70b33f262e21e4d",
+            "name": "ipOpErFacBill",
+            "pathId": "76878ffa48b0fd1ed2558e00479a1c5d",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "ddbf733c-17ac-4b63-9bd4-c41e29bdcfe6",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "modTc26SuppFlag",
+          "message": "Procedure code was billed with modifier TC and/or 26.",
+          "rule": {
+            "_id": "0cd18be28717cfe90e3536270c929b39",
+            "name": "modTc26SuppFlag",
+            "pathId": "896185936cd87725a92a76beb7b71e20",
+            "path": "FTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "93ae597a-da33-4d28-b2dd-74ebec8e629c",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "ncciPractitionerFirst",
+          "message": "NCCI Practitioner may apply to this bill.",
+          "rule": {
+            "_id": "2be74aadd98d4b44ca6ffa83e3e61840",
+            "name": "ncciSuppFlagFirstLevel",
+            "pathId": "9763c47be488829ada0cfcc520b950ba",
+            "path": "TTTTF"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "modifiers",
+              "type": "Strings",
+              "value": "[\n  \"TC\",\n  \"26\"\n]"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "71d1119c-7dcb-4fdc-905e-0a7a78060888",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "nonMiTreatmentState",
+          "message": "The treatment state is not MI.",
+          "rule": {
+            "_id": "f5648bfcd0fdb1788ccd534a99e6143e",
+            "name": "nonMiTreatmentState",
+            "pathId": "b34f200ee8724ad9d08633e025e3ed2d",
+            "path": "TT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "d6e60349-1a66-4ce7-9d7e-2ce7f59830fa",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "nonNjTreatmentOrPolicyState",
+          "message": "The treatment or policy state is not NJ.",
+          "rule": {
+            "_id": "4c9a07f0ca46db2033e8a400e6cab473",
+            "name": "nonNjTreatmentOrPolicyState",
+            "pathId": "68c345e1b8f8865c1cb2e33407360722",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "e5148818-bd0b-424e-9f5e-b69450fc00ef",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "notFlKyLaMnNyDeVt",
+          "message": "Treatment state is FL, KY, LA, MN, NY, DE, or VT.",
+          "rule": {
+            "_id": "eeea64687201460d9669f7bd77842c83",
+            "name": "notFlKyLaMnNyDeVt",
+            "pathId": "8243dd54a2542bc0b0b7cfe8de89955f",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "251a13a9-32ad-4148-9721-4e95fc732cf8",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "treatmentNotFlorida",
+          "message": "Treatment state is not Florida",
+          "rule": {
+            "_id": "6825266175238d68b23e578f52b706c6",
+            "name": "treatmentNotFlorida",
+            "pathId": "11e5c7516784476b005e07c839e4cc77",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "cb35bf84-307a-4a84-9673-06fc3d7cfd99",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "treatmentStateFlKyVtNy",
+          "message": "Treatment state is Florida, Kentucky, Vermont, or New York.",
+          "rule": {
+            "_id": "ceb5aa0b215798a1f67692810d27b1dd",
+            "name": "treatmentStateFlKyVtNy",
+            "pathId": "6832d06380b5f011f3a3bd531ce7b78a",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "b0e9df49-eb26-4663-a993-9611f582cfb9",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']",
+          "reasonCode": "treatmentStateNotNjFlag",
+          "message": "The treatment state billed is not New Jersey",
+          "rule": {
+            "_id": "ac687230ee2cc1927f2c44766f17bb53",
+            "name": "treatmentStateNotNjFlag",
+            "pathId": "3f8cd028b7fcb849f73da630a5ce8a7c",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      }
+    ],
+    "appliedFlag": "class2Or3IcdBm_FTTTTT",
+    "evaluator": [
+      {
+        "recommendationId": "2d1348a0-a0e5-4f78-8c92-3a657c1fd4e0",
+        "type": "Reimburse",
+        "targetReference": "$.RecommendationSet[@._id=='0b2a0000-447a-46fd-ee5d-08dd2ef03112'].recommendation[@._id=='fa189748-ba20-43ed-9d24-81a9b1841aa0']",
+        "reasonCode": null,
+        "supportingValues": [],
+        "id": "fa189748-ba20-43ed-9d24-81a9b1841aa0",
+        "values": [],
+        "reimburse": ""
+      }
+    ],
+    "fireFlagRule": "3mNyInpatient,3MonthGap,4WeeksGap,class2Or3IcdBm,bundlerDebitRuleSuppFlagGlobalFac,claimTypeSuppFlag,consecutiveDaysSameTx,dentalProcedure,dentalCodes,miPolicyNotMiTx,nonUmClaimTypeSuppFlag,bluefireMedicareExclusionFlag,covidTestingSuppFlag,flWithoutFeeScheduleSuppFlag,hmNonUcrPolicyState,ipOpErFacBill,modTc26SuppFlag,ncciSuppFlagFirstLevel,nonMiTreatmentState,nonNjTreatmentOrPolicyState,notFlKyLaMnNyDeVt,treatmentNotFlorida,treatmentStateFlKyVtNy,treatmentStateNotNjFlag",
+    "firedChangeRule": "",
+    "firedReimburseRule": "billedAmount,nyDental",
+    "firedDenyRule": "",
+    "clientConfigDenailByPriority": "",
+    "bundlerRuleName": "",
+    "lineReimburse": "62.5",
+    "lineRc": "FS_NY",
+    "lineRuleName": "nyDental_TTTTTTTTTTTF",
+    "lineRcOverride": "",
+    "lineReimburseOverride": "",
+    "primaryDeny": "",
+    "evaluatorOverride": true,
+    "bundlerReimburse": "",
+    "bundlerRc": "",
+    "finalReimburse": "62.5",
+    "finalRc": "FS_NY"
+  },
+  {
+    "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16",
+    "createTime": "2025-01-07T07:52:07.3560129+00:00",
+    "completedTime": "2025-01-07T07:52:13.835+00:00",
+    "requestComplete": true,
+    "clientCode": "kentuckyNat",
+    "billId": "6bb90000-dca5-dec9-411f-08dd2ef02f4d",
+    "correlationId": "8f0aa572-53a4-4708-b83d-a57b2bcc98cb",
+    "packageId": null,
+    "docId": "KN1412069",
+    "formType": "http://cccis.com/casualty/v5.1.0/ub04.schema.json",
+    "lineId": "ef7ce5bd-cb29-429c-be00-1c27316063fb",
+    "displayLineNo": "2",
+    "appliedRecommendations": [
+      {
+        "recommendationId": "971caeeb-7da2-4c2b-9b01-5274d2122752",
+        "type": "Reimburse",
+        "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+        "reasonCode": "FS_NY",
+        "supportingValues": [
+          {
+            "key": "codeCategory",
+            "type": "String",
+            "value": "Medical"
+          },
+          {
+            "key": "dataSource",
+            "type": "String",
+            "value": "FS.NY"
+          },
+          {
+            "key": "dateOfService",
+            "type": "Date",
+            "value": "2024-12-03"
+          },
+          {
+            "key": "discountType",
+            "type": "String",
+            "value": "FS"
+          },
+          {
+            "key": "factor",
+            "type": "Number",
+            "value": 1.0
+          },
+          {
+            "key": "fee",
+            "type": "Money",
+            "value": 62.5
+          },
+          {
+            "key": "procCode",
+            "type": "String",
+            "value": "D0140"
+          },
+          {
+            "key": "providerName",
+            "type": "String",
+            "value": "A PROVIDER IN NY"
+          },
+          {
+            "key": "providerSpecialty",
+            "type": "String",
+            "value": "Oral Surgery (Dentists only)"
+          },
+          {
+            "key": "providerTaxCode",
+            "type": "String",
+            "value": "66-5666994"
+          },
+          {
+            "key": "revCode",
+            "type": "String",
+            "value": "320"
+          },
+          {
+            "key": "rvu",
+            "type": "Number",
+            "value": 62.5
+          },
+          {
+            "key": "units",
+            "type": "Number",
+            "value": 2.0
+          }
+        ],
+        "dependsOn": [],
+        "ruleName": "nyDental_TTTTTTTTTF",
+        "reimburse": "125"
+      },
+      {
+        "recommendationId": "520d2040-9ef6-4d60-9ae1-4c64b390f323",
+        "type": "Flag",
+        "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+        "reasonCode": "BM_ICD_FLAG",
+        "supportingValues": [
+          {
+            "key": "dateOfService",
+            "type": "Date",
+            "value": "2024-12-03"
+          },
+          {
+            "key": "flagType",
+            "type": "String",
+            "value": "NR"
+          },
+          {
+            "key": "procCode",
+            "type": "String",
+            "value": "D0140"
+          },
+          {
+            "key": "providerName",
+            "type": "String",
+            "value": "A PROVIDER IN NY"
+          },
+          {
+            "key": "providerSpecialty",
+            "type": "String",
+            "value": "Oral Surgery (Dentists only)"
+          },
+          {
+            "key": "providerTaxCode",
+            "type": "String",
+            "value": "66-5666994"
+          },
+          {
+            "key": "revCode",
+            "type": "String",
+            "value": "320"
+          }
+        ],
+        "dependsOn": [],
+        "ruleName": "class2Or3IcdBm_FTTTTT",
+        "reimburse": ""
+      }
+    ],
+    "bundlerRecommendation": "",
+    "dreRecommendationAvailable": [
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "14c6ec7a-912e-408f-8cf7-6cc8ef0cda55",
+          "type": "Reimburse",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "BA",
+          "message": "Billed Amount",
+          "rule": {
+            "_id": "c8a13742b84ba15278c155bb56e737d7",
+            "name": "billedAmount",
+            "pathId": "049752f0b73dc4b5c8603b039f954635",
+            "path": "FTT"
+          },
+          "values": [
+            {
+              "pathReference": null,
+              "key": "reimbursement",
+              "type": "Money",
+              "value": 500.0
+            }
+          ],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "charges",
+              "type": "Money",
+              "value": 500.0
+            },
+            {
+              "key": "codeCategory",
+              "type": "String",
+              "value": "Medical"
+            },
+            {
+              "key": "dataSource",
+              "type": "String",
+              "value": "BA.DEFAULT"
+            },
+            {
+              "key": "dataSourceSubCategory",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "discountType",
+              "type": "String",
+              "value": "BA"
+            },
+            {
+              "key": "fee",
+              "type": "Money",
+              "value": 250.0
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            },
+            {
+              "key": "units",
+              "type": "Number",
+              "value": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "971caeeb-7da2-4c2b-9b01-5274d2122752",
+          "type": "Reimburse",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "FS_NY",
+          "message": "Reimbursed at $125.00",
+          "rule": {
+            "_id": "cebd423a41bd8caced3e628c1466b7cc",
+            "name": "nyDental",
+            "pathId": "4ffa7b116c2e56a8a6d76b9d763ff4f1",
+            "path": "TTTTTTTTTF"
+          },
+          "values": [
+            {
+              "pathReference": null,
+              "key": "reimbursement",
+              "type": "Money",
+              "value": 125.0
+            }
+          ],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "codeCategory",
+              "type": "String",
+              "value": "Medical"
+            },
+            {
+              "key": "dataSource",
+              "type": "String",
+              "value": "FS.NY"
+            },
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "discountType",
+              "type": "String",
+              "value": "FS"
+            },
+            {
+              "key": "factor",
+              "type": "Number",
+              "value": 1.0
+            },
+            {
+              "key": "fee",
+              "type": "Money",
+              "value": 62.5
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            },
+            {
+              "key": "rvu",
+              "type": "Number",
+              "value": 62.5
+            },
+            {
+              "key": "units",
+              "type": "Number",
+              "value": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "f0b566ab-228a-4788-a4ba-ec09386daa9b",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "3M_NY_INPATIENT",
+          "message": "This bill is eligible to send to 3M.",
+          "rule": {
+            "_id": "f3b67bd0322bb53ddd10231d1e760cfd",
+            "name": "3mNyInpatient",
+            "pathId": "9e7d26da081bfa9d1044cf72c291eaf6",
+            "path": "TTTTTTTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "allowReimburseGreaterThanCharge",
+              "type": "String",
+              "value": "TRUE"
+            },
+            {
+              "key": "dataSource",
+              "type": "String",
+              "value": "3M.NY.DRG"
+            },
+            {
+              "key": "defaultIfBlank.admittingDx",
+              "type": "String",
+              "value": "A31.8"
+            },
+            {
+              "key": "defaultIfBlank.dischargeStatus",
+              "type": "String",
+              "value": "01"
+            },
+            {
+              "key": "defaultIfBlank.dx67.code",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "defaultIfBlank.dxCodes.presentOnAdmission",
+              "type": "String",
+              "value": "Y"
+            },
+            {
+              "key": "defaultIfBlank.dxQualifier",
+              "type": "String",
+              "value": "0"
+            },
+            {
+              "key": "defaultIfBlank.icdCodes.poaIndicator",
+              "type": "String",
+              "value": "Y"
+            },
+            {
+              "key": "defaultIfBlank.icdIndicator",
+              "type": "String",
+              "value": "0"
+            },
+            {
+              "key": "defaultIfBlank.patientSex",
+              "type": "String",
+              "value": "U"
+            },
+            {
+              "key": "defaultifBlank.typeOfBill",
+              "type": "String",
+              "value": "0111"
+            },
+            {
+              "key": "fee",
+              "type": "String",
+              "value": "<totalPayment>"
+            },
+            {
+              "key": "message",
+              "type": "String",
+              "value": "Reimbursement is calculated based on New York Workers Compensation Inpatient Case Rates for this facility."
+            },
+            {
+              "key": "mmmInput.birthWeightOption",
+              "type": "String",
+              "value": "7"
+            },
+            {
+              "key": "mmmInput.grouperType",
+              "type": "String",
+              "value": "NY_APR"
+            },
+            {
+              "key": "mmmInput.payerFlag",
+              "type": "String",
+              "value": "4"
+            },
+            {
+              "key": "mmmInput.paymentPortionType",
+              "type": "String",
+              "value": "APR_WITH_SURCHARGE_WITH_DIRECT_PAYMENT_TO_POOL"
+            },
+            {
+              "key": "mmmInput.reorder",
+              "type": "String",
+              "value": "0"
+            },
+            {
+              "key": "mmmInput.scheduleType",
+              "type": "String",
+              "value": "NYIPT"
+            },
+            {
+              "key": "mmmOutput.alternateLevelOfCarePayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.costOutlierPayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.drg",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.drgBasePayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.paymentStatus",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.returnCode",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.soi",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.surchargePayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.totalOperatingPayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmmOutput.totalPayment",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "mmminput.hospitalType",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "npi",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerTaxId",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "reasonCode",
+              "type": "String",
+              "value": "NY_INP"
+            },
+            {
+              "key": "reimbursementFormula",
+              "type": "String",
+              "value": "<totalPayment>"
+            },
+            {
+              "key": "requiredProviderInput1.providerTaxId+tinSuffix",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "requiredProviderInput2.providerTaxId",
+              "type": "String",
+              "value": ""
+            },
+            {
+              "key": "statementCoversPeriod.from",
+              "type": "Date",
+              "value": "2024-12-02"
+            },
+            {
+              "key": "statementCoversPeriod.through",
+              "type": "Date",
+              "value": "2024-12-06"
+            },
+            {
+              "key": "tinSuffix",
+              "type": "String",
+              "value": ""
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "520d2040-9ef6-4d60-9ae1-4c64b390f323",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "BM_ICD_FLAG",
+          "message": "The Diagnosis code may not be causally related to the loss. Review records to determine if the diagnosis was causally related to the loss.",
+          "rule": {
+            "_id": "18f715ebbc6b8504ea3fc8f121d57f93",
+            "name": "class2Or3IcdBm",
+            "pathId": "29c5586b9267a60b0a3b10160b2c5c10",
+            "path": "FTTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "9d99b62e-9cc8-497c-a997-f8f546d2e005",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "BUNDLER_debitRuleSuppFlagGlobalFac",
+          "message": "A global procedure was billed.",
+          "rule": {
+            "_id": "90a13b1587bfb1fbadcf78ab96a89a81",
+            "name": "bundlerDebitRuleSuppFlagGlobalFac",
+            "pathId": "bd0fbc39c1d078cc9cf5e36d52a0bb8d",
+            "path": "TTTTF"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "562e589c-71d9-4a28-9184-f7b581acc16e",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "CLAIM_TYPE_FLAG",
+          "message": "Refer to the supporting information for the coverage type assigned to the claim on this bill",
+          "rule": {
+            "_id": "3b94aefa6e3e5a6fd8099787f9d9a24e",
+            "name": "claimTypeSuppFlag",
+            "pathId": "04e59c5fe2657b7f33c067264a311f7f",
+            "path": "FTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NULL"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "ba18891c-dfc9-486d-8661-17a232b72ffc",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "Consecutive_Days_Same_Treatment_Flag",
+          "message": "Identical CPT codes were rendered on consecutive days. Please review to make sure the procedures were medically necessary.",
+          "rule": {
+            "_id": "9fa49bc37c684b8a1f5a1f176975c845",
+            "name": "consecutiveDaysSameTx",
+            "pathId": "64174752a5278131b7b107b630637879",
+            "path": "FTTTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [
+            "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='4c7687b8-3863-4fa5-a452-799859ebb5c3']",
+            "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='59603ca3-7607-4271-a2ab-8ffdf47cbd4e']"
+          ],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "5e1921a9-0a0e-4312-b764-9d4f9fd085c3",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "DENTIST_FLAG",
+          "message": "Dental procedure was performed. Professional nurse review may be appropriate. Submit to nurse review.",
+          "rule": {
+            "_id": "0cc29039e3c8123d53e20e3bc272f576",
+            "name": "dentalProcedure",
+            "pathId": "e38ed78ea9e932ce636c0ff54c3b68dd",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "16bde903-8db0-4a79-a3fa-6a0416eeb5d3",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "Dental_Flag",
+          "message": "A Dental procedure was presented on this claim. Consideration should be given for referral to the Nationwide Medical Support Unit.",
+          "rule": {
+            "_id": "af13f9e32ec41211965149accef91a7f",
+            "name": "dentalCodes",
+            "pathId": "c123f5ed814ac8b8cd0e25e301dcc01a",
+            "path": "FTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "NR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "9d28b2b0-67da-458b-a161-f90055a1c0ef",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "MI_POLICY_STATE_FLAG",
+          "message": "The bill is marked Policy State Michigan but not Treatment State Michigan, please review.",
+          "rule": {
+            "_id": "982d9274911242a80382736156be0829",
+            "name": "miPolicyNotMiTx",
+            "pathId": "a904cfdc35f49bda1b58ec207439500b",
+            "path": "TTTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "ADJ"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "e59ddd1e-c2b0-4942-9554-300fdda3ee38",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "NON_UM_CLAIM_TYPE_FLAG",
+          "message": "This is not a UM claim",
+          "rule": {
+            "_id": "15dac0eb3a764358692d4c0018c7eaae",
+            "name": "nonUmClaimTypeSuppFlag",
+            "pathId": "969fb52cc17f0af2ea0ab97d28978402",
+            "path": "TT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "policyCoverageType",
+              "type": "String",
+              "value": "PIP"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "a9b853db-3eb8-4fd3-99f4-d7968705e0b9",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "bluefireMedicareExclusionFlag",
+          "message": "A bill with treatment state other than Texas was received.",
+          "rule": {
+            "_id": "4d293ecaa5d371188b968d9dc118e094",
+            "name": "bluefireMedicareExclusionFlag",
+            "pathId": "6fc31bc0b650143ad36f711500e014b4",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "93e135aa-5d27-4df9-ad48-0677fab68733",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "covidTestingSuppFlag",
+          "message": "A non-COVID-19 Testing procedure code was billed.",
+          "rule": {
+            "_id": "3fdfab61106923cda8f4288cc34a2193",
+            "name": "covidTestingSuppFlag",
+            "pathId": "00d1d5d3950d1b2e243d1ad73234807d",
+            "path": "FTTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "52930646-7609-4a0f-9099-e23d00c2d9e6",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "flWithoutFeeScheduleSuppFlag",
+          "message": "Florida policy with fee schedule is not selected.",
+          "rule": {
+            "_id": "0b77cf39d686b5034479212229d6ac6f",
+            "name": "flWithoutFeeScheduleSuppFlag",
+            "pathId": "ab9cef68b916e642a6e69299c6036660",
+            "path": "T"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "f4fe0e18-5289-4705-b3c9-820329b89a59",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "hmNonUcrPolicyState",
+          "message": "Policy State is not CT, DC, IL, KS, MD, NC, ND, OR, SD, TX, UT, VA, WA",
+          "rule": {
+            "_id": "92090ee325f90fb593d28ad974c01508",
+            "name": "hmNonUcrPolicyState",
+            "pathId": "9ae4f28e7b55bbec01fec26fdd55e11a",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "76612b19-aac0-4dcb-96fd-d5ce0bc5b75a",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "ipOpErFacBill",
+          "message": "This is an Inpatient, Outpatient or Emergency Room facility bill.",
+          "rule": {
+            "_id": "10a915c3b1869df1f70b33f262e21e4d",
+            "name": "ipOpErFacBill",
+            "pathId": "76878ffa48b0fd1ed2558e00479a1c5d",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "0fafa4a5-ad6d-4017-af5d-75c2e913f773",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "ncciPractitionerFirst",
+          "message": "NCCI Practitioner may apply to this bill.",
+          "rule": {
+            "_id": "2be74aadd98d4b44ca6ffa83e3e61840",
+            "name": "ncciSuppFlagFirstLevel",
+            "pathId": "9763c47be488829ada0cfcc520b950ba",
+            "path": "TTTTF"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "48973f39-2ce6-4630-b3a5-a2c31b69e358",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "nonMiTreatmentState",
+          "message": "The treatment state is not MI.",
+          "rule": {
+            "_id": "f5648bfcd0fdb1788ccd534a99e6143e",
+            "name": "nonMiTreatmentState",
+            "pathId": "b34f200ee8724ad9d08633e025e3ed2d",
+            "path": "TT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "34ad71c4-c4fa-40b7-9de3-b7c81893c687",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "nonNjTreatmentOrPolicyState",
+          "message": "The treatment or policy state is not NJ.",
+          "rule": {
+            "_id": "4c9a07f0ca46db2033e8a400e6cab473",
+            "name": "nonNjTreatmentOrPolicyState",
+            "pathId": "68c345e1b8f8865c1cb2e33407360722",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "7ef3bb1f-77da-4d2d-9f94-34c9bf7860f6",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "notFlKyLaMnNyDeVt",
+          "message": "Treatment state is FL, KY, LA, MN, NY, DE, or VT.",
+          "rule": {
+            "_id": "eeea64687201460d9669f7bd77842c83",
+            "name": "notFlKyLaMnNyDeVt",
+            "pathId": "8243dd54a2542bc0b0b7cfe8de89955f",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "8320a601-37f2-495b-ad02-18c8c9bdbcb7",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "treatmentNotFlorida",
+          "message": "Treatment state is not Florida",
+          "rule": {
+            "_id": "6825266175238d68b23e578f52b706c6",
+            "name": "treatmentNotFlorida",
+            "pathId": "11e5c7516784476b005e07c839e4cc77",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "39b2615f-b164-4584-9498-4af7d15856a5",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "treatmentStateFlKyVtNy",
+          "message": "Treatment state is Florida, Kentucky, Vermont, or New York.",
+          "rule": {
+            "_id": "ceb5aa0b215798a1f67692810d27b1dd",
+            "name": "treatmentStateFlKyVtNy",
+            "pathId": "6832d06380b5f011f3a3bd531ce7b78a",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      },
+      {
+        "_id": "0b2a0000-447a-46fd-ee5d-08dd2ef03112",
+        "metadata": {
+          "userId": "DRE",
+          "category": "DreRecommendation",
+          "requestId": "6bb90000-dca5-dec9-9032-08dd2ef02f16"
+        },
+        "recommendations": {
+          "_id": "00806197-0d19-4033-b345-ce80753a44b6",
+          "type": "Flag",
+          "targetReference": "$.bills[@._id=='6bb90000-dca5-dec9-411f-08dd2ef02f4d'].pages[0].lines[@.metadata.id=='ef7ce5bd-cb29-429c-be00-1c27316063fb']",
+          "reasonCode": "treatmentStateNotNjFlag",
+          "message": "The treatment state billed is not New Jersey",
+          "rule": {
+            "_id": "ac687230ee2cc1927f2c44766f17bb53",
+            "name": "treatmentStateNotNjFlag",
+            "pathId": "3f8cd028b7fcb849f73da630a5ce8a7c",
+            "path": "TTT"
+          },
+          "values": [],
+          "scale": 0,
+          "dependsOn": [],
+          "replaces": [],
+          "supportingValues": [
+            {
+              "key": "dateOfService",
+              "type": "Date",
+              "value": "2024-12-03"
+            },
+            {
+              "key": "flagType",
+              "type": "String",
+              "value": "SR"
+            },
+            {
+              "key": "procCode",
+              "type": "String",
+              "value": "D0140"
+            },
+            {
+              "key": "providerName",
+              "type": "String",
+              "value": "A PROVIDER IN NY"
+            },
+            {
+              "key": "providerSpecialty",
+              "type": "String",
+              "value": "Oral Surgery (Dentists only)"
+            },
+            {
+              "key": "providerTaxCode",
+              "type": "String",
+              "value": "66-5666994"
+            },
+            {
+              "key": "revCode",
+              "type": "String",
+              "value": "320"
+            }
+          ]
+        }
+      }
+    ],
+    "appliedFlag": "class2Or3IcdBm_FTTTTT",
+    "evaluator": [
+      {
+        "recommendationId": "1ef0f83f-7e3b-473e-8e49-c91613cb3bc3",
+        "type": "Reimburse",
+        "targetReference": "$.RecommendationSet[@._id=='0b2a0000-447a-46fd-ee5d-08dd2ef03112'].recommendation[@._id=='971caeeb-7da2-4c2b-9b01-5274d2122752']",
+        "reasonCode": null,
+        "supportingValues": [],
+        "id": "971caeeb-7da2-4c2b-9b01-5274d2122752",
+        "values": [],
+        "reimburse": ""
+      }
+    ],
+    "fireFlagRule": "3mNyInpatient,class2Or3IcdBm,bundlerDebitRuleSuppFlagGlobalFac,claimTypeSuppFlag,consecutiveDaysSameTx,dentalProcedure,dentalCodes,miPolicyNotMiTx,nonUmClaimTypeSuppFlag,bluefireMedicareExclusionFlag,covidTestingSuppFlag,flWithoutFeeScheduleSuppFlag,hmNonUcrPolicyState,ipOpErFacBill,ncciSuppFlagFirstLevel,nonMiTreatmentState,nonNjTreatmentOrPolicyState,notFlKyLaMnNyDeVt,treatmentNotFlorida,treatmentStateFlKyVtNy,treatmentStateNotNjFlag",
+    "firedChangeRule": "",
+    "firedReimburseRule": "billedAmount,nyDental",
+    "firedDenyRule": "",
+    "clientConfigDenailByPriority": "",
+    "bundlerRuleName": "",
+    "lineReimburse": "125",
+    "lineRc": "FS_NY",
+    "lineRuleName": "nyDental_TTTTTTTTTF",
+    "lineRcOverride": "",
+    "lineReimburseOverride": "",
+    "primaryDeny": "",
+    "evaluatorOverride": true,
+    "bundlerReimburse": "",
+    "bundlerRc": "",
+    "finalReimburse": "125",
+    "finalRc": "FS_NY"
+  }
+]

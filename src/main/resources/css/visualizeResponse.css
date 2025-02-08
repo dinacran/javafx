@@ -1,0 +1,215 @@
+.root{    
+    /* -fx-font-family:  monospace; */
+    -fx-font-size: 16;
+
+}
+
+#inputHeader{
+    -fx-padding: 10;
+    padding: 10;
+    -fx-font-family: 'Courier New', monospace;
+
+}
+
+.input{
+    -fx-pref-width: 300px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #1e1e1ed7;
+    -fx-text-fill: rgb(116, 116, 116);
+    -fx-prompt-text-fill: rgb(116, 116, 116);
+    border-color: #5c5c5c;
+    -fx-border-color: #5c5c5c;
+    -fx-border-width: 1;
+    border-width: 1;
+    border-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+#comboBox{
+    -fx-pref-height: 40px;
+    -fx-background-color: #1e1e1ed7;
+     border-color: #5c5c5c;
+    -fx-border-color: #5c5c5c;
+    -fx-border-width: 1;
+    border-width: 1;
+    border-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.arrow-button{
+    -fx-background-color: #1e1e1ed7;
+
+}
+
+.combo-box .text-field {
+    -fx-prompt-text-fill: gray;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: rgb(181, 181, 181);
+    -fx-background-color: #000000d7;
+}
+
+.combo-box .list-cell:selected {
+    -fx-text-fill: white;
+    -fx-background-color: #4377cb; 
+}
+
+.combo-box-popup {
+    -fx-background-color: #000000d7;
+    -fx-border-color: #3c3c3c;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+.combo-box .list{
+    -fx-background-color: #1e1e1ed7;
+    -fx-border-color: #5c5c5c;
+    -fx-border-width: 1;
+    border-width: 1;
+    border-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+
+#fetchButton{
+    -fx-pref-height: 38px;
+    -fx-background-color: #4377cb;
+    -fx-text-fill: white;
+    -fx-border-color: #4377cb;
+    -fx-border-width: 1;
+    border-width: 1;
+    border-radius: 4;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.radio-container {
+    -fx-border-color: #7a7a7a96;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-padding: 2px;
+    -fx-display: inline-flex; 
+    -fx-max-height: 30px;
+}
+
+.custom-radio-button {
+    -fx-padding: 7px;
+    -fx-background-color: transparent; 
+    -fx-cursor: pointer;
+    -fx-border-radius: 2px; 
+    -fx-background-radius: 2px;
+    -fx-text-fill: #5c5c5c; 
+}
+
+.custom-radio-button:selected {
+    -fx-background-color: #7a7a7a96;
+    -fx-text-fill: white;
+}
+
+.custom-radio-button .radio-button {
+    -fx-opacity: 0; 
+    -fx-max-height: 30;
+}
+
+.custom-radio-button:selected .radio-button {
+    -fx-opacity: 0;
+    -fx-max-height: 30;
+}
+
+.stack-pane {
+    -fx-opacity: 0;
+    -fx-cursor: default;
+    -fx-focus-traversable: false;
+}
+
+.arrow-button{
+    -fx-background-color: #1e1e1ed7;    
+}
+
+
+
+.arrow-button .arrow{
+    -fx-shape: "M16 10L12 14L8 10";
+    -fx-stroke: #000000;
+    -fx-stroke-width: 0.672;
+    -fx-stroke-linecap: round;
+    -fx-stroke-linejoin: round;
+    -fx-stroke-linecap: round;
+    -fx-stroke-linejoin: round;
+    -fx-stroke-type: inside;
+    -fx-background-color: #6a6a6ad7;
+}
+
+.dot{
+    -fx-opacity: 0;
+}
+
+.radio{
+    -fx-preferred-height: 0; 
+    -fx-preferred-width: 0;
+    -fx-max-height: 0;
+    -fx-max-width: 0;
+    -fx-min-height: 0;
+    -fx-min-width: 0;
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+    -fx-opacity: 0;
+    -fx-cursor: default;
+    -fx-focus-traversable: false;
+}
+
+#dataContainer{
+    -fx-padding: 10;
+    -fx-font-family: 'Courier New', monospace;
+    -fx-text-fill: rgb(119, 119, 119);
+
+}
+
+.codeArea{
+    -fx-padding: 10;
+    -fx-font-size: 14;
+    -fx-background-color: #1e1e1ed7;
+    -fx-border-color: #5c5c5c;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-pref-height: 1000;
+
+}
+
+.codeArea .content{
+    -fx-background-color: #c1c1c1d7;
+}
+
+.codeArea .text{
+    -fx-font-size: 14;
+}
+
+.string {
+    -fx-fill: #CE9178;
+}
+
+.number {
+    -fx-fill: #16b887;
+}
+
+.boolean, .null, .keyword {
+    -fx-fill: #3273ffab; 
+}
+
+.brace, .comma, .colon {
+    -fx-fill: #9b9b9b;
+}
+
+.jsonKey {
+    -fx-fill: #51b7ee; 
+}
+
+.highlight {
+    -fx-fill: yellow;
+    -fx-background-color: black; 
+}

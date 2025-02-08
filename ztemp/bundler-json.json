@@ -1,0 +1,2339 @@
+{
+    "data": "bundler",
+    "arrayOfObjects":[{"key1": "value1", "key2": "value2"},{"key3": "value3", "key4": "value4"}],
+    "arrayOfIntegers": [1, 2, 3, 4, 5],
+    "schema": "http://cccis.com/casualty/v8.2.0/medical-bill-review-response.schema.json",
+    "metadata": {
+        "createdDateTime": "2024-10-17T06:12:17.0000824Z",
+        "userId": "DRE",
+        "category": "dreRecommendation",
+        "requestId": "e38e0000-b3b9-ca3b-82b4-08dcee9c8f1a",
+        "correlationId": "6620ced3-f44c-4c77-9eef-50d51724cec1",
+        "implementationVersion": "10.56.0-SNAPSHOT",
+        "mainClass": "org.springframework.boot.loader.JarLauncher",
+        "springBootLayersIndex": "BOOT-INF/layers.idx",
+        "manifestVersion": "1.0",
+        "springBootLib": "BOOT-INF/lib/",
+        "javaVersion": "11.0.3",
+        "implementationTitle": "api",
+        "buildNumber": "20241016.2",
+        "releaseId": "194379",
+        "excludedRules": [
+            "miPacBaseTest",
+            "miPacEnh1Test",
+            "miPacEnh2Test",
+            "miPacEnh3Test",
+            "miCdmBaseTest",
+            "miCdmEnh1Test",
+            "miCdmEnh2Test",
+            "miCdmEnh3Test",
+            "orPendForNewFeesFlag",
+            "flPendForNewFeesFlag",
+            "utPendForNewFeesFlag",
+            "bundlerChiroCapSuppFlag",
+            "approveNonTraumaBillFlag",
+            "nyPendForDmeFlag",
+            "paPendForNewFeesFlag",
+            "stpExclusion"
+        ],
+        "buildJdk": "11.0.24",
+        "artifactId": "com.ccc.casualty.dre:api:10.56.0-SNAPSHOT",
+        "startClass": "com.ccc.aisreview.casualty.engine.RulesEngineApplication",
+        "implementationVendorId": "com.ccc.casualty.dre",
+        "springBootClasses": "BOOT-INF/classes/",
+        "javaVersionDate": "2019-04-16",
+        "buildId": "194377",
+        "springBootClasspathIndex": "BOOT-INF/classpath.idx",
+        "dependencies": [
+            {
+                "type": "jar",
+                "groupId": "com.ccc.casualty.dre",
+                "artifactId": "model",
+                "version": "26.11.0"
+            },
+            {
+                "type": "jar",
+                "groupId": "com.ccc.casualty.dre",
+                "artifactId": "model-test",
+                "version": "26.11.0"
+            },
+            {
+                "type": "jar",
+                "groupId": "com.ccc.casualty.dre",
+                "artifactId": "service",
+                "version": "26.11.0"
+            },
+            {
+                "type": "jar",
+                "groupId": "com.ccc.casualty.drools.rules",
+                "artifactId": "drools-rules",
+                "version": "11.0.0-SNAPSHOT"
+            },
+            {
+                "type": "jar",
+                "groupId": "com.ccc.casualty.dre",
+                "artifactId": "service-test",
+                "version": "26.11.0"
+            },
+            {
+                "type": "jar",
+                "groupId": "com.ccc.casualty.dre.test",
+                "artifactId": "dre-assertions",
+                "version": "3.0.0"
+            },
+            {
+                "type": "jar",
+                "groupId": "com.ccc.casualty.dre",
+                "artifactId": "application-service",
+                "version": "10.56.0-SNAPSHOT"
+            }
+        ],
+        "dataVersions": [
+            {
+                "mavenGroupId": "com.cccis.data.reference.3M.3m-medicare-outpatient-providers.us",
+                "mavenArtifactId": "3m-medicare-outpatient-providers.raw",
+                "mavenVersionId": "1.10.0",
+                "tableName": "medicare_outpatient_providers",
+                "id": 805
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.3M.ais-client-config.3M-client-configuration-list.us",
+                "mavenArtifactId": "client-config-for-3m.raw",
+                "mavenVersionId": "1.0.1",
+                "tableName": "mmm_client_configuration",
+                "id": 91
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.3M.medicare-inpatient-providers.us",
+                "mavenArtifactId": "3m-medicare-inpatient-providers.transformed-dre",
+                "mavenVersionId": "1.11.0",
+                "tableName": "medicare_inpatient_transform",
+                "id": 867
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.2007-asc-fee-schedule.us",
+                "mavenArtifactId": "2007-asc-fee-schedule.raw",
+                "mavenVersionId": "1.0.4",
+                "tableName": "asc_fee_schedule_2007",
+                "id": 70
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.2007-asc-wage-index-fl.us",
+                "mavenArtifactId": "2007-asc-wage-index-fl.raw",
+                "mavenVersionId": "1.0.3",
+                "tableName": "asc_wage_index_2007",
+                "id": 71
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.add-on-primary-codes.us",
+                "mavenArtifactId": "add-on-primary-codes.transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "add_on_primary",
+                "id": 861
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.ambulance-fee-schedule.fl-pa",
+                "mavenArtifactId": "ambulance-fee-schedule.transformed-dre",
+                "mavenVersionId": "3.6.0",
+                "tableName": "ambulance_fee_schedule",
+                "id": 579
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.anesthesia-base.us",
+                "mavenArtifactId": "anesthesia-base.transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "anesthesia_basic_units",
+                "id": 24
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.anesthesia-conv.us",
+                "mavenArtifactId": "anesthesia-conv.transformed-dre",
+                "mavenVersionId": "2.3.0",
+                "tableName": "anesthesia_conversion_factor",
+                "id": 23
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.asc-fee-schedule-ee.us",
+                "mavenArtifactId": "asc-fee-schedule-ee.transform-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "asc_addenda_ee_data",
+                "id": 594
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.asc-fee-schedule.fl-pa",
+                "mavenArtifactId": "asc-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.27.0",
+                "tableName": "asc_fee_schedule",
+                "id": 873
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.asc-wage-index.fl-pa",
+                "mavenArtifactId": "asc-wage-index.transformed-dre",
+                "mavenVersionId": "4.3.0",
+                "tableName": "asc_wage_index",
+                "id": 525
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.asp-fee-schedule.us",
+                "mavenArtifactId": "asp-fee-schedule.transformed-dre",
+                "mavenVersionId": "5.14.1",
+                "tableName": "asp_fee_schedule",
+                "id": 258
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.asp-fee-schedule.us",
+                "mavenArtifactId": "asp-fee-schedule.transformed-dre",
+                "mavenVersionId": "5.21.0",
+                "tableName": "asp_fee_schedule_1",
+                "id": 686
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.asp-fee-schedule.us",
+                "mavenArtifactId": "asp-fee-schedule.transformed-dre",
+                "mavenVersionId": "5.28.0",
+                "tableName": "asp_fee_schedule_2",
+                "id": 891
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.cbsa.us",
+                "mavenArtifactId": "cbsa.transformed-dre",
+                "mavenVersionId": "2.11.0",
+                "tableName": "zip_to_cbsa_mapping",
+                "id": 892
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.clab-fee-schedule.us",
+                "mavenArtifactId": "clab-fee-schedule-pre-2018.transformed-dre",
+                "mavenVersionId": "1.0.0",
+                "tableName": "clinical_lab_fee_pre_2018",
+                "id": 33
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.clab-fee-schedule.us",
+                "mavenArtifactId": "clab-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.18.0",
+                "tableName": "clinical_lab_fee",
+                "id": 890
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.cms-hipps-codes.us",
+                "mavenArtifactId": "cms-hipps-codes.transformed-dre",
+                "mavenVersionId": "2.0.2",
+                "tableName": "cms_hipps_codes",
+                "id": 90
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.cms-opps-addendum-a-and-addendum-b.us",
+                "mavenArtifactId": "cms-outpatient-mpr.transformed-dre",
+                "mavenVersionId": "2.4.0",
+                "tableName": "cms_outpatient_mpr",
+                "id": 730
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.cms-opps-addendumb.us",
+                "mavenArtifactId": "cms-opps-addendumb.transformed-dre",
+                "mavenVersionId": "0.0.1",
+                "tableName": "cms_opps_addendumb",
+                "id": 274
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.cms-opps-addendumb.us",
+                "mavenArtifactId": "cms-opps-addendumb.transformed-dre",
+                "mavenVersionId": "1.13.0",
+                "tableName": "cms_opps_addendumb_2",
+                "id": 901
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.cms-rvu.us",
+                "mavenArtifactId": "cms-rvu.transformed-dre",
+                "mavenVersionId": "2.19.0",
+                "tableName": "cms_rvu",
+                "id": 852
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.cms-wage-index-by-cbsa.us",
+                "mavenArtifactId": "cms-wage-index-by-cbsa.transformed-dre",
+                "mavenVersionId": "1.4.0",
+                "tableName": "cms_wage_index_by_cbsa",
+                "id": 885
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.dmepos-fee-schedule.fl-pa",
+                "mavenArtifactId": "dmepos-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.16.0",
+                "tableName": "dmepos",
+                "id": 871
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.fl-asc-addendum-ee.fl",
+                "mavenArtifactId": "fl-asc-addendum-ee.transform-dre",
+                "mavenVersionId": "1.1.0",
+                "tableName": "fl_asc_addendum_ee_data",
+                "id": 662
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.fl-asc-fee-schedule.us",
+                "mavenArtifactId": "fl-asc-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.9.0",
+                "tableName": "fl_asc_fee_schedule",
+                "id": 661
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.fl-asc-wage-index.fl",
+                "mavenArtifactId": "fl-asc-wage-index.transformed-dre",
+                "mavenVersionId": "1.1.0",
+                "tableName": "fl_asc_wage_index",
+                "id": 663
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.gpci.us",
+                "mavenArtifactId": "cms-gpci-transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "cms_gpci",
+                "id": 580
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.medicare-config-by-client-by-state.us",
+                "mavenArtifactId": "medicare-config-by-client-by-state.raw",
+                "mavenVersionId": "1.30.0",
+                "tableName": "medicare_config_by_client_by_state",
+                "id": 897
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.mi-asc-addendum-ee.mi",
+                "mavenArtifactId": "mi-asc-addendum-ee.transform-dre",
+                "mavenVersionId": "1.1.0",
+                "tableName": "mi_asc_addendum_ee_data",
+                "id": 751
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.mi-asc-fee-schedule.us",
+                "mavenArtifactId": "mi-asc-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.10.0",
+                "tableName": "mi_asc_fee_schedule",
+                "id": 763
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.mi-asc-wage-index.mi",
+                "mavenArtifactId": "mi-asc-wage-index.transformed-dre",
+                "mavenVersionId": "1.2.0",
+                "tableName": "mi_asc_wage_index",
+                "id": 764
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.national-payment-amount.us",
+                "mavenArtifactId": "national-payment-amount.transformed-dre",
+                "mavenVersionId": "2.9.0",
+                "tableName": "national_payment_amount",
+                "id": 769
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.ncci-type-of-bills.us",
+                "mavenArtifactId": "ncci-type-of-bills.raw",
+                "mavenVersionId": "1.0.0",
+                "tableName": "ncci_type_of_bill",
+                "id": 101
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.ncci.us",
+                "mavenArtifactId": "ncci-hospital.transformed-dre",
+                "mavenVersionId": "3.14.0",
+                "tableName": "ncci_hospital",
+                "id": 854
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.ncci.us",
+                "mavenArtifactId": "ncci-modifiers.raw",
+                "mavenVersionId": "2.0.0",
+                "tableName": "ncci_modifiers",
+                "id": 674
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.ncci.us",
+                "mavenArtifactId": "ncci-practitioner.transformed-dre",
+                "mavenVersionId": "3.15.0",
+                "tableName": "ncci_practitioner",
+                "id": 845
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.pa-cah.us",
+                "mavenArtifactId": "pa-cah.transformed-dre",
+                "mavenVersionId": "2.1.0",
+                "tableName": "pa_cah",
+                "id": 48
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.pa-fee-schedule-hospice.pa",
+                "mavenArtifactId": "pa-fee-schedule-hospice.transformed-dre",
+                "mavenVersionId": "1.5.0",
+                "tableName": "hospice_fee_schedule_rates",
+                "id": 865
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.pa-fee-schedule-hospice.pa",
+                "mavenArtifactId": "pa-fee-schedule-hospice.transformed-dre",
+                "mavenVersionId": "1.5.0",
+                "tableName": "hospice_fee_schedule_rates_wage_index",
+                "id": 866
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.physical-status-modifiers.us",
+                "mavenArtifactId": "physical-status-modifiers.raw",
+                "mavenVersionId": "1.1.0",
+                "tableName": "ucr_physical_status_modifiers",
+                "id": 10
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.cms.medicare.zip-code-to-carrier-locality.us",
+                "mavenArtifactId": "zip-code-to-carrier-locality.us.transformed-dre",
+                "mavenVersionId": "1.12.0",
+                "tableName": "zip_carrier_locality",
+                "id": 835
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-dental.us",
+                "mavenArtifactId": "ucr-dental.transformed-dre",
+                "mavenVersionId": "1.6.0",
+                "tableName": "ucr_ac_dc_dental",
+                "id": 816
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-dental.us",
+                "mavenArtifactId": "ucr-dental.transformed-dre",
+                "mavenVersionId": "1.6.0",
+                "tableName": "ucr_dental_zip",
+                "id": 817
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-hcpcs.us",
+                "mavenArtifactId": "ucr-hcpcs.transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "ucr_hcpcs_acdc",
+                "id": 790
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-hcpcs.us",
+                "mavenArtifactId": "ucr-hcpcs.transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "ucr_hcpcs_zip",
+                "id": 791
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-medical.us",
+                "mavenArtifactId": "ucr-medical.transformed-dre",
+                "mavenVersionId": "1.5.0",
+                "tableName": "ucr_medical_acdc",
+                "id": 759
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-medical.us",
+                "mavenArtifactId": "ucr-medical.transformed-dre",
+                "mavenVersionId": "1.5.0",
+                "tableName": "ucr_medical_zip",
+                "id": 760
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-outpatient.us",
+                "mavenArtifactId": "ucr-outpatient.transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "ucr_outpatient_acdc",
+                "id": 737
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-outpatient.us",
+                "mavenArtifactId": "ucr-outpatient.transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "ucr_outpatient_zip",
+                "id": 738
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-surgical.us",
+                "mavenArtifactId": "ucr-surgical.transformed-dre",
+                "mavenVersionId": "1.5.0",
+                "tableName": "ucr_surgical_acdc",
+                "id": 761
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.acdc.ucr-surgical.us",
+                "mavenArtifactId": "ucr-surgical.transformed-dre",
+                "mavenVersionId": "1.5.0",
+                "tableName": "ucr_surgical_zip",
+                "id": 762
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-anesthesia.us",
+                "mavenArtifactId": "ucr-anesthesia.transformed-dre",
+                "mavenVersionId": "7.2.0",
+                "tableName": "anesthesia_ucr_data",
+                "id": 766
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-asc.us",
+                "mavenArtifactId": "ucr-asc.transformed-dre",
+                "mavenVersionId": "1.4.0",
+                "tableName": "ucr_asc_stat",
+                "id": 193
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-asc.us",
+                "mavenArtifactId": "ucr-asc.transformed-dre",
+                "mavenVersionId": "1.4.0",
+                "tableName": "ucr_asc_zip",
+                "id": 192
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-asc.us",
+                "mavenArtifactId": "ucr-asc.transformed-dre",
+                "mavenVersionId": "2.9.0",
+                "tableName": "ucr_asc_stat_2",
+                "id": 847
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-asc.us",
+                "mavenArtifactId": "ucr-asc.transformed-dre",
+                "mavenVersionId": "2.9.0",
+                "tableName": "ucr_asc_zip_2",
+                "id": 846
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-dental.us",
+                "mavenArtifactId": "ucr-dental.transformed-dre",
+                "mavenVersionId": "6.2.1",
+                "tableName": "ucr_dental",
+                "id": 179
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-hcpcs-facility.us",
+                "mavenArtifactId": "ucr-hcpcs-facility.transformed-dre",
+                "mavenVersionId": "1.3.0",
+                "tableName": "ucr_hcpcs_facility_hcfacdc",
+                "id": 170
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-hcpcs-facility.us",
+                "mavenArtifactId": "ucr-hcpcs-facility.transformed-dre",
+                "mavenVersionId": "1.3.0",
+                "tableName": "ucr_hcpcs_facility_hcfzip",
+                "id": 171
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-hcpcs-facility.us",
+                "mavenArtifactId": "ucr-hcpcs-facility.transformed-dre",
+                "mavenVersionId": "2.6.0",
+                "tableName": "ucr_hcpcs_facility_hcfacdc_2",
+                "id": 735
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-hcpcs-facility.us",
+                "mavenArtifactId": "ucr-hcpcs-facility.transformed-dre",
+                "mavenVersionId": "2.6.0",
+                "tableName": "ucr_hcpcs_facility_hcfzip_2",
+                "id": 736
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-hcpcs.us",
+                "mavenArtifactId": "ucr-hcpcs.transformed-dre",
+                "mavenVersionId": "7.16.0",
+                "tableName": "ucr_hcpcs",
+                "id": 7
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-medical.us",
+                "mavenArtifactId": "ucr-medical.transformed-dre",
+                "mavenVersionId": "8.17.0",
+                "tableName": "medical_ucr",
+                "id": 4
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.fairhealth.ucr-outpatient.us",
+                "mavenArtifactId": "ucr-outpatient.transformed-dre",
+                "mavenVersionId": "9.13.0",
+                "tableName": "ucr_outpatient",
+                "id": 3
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.Provider-Specialty-to-Terminated-Benefits.us",
+                "mavenArtifactId": "Provider-Specialty-to-Terminated-Benefits.raw",
+                "mavenVersionId": "1.0.0",
+                "tableName": "provider_specialty_to_terminated_benefits",
+                "id": 182
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.apc-code-groups.us",
+                "mavenArtifactId": "apc-code-groups",
+                "mavenVersionId": "1.0.0",
+                "tableName": "apc_code_group",
+                "id": 165
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.body-mapping.us",
+                "mavenArtifactId": "cpt.transformed-dre",
+                "mavenVersionId": "1.15.0",
+                "tableName": "body_mapping_cpt",
+                "id": 859
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.body-mapping.us",
+                "mavenArtifactId": "icd.transformed-dre",
+                "mavenVersionId": "1.15.0",
+                "tableName": "body_mapping_icd_1",
+                "id": 860
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.body-mapping.us",
+                "mavenArtifactId": "icd.transformed-dre",
+                "mavenVersionId": "1.6.0",
+                "tableName": "body_mapping_icd",
+                "id": 418
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.bundler-exclusion-config.us",
+                "mavenArtifactId": "bundler-exclusion-config",
+                "mavenVersionId": "1.10.0",
+                "tableName": "bundler_rule_filter",
+                "id": 381
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.bundler-exclusion-config.us",
+                "mavenArtifactId": "bundler-exclusion-config",
+                "mavenVersionId": "2.58.0",
+                "tableName": "bundler_rule_filter_1",
+                "id": 900
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.change-rule-reason-code-config.us",
+                "mavenArtifactId": "change-rule-reason-code-config.raw",
+                "mavenVersionId": "1.0.0",
+                "tableName": "change_rule_reason_code_config",
+                "id": 451
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.change-rule-reason-code-config.us",
+                "mavenArtifactId": "change-rule-reason-code-config.raw",
+                "mavenVersionId": "1.4.0",
+                "tableName": "change_rule_reason_code_config_1",
+                "id": 497
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.change-rule-reason-code-config.us",
+                "mavenArtifactId": "change-rule-reason-code-config.raw",
+                "mavenVersionId": "1.6.0",
+                "tableName": "change_rule_reason_code_config_2",
+                "id": 711
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.code-group.us",
+                "mavenArtifactId": "cpt-code-group-source",
+                "mavenVersionId": "1.46.0",
+                "tableName": "code_group",
+                "id": 882
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.doc-request-reason-codes.us",
+                "mavenArtifactId": "doc-request-reason-codes",
+                "mavenVersionId": "1.2.0",
+                "tableName": "doc_request_reason_codes",
+                "id": 772
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.downcoding.us",
+                "mavenArtifactId": "downcoding.raw",
+                "mavenVersionId": "1.4.0",
+                "tableName": "downcoding",
+                "id": 858
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.downcoding.us",
+                "mavenArtifactId": "downcoding.raw",
+                "mavenVersionId": "1.4.0",
+                "tableName": "downcoding_reason_codes",
+                "id": 857
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.drg-code-groups.us",
+                "mavenArtifactId": "drg-code-groups",
+                "mavenVersionId": "1.0.0",
+                "tableName": "drg_code_group",
+                "id": 166
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.geico-flag-cond-config.us",
+                "mavenArtifactId": "geico-flag-cond-config.transformed-dre",
+                "mavenVersionId": "1.0.0",
+                "tableName": "geico_flag_cond_config",
+                "id": 850
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.hipps-code-groups.us",
+                "mavenArtifactId": "hipps-code-groups",
+                "mavenVersionId": "1.0.0",
+                "tableName": "hipps_code_group",
+                "id": 164
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.modifier-factor.us",
+                "mavenArtifactId": "modifier-factor.raw",
+                "mavenVersionId": "1.39.0",
+                "tableName": "modifier_factors",
+                "id": 888
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.nationwide-ndc.us",
+                "mavenArtifactId": "nationwide-ndc",
+                "mavenVersionId": "1.2.0",
+                "tableName": "nationwide_ndc",
+                "id": 338
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.ncci-edit-exclusion.us",
+                "mavenArtifactId": "ncci-edit-exclusion.raw",
+                "mavenVersionId": "1.0.1",
+                "tableName": "ncci_edit_exclusions",
+                "id": 107
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.ndc-code-groups.us",
+                "mavenArtifactId": "ndc-code-groups",
+                "mavenVersionId": "1.5.0",
+                "tableName": "ndc_code_group",
+                "id": 883
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.ny-emergency-room-rates.us",
+                "mavenArtifactId": "ny-emergency-room-rates",
+                "mavenVersionId": "1.2.0",
+                "tableName": "ny_emergency_room_rates",
+                "id": 701
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.oon-config.us",
+                "mavenArtifactId": "oon-config.raw",
+                "mavenVersionId": "1.6.0",
+                "tableName": "oon_config",
+                "id": 887
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.place-of-service-mapping.us",
+                "mavenArtifactId": "place-of-service-mapping.raw",
+                "mavenVersionId": "1.1.0",
+                "tableName": "place_of_service_mapping",
+                "id": 818
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.reimbursement-adjustment-config-by-provider-title.us",
+                "mavenArtifactId": "reimbursement-adjustment-config-by-provider-title.raw",
+                "mavenVersionId": "1.5.0",
+                "tableName": "reimbursement_adjustment_config_by_provider_title",
+                "id": 831
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.reviewer-configuration.us",
+                "mavenArtifactId": "reviewer-configuration",
+                "mavenVersionId": "1.28.0",
+                "tableName": "reviewer_configuration",
+                "id": 899
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.reviewer-configuration.us",
+                "mavenArtifactId": "reviewer-configuration",
+                "mavenVersionId": "1.28.0",
+                "tableName": "reviewer_rule_configuration",
+                "id": 898
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.stp-exclusion-config.us",
+                "mavenArtifactId": "stp-exclusion-config.raw",
+                "mavenVersionId": "1.3.0",
+                "tableName": "stp_exclusion_config",
+                "id": 902
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.internal.tin-code-group.us",
+                "mavenArtifactId": "tin-code-group.raw",
+                "mavenVersionId": "1.2.0",
+                "tableName": "tin_group",
+                "id": 549
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.medispan.us",
+                "mavenArtifactId": "pharm-sched-medispan.transformed-dre",
+                "mavenVersionId": "1.1.0",
+                "tableName": "pharmacy_schedule_medispan",
+                "id": 837
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.milliman.us",
+                "mavenArtifactId": "milliman.transformed-dre",
+                "mavenVersionId": "1.6.0",
+                "tableName": "milliman_reasonable_fee_data",
+                "id": 631
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.milliman.us",
+                "mavenArtifactId": "milliman.transformed-dre",
+                "mavenVersionId": "1.6.0",
+                "tableName": "milliman_zip_codes",
+                "id": 632
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.code-sets.Dental-CDT.us",
+                "mavenArtifactId": "dental-cdt.transformed-dre",
+                "mavenVersionId": "1.0.1",
+                "tableName": "dental_cdt",
+                "id": 93
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.code-sets.cpt-hcpcs.us",
+                "mavenArtifactId": "cpt-hcpcs.transformed-dre",
+                "mavenVersionId": "2.37.0",
+                "tableName": "treatment_codes",
+                "id": 880
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.code-sets.icd10.us",
+                "mavenArtifactId": "icd10.transformed-dre",
+                "mavenVersionId": "1.9.0",
+                "tableName": "icd10",
+                "id": 881
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.fl-fee-schedule.us",
+                "mavenArtifactId": "fl-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.2.1",
+                "tableName": "fl_fee_schedule_wrkuva",
+                "id": 64
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.fl-fee-schedule.us",
+                "mavenArtifactId": "fl-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.2.1",
+                "tableName": "fl_fee_schedule_wrkzip",
+                "id": 63
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.fl-fee-schedule.us",
+                "mavenArtifactId": "fl-fee-schedule.transformed-dre",
+                "mavenVersionId": "4.1.0",
+                "tableName": "fl_fee_schedule_wrkuva_3",
+                "id": 780
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.fl-fee-schedule.us",
+                "mavenArtifactId": "fl-fee-schedule.transformed-dre",
+                "mavenVersionId": "4.1.0",
+                "tableName": "fl_fee_schedule_wrkzip_3",
+                "id": 779
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.fs-ane-conversion-factor.us",
+                "mavenArtifactId": "fs-ane-conversion-factor.raw",
+                "mavenVersionId": "1.4.0",
+                "tableName": "fs_anesthesia_conversion_factor",
+                "id": 708
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.hi-fee-schedule.us",
+                "mavenArtifactId": "hi-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.1.0",
+                "tableName": "hi_fee_schedule_wrkuva",
+                "id": 896
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.hi-fee-schedule.us",
+                "mavenArtifactId": "hi-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.1.0",
+                "tableName": "hi_fee_schedule_wrkzip",
+                "id": 895
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.mi-fee-schedule.us",
+                "mavenArtifactId": "mi-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.4.0",
+                "tableName": "mi_fee_schedule_wrkuva",
+                "id": 782
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.mi-fee-schedule.us",
+                "mavenArtifactId": "mi-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.4.0",
+                "tableName": "mi_fee_schedule_wrkzip",
+                "id": 781
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.nj-fee-schedule.nj",
+                "mavenArtifactId": "nj-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.1.1",
+                "tableName": "nj_fee_schedule_wrkuva",
+                "id": 50
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.nj-fee-schedule.nj",
+                "mavenArtifactId": "nj-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.1.1",
+                "tableName": "nj_fee_schedule_wrkzip",
+                "id": 49
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.ny-fee-schedule.us",
+                "mavenArtifactId": "ny-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "ny_fee_schedule_rvu",
+                "id": 876
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.ny-fee-schedule.us",
+                "mavenArtifactId": "ny-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "ny_fee_schedule_zip",
+                "id": 874
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.ny-fee-schedule.us",
+                "mavenArtifactId": "ny-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.7.0",
+                "tableName": "ny_fee_schedule_zip_conversion_factor",
+                "id": 875
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.or-fee-schedule.us",
+                "mavenArtifactId": "or-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.14.0",
+                "tableName": "or_fee_schedule_wrkuva",
+                "id": 688
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.or-fee-schedule.us",
+                "mavenArtifactId": "or-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.14.0",
+                "tableName": "or_fee_schedule_wrkzip",
+                "id": 687
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.pa-fee-schedule.us",
+                "mavenArtifactId": "pa-fee-schedule.transformed-dre",
+                "mavenVersionId": "3.17.0",
+                "tableName": "pa_fee_schedule_wrkuva",
+                "id": 894
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.pa-fee-schedule.us",
+                "mavenArtifactId": "pa-fee-schedule.transformed-dre",
+                "mavenVersionId": "3.17.0",
+                "tableName": "pa_fee_schedule_wrkzip",
+                "id": 893
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.ut-fee-schedule.us",
+                "mavenArtifactId": "ut-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.4.0",
+                "tableName": "ut_fee_schedule_wrkuva",
+                "id": 729
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.optum.fee-schedule.ut-fee-schedule.us",
+                "mavenArtifactId": "ut-fee-schedule.transformed-dre",
+                "mavenVersionId": "1.4.0",
+                "tableName": "ut_fee_schedule_wrkzip",
+                "id": 728
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.redbook.pharmacy.non-medispan.us",
+                "mavenArtifactId": "pharm-sched-non-medispan.transformed-dre",
+                "mavenVersionId": "1.32.0",
+                "tableName": "pharmacy_schedule",
+                "id": 889
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.eMedNY.ny-dme-rental-cap.ny",
+                "mavenArtifactId": "ny-dme-quantity-cap-transformed",
+                "mavenVersionId": "1.0.0",
+                "tableName": "ny_dme_quantity_cap",
+                "id": 92
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.fl-wcd",
+                "mavenArtifactId": "fl-wc-asc.raw",
+                "mavenVersionId": "1.0.1",
+                "tableName": "fl_wc_asc_fee_schedule",
+                "id": 65
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.fl-wcd",
+                "mavenArtifactId": "fl-wc-asc.raw",
+                "mavenVersionId": "2.0.1",
+                "tableName": "fl_wc_asc_fee_schedule_appendix_a",
+                "id": 485
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.fl-wcd",
+                "mavenArtifactId": "fl-wc-asc.raw",
+                "mavenVersionId": "2.0.1",
+                "tableName": "fl_wc_asc_fee_schedule_appendix_b",
+                "id": 486
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.mi-doh.mi-ccr.us",
+                "mavenArtifactId": "mi-ccr.transformed-dre",
+                "mavenVersionId": "1.0.0",
+                "tableName": "mi_ccr",
+                "id": 753
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.mi-doh.mi-cdm-pac.us",
+                "mavenArtifactId": "mi-cdm-pac.raw",
+                "mavenVersionId": "1.59.0-test",
+                "tableName": "mi_cdm_pac",
+                "id": 332
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.mi-doh.mi-cdm-pac.us",
+                "mavenArtifactId": "mi-cdm-pac.transformed-dre",
+                "mavenVersionId": "1.121.0",
+                "tableName": "mi_cdm_pac_1",
+                "id": 804
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.mi-doh.mi-enhanced-provider-config.us",
+                "mavenArtifactId": "mi-enhanced-provider-config.raw",
+                "mavenVersionId": "1.3.0",
+                "tableName": "mi_enhanced_provider_config",
+                "id": 749
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.mi-doh.mi-fee-schedule-config.us",
+                "mavenArtifactId": "mi-fee-schedule-config.transformed-dre",
+                "mavenVersionId": "1.1.0",
+                "tableName": "mi_fee_schedule_config",
+                "id": 111
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.mi-doh.mi-fee-schedule-config.us",
+                "mavenArtifactId": "mi-fee-schedule-config.transformed-dre",
+                "mavenVersionId": "2.0.0",
+                "tableName": "mi_fee_schedule_config_2",
+                "id": 210
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.mi-doh.mi-fee-schedule-config.us",
+                "mavenArtifactId": "mi-fee-schedule-config.transformed-dre",
+                "mavenVersionId": "2.1.0",
+                "tableName": "mi_fee_schedule_config_3",
+                "id": 321
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.mi-doh.mi-fee-schedule-config.us",
+                "mavenArtifactId": "mi-fee-schedule-config.transformed-dre",
+                "mavenVersionId": "2.8.0",
+                "tableName": "mi_fee_schedule_config_4",
+                "id": 748
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.nj-dobi.nj-dme-rental-cap.us",
+                "mavenArtifactId": "nj-dme-rental-cap.transformed",
+                "mavenVersionId": "1.0.1",
+                "tableName": "nj_dme_rental_cap",
+                "id": 94
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.nj-dobi.nj-fee-schedule-asc.us",
+                "mavenArtifactId": "nj-fee-schedule-asc.transformed-dre",
+                "mavenVersionId": "1.2.2",
+                "tableName": "nj_asc_fee_schedule",
+                "id": 83
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.nj-dobi.nj-fee-schedule-daily-maximum.us",
+                "mavenArtifactId": "nj-fee-schedule-daily-maximum.transform",
+                "mavenVersionId": "1.0.2",
+                "tableName": "nj_dailymax_codes",
+                "id": 84
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.nj-dobi.nj-fee-schedule-hosf.us",
+                "mavenArtifactId": "nj-fee-schedule-hosf.transformed-dre",
+                "mavenVersionId": "1.1.4",
+                "tableName": "nj_hosf_fee_schedule",
+                "id": 85
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.nj-doh.nj-fee-schedule-crosswalk.us",
+                "mavenArtifactId": "nj-fee-schedule-crosswalk.transform-dre",
+                "mavenVersionId": "1.1.0",
+                "tableName": "nj_fee_schedule_crosswalk",
+                "id": 108
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.ny-doh.ny-contiguous-body-parts",
+                "mavenArtifactId": "ny-contiguous-body-parts",
+                "mavenVersionId": "1.4.0",
+                "tableName": "ny_contiguous_body_parts_1",
+                "id": 740
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.ny-doh.ny-eapg-update-downstate-zipcodes.us",
+                "mavenArtifactId": "ny-eapg-update-downstate-zipcodes.raw",
+                "mavenVersionId": "1.2.0",
+                "tableName": "ny_zip_codes",
+                "id": 264
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.ny-doh.ny-specialty-hospital.us",
+                "mavenArtifactId": "ny-specialty-hospital.transformed-dre",
+                "mavenVersionId": "2.4.0",
+                "tableName": "ny_specialty_per_diem",
+                "id": 834
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.or-wcd.oregon-asc-fee-schedule.us",
+                "mavenArtifactId": "oregon-asc-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.7.0",
+                "tableName": "or_asc_fee_schedule",
+                "id": 673
+            },
+            {
+                "mavenGroupId": "com.cccis.data.reference.state-agency.or-wcd.oregon-ccr-fee-schedule.us",
+                "mavenArtifactId": "oregon-ccr-fee-schedule.transformed-dre",
+                "mavenVersionId": "2.4.0",
+                "tableName": "or_ccr",
+                "id": 684
+            },
+            {
+                "mavenGroupId": "com.cccis.optum.icd-code-groups.us",
+                "mavenArtifactId": "icd-code-groups.us.raw",
+                "mavenVersionId": "3.8.0",
+                "tableName": "icd_code_group",
+                "id": 801
+            },
+            {
+                "mavenGroupId": "com.cccis.optum.pos-code-groups.us",
+                "mavenArtifactId": "pos-code-groups.us.raw",
+                "mavenVersionId": "2.2.0",
+                "tableName": "pos_code_groups",
+                "id": 80
+            },
+            {
+                "mavenGroupId": "com.cccis.optum.revenue-code-groups.us",
+                "mavenArtifactId": "revenue-code-groups.us.raw",
+                "mavenVersionId": "2.3.0",
+                "tableName": "rev_code_groups",
+                "id": 161
+            }
+        ],
+        "filter": {
+            "treatmentStateFilter": {
+                "HI": [
+                    "hiAcuFeeXwalkTo20560",
+                    "hiAcuFeeXwalkTo20561",
+                    "hiAnesthesia",
+                    "hiBa80Default",
+                    "hiDmePos",
+                    "hiEmergencyRoomPhysician",
+                    "hiFeeSchedule",
+                    "hiHospital"
+                ],
+                "MN": [
+                    "minnesotaBill",
+                    "mnDuration6Months",
+                    "mnPharmacyNotPharmacist"
+                ],
+                "OR": [
+                    "orAmbulance",
+                    "orAnesthesia",
+                    "orAsc80",
+                    "orDental",
+                    "orEquipDistantSite",
+                    "orFeeSchedule",
+                    "orHearing",
+                    "orInterpretMileage",
+                    "orInvalidPosTelehealth",
+                    "orMod22",
+                    "orPendForNewFeesFlag",
+                    "orPharmacy",
+                    "orRehab",
+                    "orRehabRev",
+                    "orStatuteOfLimitations",
+                    "orTelehealthTransmission",
+                    "orVision",
+                    "oregonBill"
+                ],
+                "FL": [
+                    "bundlerAssuranceAmericaFloridaBill",
+                    "bundlerFlEmergencyFacilitySuppFlag",
+                    "bundlerFlFacMprSuppFlagSafeco",
+                    "bundlerFlMpr4SuppFlag",
+                    "bundlerFlMpr4SuppFlagSafeco",
+                    "bundlerFlMprSuppFlag",
+                    "bundlerFlMprSuppFlagSafeco",
+                    "bundlerFlagFlNegSuppFlag",
+                    "bundlerKemperFloridaBill",
+                    "bundlerMultiLinesFlBilateralFac02SuppFlag",
+                    "bundlerMultiLinesFlBilateralFac1SuppFlag",
+                    "bundlerMultiLinesFlBilateralFac3SuppFlag",
+                    "bundlerRootFloridaBill",
+                    "fl3dImages",
+                    "fl97110With97150",
+                    "fl98943Flag",
+                    "flA0110",
+                    "flAcuProcedure",
+                    "flAcuProvider",
+                    "flAmbulance",
+                    "flAsc99070NoInvoice",
+                    "flAscCmsFac",
+                    "flAscCmsFac2007",
+                    "flAscNoFee",
+                    "flAscNoFeeDenial",
+                    "flAscWorkComp",
+                    "flAscWorkCompCmsFac",
+                    "flByReportNpPa",
+                    "flCodingAlertDme",
+                    "flCodingAlertEmSuppFlag",
+                    "flCodingAlertInitial14Days",
+                    "flCodingAlertTens",
+                    "flConstantAttendance",
+                    "flDiagTestNotMedicallyNecessary",
+                    "flDmepos",
+                    "flDmx",
+                    "flElectrodes",
+                    "flEmcPerProvider",
+                    "flEmergencyPhysician",
+                    "flEmergencyPhysicianNpPa",
+                    "flEstimSuppFlag",
+                    "flFacilityLicenseNotValid",
+                    "flFeeSchedule",
+                    "flGaitTraining",
+                    "flHospiceRev657",
+                    "flHydrobed",
+                    "flInitialTreatmentAfter14Days",
+                    "flInitialTreatmentWin14Days",
+                    "flNewCodesBa2023",
+                    "flNewCodesBa2024",
+                    "flNewCodesFs2021",
+                    "flNewCodesFs2022",
+                    "flNewCodesFs2023",
+                    "flNewCodesFs2024",
+                    "flNonspecificSupplies",
+                    "flPendForNewFeesFlag",
+                    "flPharmacy",
+                    "flPossibleMassageTherapy",
+                    "flQRCodes",
+                    "flSCodes",
+                    "flSHcpcsCodes",
+                    "fpmDccFlLicenseMissingExpirationFlag",
+                    "fpmDccFlLicenseNotValidFlag"
+                ],
+                "NY": [
+                    "bundlerNyDiagRadMprSuppFlag",
+                    "bundlerNyRvuCapEmSuppFlag",
+                    "bundlerNyRvuCapSuppFlag",
+                    "bundlerNySurgMprSuppFlag",
+                    "colinClarkTins",
+                    "fpmDccMissingTinSuffixFlag",
+                    "fpmDccNy112960842Flag",
+                    "fpmDccNyAnesthesiaAssistantEdiFlag",
+                    "fpmDccNyUbEdiFlag",
+                    "ny22505NoDocumentation",
+                    "ny87635Units",
+                    "nyA4670",
+                    "nyAcuNeedles",
+                    "nyAcupunctureServices",
+                    "nyAnesthesia",
+                    "nyBehaviorAssessSuppFlag",
+                    "nyBehaviorAssessWithPsych",
+                    "nyByReport",
+                    "nyChiroMua",
+                    "nyConsultByDxRad",
+                    "nyEdx4Weeks",
+                    "nyEmergencyRoom",
+                    "nyErAmbulanceFlag",
+                    "nyFeeSchedule",
+                    "nyFeeScheduleNotCovered",
+                    "nyFsBiofeedbackProceduresSuppFlag",
+                    "nyFsElectroDiagTestingSuppFlag",
+                    "nyFsPathConfirmaryDrugScreeningUnits",
+                    "nyFsPodConfirmatoryDrugScreeningUnits",
+                    "nyFsPodRandomDrugScreeningSuppFlag",
+                    "nyFsRandomDrugScreeningSuppFlag",
+                    "nyFunctionalCapacity",
+                    "nyHomeTreatmentCheck",
+                    "nyMcsDiffProv",
+                    "nyMcsSameProv",
+                    "nyMoxbustionWithAcupuncture",
+                    "nyMua",
+                    "nyNdcSuppFlag",
+                    "nyNoPerDiem",
+                    "nyOncePerDaySuppFlag",
+                    "nyPeerableFlag",
+                    "nyPendForDmeFlag",
+                    "nyPerDiem",
+                    "nyPharmaceuticalsHcpcs",
+                    "nyPharmacy",
+                    "nyPsychSvcDiagProcedure",
+                    "nyPtDuration90Days",
+                    "nyPtEval",
+                    "nyPtOtReferral",
+                    "nyQualifyCircumstances",
+                    "nyReligious",
+                    "nySedationWithMcs",
+                    "nySuppliesWithSurg",
+                    "nySupplyMiscNos",
+                    "nySurgery2020",
+                    "nyTimelyFilingPostmark",
+                    "nyUnlistedSupply",
+                    "nyVision"
+                ],
+                "CO": [
+                    "coDuration6Months",
+                    "coInitialTreatment",
+                    "umClaimTypeColorado"
+                ],
+                "KY": [
+                    "kentuckyBill"
+                ],
+                "PA": [
+                    "miscProc",
+                    "pa98943",
+                    "pa99002",
+                    "paAnesthesia",
+                    "paBilledAmount80",
+                    "paBilledAmount80Fac",
+                    "paByReportNpPa",
+                    "paConsult",
+                    "paFeeSchedule",
+                    "paFeeScheduleNpPa",
+                    "paHospiceBill",
+                    "paHospiceRev651-652",
+                    "paHospiceRev657",
+                    "paLcsw",
+                    "paOmt",
+                    "paPendForNewFeesFlag",
+                    "paPharmacy",
+                    "paPhysAsst",
+                    "paRehabFacility",
+                    "paStatusB",
+                    "paTax",
+                    "paTraumaFlag",
+                    "paTraumaRev"
+                ],
+                "MA": [
+                    "maNonEmergencyTransport",
+                    "maStatuteOfLimitations"
+                ],
+                "NC": [
+                    "ncAcupuncture",
+                    "ncChiroTreatment",
+                    "northCarolinaBill"
+                ],
+                "MI": [
+                    "3mMiOutpatientBase",
+                    "3mMiOutpatientEnh2",
+                    "bundlerMiMpr4SuppFlag",
+                    "bundlerMiMpr5SuppFlag",
+                    "bundlerMiMprSuppFlag",
+                    "miAmbulance2Days",
+                    "miAscImplant",
+                    "miBaseFeeSchedule",
+                    "miBoneJointStudy",
+                    "miByReport",
+                    "miCahBase",
+                    "miCahEnh1",
+                    "miCahEnh3",
+                    "miCdmBase",
+                    "miCdmBaseTest",
+                    "miCdmEnh1",
+                    "miCdmEnh1Test",
+                    "miCdmEnh2",
+                    "miCdmEnh2Test",
+                    "miCdmEnh3",
+                    "miCdmEnh3Test",
+                    "miComputerizedMuscleTesting",
+                    "miConfigSuppFlag",
+                    "miEnhanced1",
+                    "miEnhanced3",
+                    "miInfusionTherapy90DayGap",
+                    "miLcswBase",
+                    "miLcswEnhanced1",
+                    "miLcswEnhanced3",
+                    "miNoFsCdmPac",
+                    "miNpPaBaseFeeSchedule",
+                    "miNpPaEnhanced1",
+                    "miNpPaEnhanced3",
+                    "miPacBase",
+                    "miPacBaseTest",
+                    "miPacEnh2Test",
+                    "miPacEnh3Test",
+                    "miPerceptualTesting",
+                    "miPolicyDatePriorTo06112019",
+                    "miPsych",
+                    "miSurgery7Day",
+                    "miTherapyAssistBase",
+                    "miTherapyAssistEnh1",
+                    "miTherapyAssistEnh3",
+                    "miVaxD"
+                ],
+                "NJ": [
+                    "biofeedbackNewJersey6Visits",
+                    "bundlerCpOonpPenaltySuppFlag",
+                    "dmeSetupDeliveryNewJersey",
+                    "njAmbSupplies",
+                    "njAmbulanceFac",
+                    "njAnesthesia",
+                    "njAscCmsFac",
+                    "njDentistDiagTests",
+                    "njDeskAudit",
+                    "njDeskAudit25K",
+                    "njDiagTests",
+                    "njDiagnosticTests",
+                    "njDupLaserTherapy",
+                    "njEmgNcsCrosswalk",
+                    "njErFacSuppFlag",
+                    "njFacilityTrauma",
+                    "njFeeSchedule",
+                    "njGreaterThan10Days",
+                    "njLaserTherapyNoUnits",
+                    "njLaserTherapySuppFlag",
+                    "njLaserTreatment",
+                    "njLaserWithInfrared",
+                    "njNcciModHospital",
+                    "njNcciModPractitioner",
+                    "njNcciPractitionerSuppFlagMidLevel",
+                    "njNoLicense",
+                    "njOnSiteAudit",
+                    "njTraumaCheckSuppFlag"
+                ],
+                "CA": [
+                    "caMassageTherapy",
+                    "caMedicalLegalEval",
+                    "caStatuteOfLimitations"
+                ],
+                "WV": [
+                    "westVirginiaTreatment"
+                ],
+                "UT": [
+                    "utAnesthesia",
+                    "utAnesthesiaUsaa",
+                    "utByReport",
+                    "utByReportUsaa",
+                    "utDental",
+                    "utFeeScheduleUsaa",
+                    "utNoTimeUnit",
+                    "utNoTimeUnitUsaa",
+                    "utPendForNewFeesFlag"
+                ]
+            }
+        },
+        "builtBy": "vsts",
+        "createdBy": "Apache Maven 3.8.8",
+        "springBootVersion": "2.7.18",
+        "releaseNumber": "Release-aws-api-master-1673",
+        "javaRuntimeName": "OpenJDK Runtime Environment"
+    },
+    "recommendations": [
+        {
+            "id": "d89c0449-a5f6-4ef9-924a-51a836bea7ed",
+            "type": "flag",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "DCC_Line_Units_OCR_Flag",
+            "message": "The unit(s) for the bill line(s) may need to be corrected.",
+            "rule": {
+                "id": "d6064537d32e90aed6ac11e9df6873ea",
+                "name": "fpmDccLineUnitsOcrFlag",
+                "pathId": "8e33074c81ccfc85e052f6b5f5ae0164",
+                "path": "TTTTT"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": [
+                {
+                    "key": "dateOfService",
+                    "type": "date",
+                    "value": "2023-04-10"
+                },
+                {
+                    "key": "flagType",
+                    "type": "string",
+                    "value": "DCC"
+                },
+                {
+                    "key": "procCode",
+                    "type": "string",
+                    "value": "70450"
+                },
+                {
+                    "key": "providerName",
+                    "type": "string",
+                    "value": "TEST, TEST"
+                },
+                {
+                    "key": "providerSpecialty",
+                    "type": "string",
+                    "value": "General Surgery"
+                },
+                {
+                    "key": "providerTaxCode",
+                    "type": "string",
+                    "value": "78-2542021"
+                }
+            ]
+        },
+        {
+            "id": "9ebf5896-cb1d-4181-b93c-f4994a4bdfca",
+            "type": "flag",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "DCC_OCR_Flag",
+            "message": "OCR Bill. Please Review.",
+            "rule": {
+                "id": "3f405695099fa00375d9f6ac030111fc",
+                "name": "fpmDccOcrFlag",
+                "pathId": "32f5e7f2af7916ddc30058e8107dca1f",
+                "path": "TTTT"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": [
+                {
+                    "key": "dateOfService",
+                    "type": "date",
+                    "value": "2023-04-10"
+                },
+                {
+                    "key": "flagType",
+                    "type": "string",
+                    "value": "DCC"
+                },
+                {
+                    "key": "procCode",
+                    "type": "string",
+                    "value": "70450"
+                },
+                {
+                    "key": "providerName",
+                    "type": "string",
+                    "value": "TEST, TEST"
+                },
+                {
+                    "key": "providerSpecialty",
+                    "type": "string",
+                    "value": "General Surgery"
+                },
+                {
+                    "key": "providerTaxCode",
+                    "type": "string",
+                    "value": "78-2542021"
+                }
+            ]
+        },
+        {
+            "id": "162c61d8-0656-4d02-a8aa-951a5cd6b81e",
+            "type": "flag",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "FT_ATLAS",
+            "message": "ATLAS (Non-Legacy) claims.",
+            "rule": {
+                "id": "ae78a023ff7b8ac2344010fe4b20ca9c",
+                "name": "fpmFtAtlas",
+                "pathId": "536408b34eaf2011d10d043930bd91f5",
+                "path": "TTTT"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": [
+                {
+                    "key": "dateOfService",
+                    "type": "date",
+                    "value": "2023-04-10"
+                },
+                {
+                    "key": "flagType",
+                    "type": "string",
+                    "value": "NULL"
+                },
+                {
+                    "key": "procCode",
+                    "type": "string",
+                    "value": "70450"
+                },
+                {
+                    "key": "providerName",
+                    "type": "string",
+                    "value": "TEST, TEST"
+                },
+                {
+                    "key": "providerSpecialty",
+                    "type": "string",
+                    "value": "General Surgery"
+                },
+                {
+                    "key": "providerTaxCode",
+                    "type": "string",
+                    "value": "78-2542021"
+                }
+            ]
+        },
+        {
+            "id": "2cdf3080-1d97-4d1a-99d4-3a30d2bdd255",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; CPT/HCPCS is not in the \"ANE\" code group",
+            "rule": {
+                "id": "99f50ad98c901e17aee1da65e2dc53cc",
+                "name": "fpmDccMissingAnesthesiaInfoOcrFlag",
+                "pathId": "cddc46202de333eedb8d501a1f676475",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "a7f44bf1-102c-477b-98ee-125ba045ed57",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; form type is unsupported",
+            "rule": {
+                "id": "dec3db5871819bce81e45085bc0e9415",
+                "name": "fpmDccMissingDiagnosisCodeFlag",
+                "pathId": "760c94891cbda9952db111dfc1faf0db",
+                "path": "TF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "f81d0918-759d-4e29-a61c-c4e65bda171c",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; form type is unsupported",
+            "rule": {
+                "id": "7f4a2d498dd2bf198575182c1a9cd6e4",
+                "name": "fpmDccMissingDiagnosisCodeOcrFlag",
+                "pathId": "6372f73e42033b03b26805885cc500f8",
+                "path": "TF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "367ad003-9b4c-4eb7-889f-98d1dcc40f44",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; CPT/HCPCS is not in the \"COMPREHENSIVE_DME_CODES\" code group.",
+            "rule": {
+                "id": "9c697d69afd1bdbc1ceb081063734fb1",
+                "name": "fpmDccMissingDmeInvoiceOcrFlag",
+                "pathId": "027b8d4607fccb28c9ab189a01c750e6",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "21a20a0b-c0cb-41fa-a925-1583b7018632",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "rule does not apply; Treatment state is not FL, PA",
+            "rule": {
+                "id": "af4027bbb7f832690862824f84fd245d",
+                "name": "fpmDccMissingHhppsFlag",
+                "pathId": "e8c14578e555ab3c93a4d2a35e6af6a3",
+                "path": "TFTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "cfc6f68f-3751-4b79-8ce6-242d6680ef91",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Treatment state is not FL, PA",
+            "rule": {
+                "id": "ce8db886774b7ff4198b455075efd2c4",
+                "name": "fpmDccMissingInvalidRevCode",
+                "pathId": "559641aea20ca45569c8a4c7e2b902ca",
+                "path": "TFTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "4e5fa840-8178-4445-b321-000dfa25f257",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "rule does not apply; form type is unsupported",
+            "rule": {
+                "id": "dce8587f7fc136f8d29a04b2f350d0de",
+                "name": "fpmDccMissingIrppsFlag",
+                "pathId": "65949236071d7132ca93d87b15fb8f3f",
+                "path": "TF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "c2d9812a-fbf3-41a2-9e2d-56d3116d1836",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; form type is unsupported",
+            "rule": {
+                "id": "2cf4372e09668075a265719087113580",
+                "name": "fpmDccMissingLicenseTypeFlag",
+                "pathId": "3e0b7c8462f2a5fbe18f355a6369aa7c",
+                "path": "TF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "ab200148-8955-40db-81e1-1e11347bdea7",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; CPT/HCPCS is not DEF00",
+            "rule": {
+                "id": "fd9cdcd2e87fe3010fc4e96487d1f79d",
+                "name": "fpmDccMissingProcedureCodeFlag",
+                "pathId": "1929801fbde1264a35db1d2c3276655a",
+                "path": "TTTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "2ada55c2-af46-48a0-b42f-15333040c0b1",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "rule does not apply; Treatment State is not \"RP\"",
+            "rule": {
+                "id": "5f17086c82b94db52cfcc900da528fa3",
+                "name": "fpmDccMissingProcessingZipCodeOcrFlag",
+                "pathId": "b2c02b596c9cc1454118f5c57c20e90b",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "ced16805-ad39-4839-88ac-b28dbd7ee709",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply;Service Provider zipcode is not 00000",
+            "rule": {
+                "id": "c2aeb45190e16241f9ea3b03e80a6d7b",
+                "name": "fpmDccMissingServiceProviderFlag",
+                "pathId": "e473ff594a0a8c892f6bebd4176ff9fb",
+                "path": "TFFFTTTTTFTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "33347928-3205-4415-bf65-36b01f851edb",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Provider Specialty is not Unknown Specialty",
+            "rule": {
+                "id": "c2a8c9524091afc8f8edde4ea65d3e8c",
+                "name": "fpmDccMissingSpecialtyOcrFlag",
+                "pathId": "790db9c9f71bcab8528ae64613821303",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "ac37542b-86ba-4e1f-881e-483cf8957ad7",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Treatment State is not MD, DE, DC, WV, NC, VA, PA",
+            "rule": {
+                "id": "47a995fdf59aee01663a4a6515bdb145",
+                "name": "fpmDccRegion1And7ProcedureCodeInvalidFlag",
+                "pathId": "34740f4d2ed09df1a24bb21558cc023f",
+                "path": "TTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "a6951f3a-769b-41cb-930f-6071ba0dfd28",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Patient ID is not 0",
+            "rule": {
+                "id": "66c1fce66be6a2a325f3e45f62c7444e",
+                "name": "fpmPendFp01",
+                "pathId": "8deab9d01b364d5d4f7346018a404a4d",
+                "path": "TTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "c64a16bc-8795-4520-9e3a-d2c30dbd4ec3",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; None of the bill lines has a Date of Service that is greater than 90 days from the Received Date",
+            "rule": {
+                "id": "b8263954205c3151eb9ad7e4ca4b1910",
+                "name": "fpmPendFp06",
+                "pathId": "95f8f568fb42bedbe3bce3d9e6cb802a",
+                "path": "TTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "cc1bac87-91c0-462f-8826-5c685caac417",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Billing Provider TIN/SSN is not 00-0000001, 01-0000001",
+            "rule": {
+                "id": "bd1c27dbe84faeea998ebcb8b4a8b239",
+                "name": "fpmPendFp07",
+                "pathId": "393865220de829ae94d13438d1609ac6",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "adc4c927-b2c5-4d0d-9727-eebbcd6aa547",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='6d5c250b-9ab7-43e9-80ed-228cdc49d9e7']",
+            "reasonCode": "UM",
+            "message": "rule does not apply; Service Provider Address is provided",
+            "rule": {
+                "id": "bd99d9f57e9c17c5ff7e671e17a3e605",
+                "name": "fpmPendFp08",
+                "pathId": "dbeca17c011dab7d4492ba492a4d1e9d",
+                "path": "TFFFTTTTFF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "ee506429-8d03-4936-8b50-9bf6628d1796",
+            "type": "flag",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "DCC_Line_Units_OCR_Flag",
+            "message": "The unit(s) for the bill line(s) may need to be corrected.",
+            "rule": {
+                "id": "d6064537d32e90aed6ac11e9df6873ea",
+                "name": "fpmDccLineUnitsOcrFlag",
+                "pathId": "8e33074c81ccfc85e052f6b5f5ae0164",
+                "path": "TTTTT"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": [
+                {
+                    "key": "dateOfService",
+                    "type": "date",
+                    "value": "2023-04-11"
+                },
+                {
+                    "key": "flagType",
+                    "type": "string",
+                    "value": "DCC"
+                },
+                {
+                    "key": "procCode",
+                    "type": "string",
+                    "value": "97140"
+                },
+                {
+                    "key": "providerName",
+                    "type": "string",
+                    "value": "TEST, TEST"
+                },
+                {
+                    "key": "providerSpecialty",
+                    "type": "string",
+                    "value": "General Surgery"
+                },
+                {
+                    "key": "providerTaxCode",
+                    "type": "string",
+                    "value": "78-2542021"
+                }
+            ]
+        },
+        {
+            "id": "84933947-2365-45eb-82ce-87f8b8cc2731",
+            "type": "flag",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "DCC_OCR_Flag",
+            "message": "OCR Bill. Please Review.",
+            "rule": {
+                "id": "3f405695099fa00375d9f6ac030111fc",
+                "name": "fpmDccOcrFlag",
+                "pathId": "32f5e7f2af7916ddc30058e8107dca1f",
+                "path": "TTTT"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": [
+                {
+                    "key": "dateOfService",
+                    "type": "date",
+                    "value": "2023-04-11"
+                },
+                {
+                    "key": "flagType",
+                    "type": "string",
+                    "value": "DCC"
+                },
+                {
+                    "key": "procCode",
+                    "type": "string",
+                    "value": "97140"
+                },
+                {
+                    "key": "providerName",
+                    "type": "string",
+                    "value": "TEST, TEST"
+                },
+                {
+                    "key": "providerSpecialty",
+                    "type": "string",
+                    "value": "General Surgery"
+                },
+                {
+                    "key": "providerTaxCode",
+                    "type": "string",
+                    "value": "78-2542021"
+                }
+            ]
+        },
+        {
+            "id": "6f30aef4-9461-4a3f-a9e7-ef6e17bb1b6d",
+            "type": "flag",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "FT_ATLAS",
+            "message": "ATLAS (Non-Legacy) claims.",
+            "rule": {
+                "id": "ae78a023ff7b8ac2344010fe4b20ca9c",
+                "name": "fpmFtAtlas",
+                "pathId": "536408b34eaf2011d10d043930bd91f5",
+                "path": "TTTT"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": [
+                {
+                    "key": "dateOfService",
+                    "type": "date",
+                    "value": "2023-04-11"
+                },
+                {
+                    "key": "flagType",
+                    "type": "string",
+                    "value": "NULL"
+                },
+                {
+                    "key": "procCode",
+                    "type": "string",
+                    "value": "97140"
+                },
+                {
+                    "key": "providerName",
+                    "type": "string",
+                    "value": "TEST, TEST"
+                },
+                {
+                    "key": "providerSpecialty",
+                    "type": "string",
+                    "value": "General Surgery"
+                },
+                {
+                    "key": "providerTaxCode",
+                    "type": "string",
+                    "value": "78-2542021"
+                }
+            ]
+        },
+        {
+            "id": "caae15b0-8254-4fd8-9d00-ebfa39e7ef4a",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; CPT/HCPCS is not in the \"ANE\" code group",
+            "rule": {
+                "id": "99f50ad98c901e17aee1da65e2dc53cc",
+                "name": "fpmDccMissingAnesthesiaInfoOcrFlag",
+                "pathId": "cddc46202de333eedb8d501a1f676475",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "f778f4a1-7ea0-466d-ae1f-52a329c1ab00",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; form type is unsupported",
+            "rule": {
+                "id": "dec3db5871819bce81e45085bc0e9415",
+                "name": "fpmDccMissingDiagnosisCodeFlag",
+                "pathId": "760c94891cbda9952db111dfc1faf0db",
+                "path": "TF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "f9e8af46-f74e-48ae-8d05-6e26a53a0e68",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; form type is unsupported",
+            "rule": {
+                "id": "7f4a2d498dd2bf198575182c1a9cd6e4",
+                "name": "fpmDccMissingDiagnosisCodeOcrFlag",
+                "pathId": "6372f73e42033b03b26805885cc500f8",
+                "path": "TF"
+            },
+            "values": [],
+            
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "2d6ca4fb-a82b-43ad-ad82-014414aa1a92",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; CPT/HCPCS is not in the \"COMPREHENSIVE_DME_CODES\" code group.",
+            "rule": {
+                "id": "9c697d69afd1bdbc1ceb081063734fb1",
+                "name": "fpmDccMissingDmeInvoiceOcrFlag",
+                "pathId": "027b8d4607fccb28c9ab189a01c750e6",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "7e281038-a30e-4730-8b4a-3f648537defe",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "rule does not apply; Treatment state is not FL, PA",
+            "rule": {
+                "id": "af4027bbb7f832690862824f84fd245d",
+                "name": "fpmDccMissingHhppsFlag",
+                "pathId": "e8c14578e555ab3c93a4d2a35e6af6a3",
+                "path": "TFTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "cfefcfa1-d279-4d69-bc8e-e7e64dd35cab",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Treatment state is not FL, PA",
+            "rule": {
+                "id": "ce8db886774b7ff4198b455075efd2c4",
+                "name": "fpmDccMissingInvalidRevCode",
+                "pathId": "559641aea20ca45569c8a4c7e2b902ca",
+                "path": "TFTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "e1a4f4c7-5414-40da-9e17-eda08e0cd142",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "rule does not apply; form type is unsupported",
+            "rule": {
+                "id": "dce8587f7fc136f8d29a04b2f350d0de",
+                "name": "fpmDccMissingIrppsFlag",
+                "pathId": "65949236071d7132ca93d87b15fb8f3f",
+                "path": "TF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "05a4fd86-e387-4c74-83f3-1a3a6a0f3aa1",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; form type is unsupported",
+            "rule": {
+                "id": "2cf4372e09668075a265719087113580",
+                "name": "fpmDccMissingLicenseTypeFlag",
+                "pathId": "3e0b7c8462f2a5fbe18f355a6369aa7c",
+                "path": "TF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "89f1fa11-64f8-4a18-844c-10122cf0ba61",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; CPT/HCPCS is not DEF00",
+            "rule": {
+                "id": "fd9cdcd2e87fe3010fc4e96487d1f79d",
+                "name": "fpmDccMissingProcedureCodeFlag",
+                "pathId": "1929801fbde1264a35db1d2c3276655a",
+                "path": "TTTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "6fbd22d4-d263-4482-ace1-0a44d12b7311",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "rule does not apply; Treatment State is not \"RP\"",
+            "rule": {
+                "id": "5f17086c82b94db52cfcc900da528fa3",
+                "name": "fpmDccMissingProcessingZipCodeOcrFlag",
+                "pathId": "b2c02b596c9cc1454118f5c57c20e90b",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "a61ec16e-498a-4d54-86ce-b7d337abaa58",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply;Service Provider zipcode is not 00000",
+            "rule": {
+                "id": "c2aeb45190e16241f9ea3b03e80a6d7b",
+                "name": "fpmDccMissingServiceProviderFlag",
+                "pathId": "e473ff594a0a8c892f6bebd4176ff9fb",
+                "path": "TFFFTTTTTFTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "66d6c9c2-6061-4f09-b759-03f260c6413d",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Provider Specialty is not Unknown Specialty",
+            "rule": {
+                "id": "c2a8c9524091afc8f8edde4ea65d3e8c",
+                "name": "fpmDccMissingSpecialtyOcrFlag",
+                "pathId": "790db9c9f71bcab8528ae64613821303",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "8392f23a-5ff5-401b-a5f4-d36fcf8c6c50",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Treatment State is not MD, DE, DC, WV, NC, VA, PA",
+            "rule": {
+                "id": "47a995fdf59aee01663a4a6515bdb145",
+                "name": "fpmDccRegion1And7ProcedureCodeInvalidFlag",
+                "pathId": "34740f4d2ed09df1a24bb21558cc023f",
+                "path": "TTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "8b549e25-0248-490d-82f5-4c10f715f622",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Patient ID is not 0",
+            "rule": {
+                "id": "66c1fce66be6a2a325f3e45f62c7444e",
+                "name": "fpmPendFp01",
+                "pathId": "8deab9d01b364d5d4f7346018a404a4d",
+                "path": "TTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "f6d90be0-621b-4dc4-99b3-461efe72ae5e",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; None of the bill lines has a Date of Service that is greater than 90 days from the Received Date",
+            "rule": {
+                "id": "b8263954205c3151eb9ad7e4ca4b1910",
+                "name": "fpmPendFp06",
+                "pathId": "95f8f568fb42bedbe3bce3d9e6cb802a",
+                "path": "TTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "6a2ebf5f-0892-4a8f-8658-76cb90fb8e60",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "Rule does not apply; Billing Provider TIN/SSN is not 00-0000001, 01-0000001",
+            "rule": {
+                "id": "bd1c27dbe84faeea998ebcb8b4a8b239",
+                "name": "fpmPendFp07",
+                "pathId": "393865220de829ae94d13438d1609ac6",
+                "path": "TTTTTF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        },
+        {
+            "id": "872725c8-59e8-486f-b767-cd36b078a132",
+            "type": "conditionNotMatched",
+            "targetReference": "$.bills[@._id=='e38e0000-b3b9-ca3b-2fac-08dcee9c8f6b'].pages[0].lines[@.metadata.id=='bb34632d-3d98-462e-baf3-2d24c0eac0c7']",
+            "reasonCode": "UM",
+            "message": "rule does not apply; Service Provider Address is provided",
+            "rule": {
+                "id": "bd99d9f57e9c17c5ff7e671e17a3e605",
+                "name": "fpmPendFp08",
+                "pathId": "dbeca17c011dab7d4492ba492a4d1e9d",
+                "path": "TFFFTTTTFF"
+            },
+            "values": [],
+            "scale": 0,
+            "dependsOn": [],
+            "replaces": [],
+            "supportingValues": []
+        }
+    ]
+}

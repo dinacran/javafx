@@ -5,18 +5,22 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
+
+<?import org.fxmisc.richtext.CodeArea?>
 
 
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
 
 
-<HBox xmlns:fx="http://javafx.com/fxml" fx:id="inputHeader" spacing="10" fx:controller="com.newapp.controller.VisualizeResponseController" alignment="TOP_LEFT" stylesheets="@visualizeResponse.css">
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="page" spacing="10" fx:controller="com.newapp.controller.VisualizeResponseController" stylesheets="@css/visualizeResponse.css">
+    <HBox fx:id="inputHeader" spacing="10">
     <TextField styleClass="input" fx:id="docIdField" promptText="Enter DocId" />
-    <ComboBox fx:id="comboBox" promptText="Select Client" >
+    <ComboBox fx:id="comboBox" promptText="Select Client" editable="true" >
         <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="auto find"/>      <String fx:value="accGen/385386"/>      <String fx:value="acmic/176516"/>  
@@ -43,7 +47,16 @@
         <RadioButton fx:id="requestRadio" mnemonicParsing="false" text="Request" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup"/>
         <RadioButton fx:id="bundlerRadio" mnemonicParsing="false" text="Bundler" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup"/>
     </HBox>
-    
 
-    <VBox fx:id="dataContainer" />
-</HBox>
+        <HBox fx:id="searchHeader" spacing="10">
+        <TextField fx:id="searchField" promptText="Search..." />
+        <Button fx:id="searchButton" text="Search" onAction="#handleSearch"/>
+    </HBox>
+    </HBox>
+
+    <VBox fx:id="dataContainer" spacing="10">
+    <CodeArea fx:id="codeArea" styleClass="codeArea" style="-fx-text-fill: gray;" />
+    </VBox>
+    
+</VBox>
+
