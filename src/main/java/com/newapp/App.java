@@ -37,7 +37,7 @@ public class App extends Application {
         homeStage.setMaximized(true);
 
         homeStage.setTitle("JavaFX Application");
-        // ScenicView.show(sceneFromFxml);
+        ScenicView.show(sceneFromFxml);
         homeStage.show();
     }
     public static void main(String[] args) {

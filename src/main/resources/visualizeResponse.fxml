@@ -5,9 +5,12 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
+
+<?import org.fxmisc.richtext.CodeArea?>
 
 
 <?import javafx.collections.FXCollections?>
@@ -44,8 +47,15 @@
         <RadioButton fx:id="requestRadio" mnemonicParsing="false" text="Request" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup"/>
         <RadioButton fx:id="bundlerRadio" mnemonicParsing="false" text="Bundler" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup"/>
     </HBox>
+
+        <HBox fx:id="searchHeader" spacing="10">
+        <TextField fx:id="searchField" promptText="Search..." />
+        <Button fx:id="searchButton" text="Search" onAction="#handleSearch"/>
     </HBox>
+    </HBox>
+
     <VBox fx:id="dataContainer" spacing="10">
+    <CodeArea fx:id="codeArea" styleClass="codeArea" style="-fx-text-fill: gray;" />
     </VBox>
     
 </VBox>
