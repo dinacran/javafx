@@ -8,6 +8,7 @@ import java.net.URL;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+@SuppressWarnings("deprecation")
 public class TokenService {
 
     public static String getToken() throws Exception {
