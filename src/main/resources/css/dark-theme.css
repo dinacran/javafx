@@ -13,6 +13,13 @@
 }
 
 .tile {
+    -fx-font-family: monospace;
+    /* -fx-minWidth: 200;
+    -fx-minHeight: 120;
+    -fx-maxWidth: 200;
+    -fx-maxHeight: 120; */
+    /* -fx-prefWidth: 200;
+    -fx-prefHeight: 120; */
     background-color: rgba(30, 30, 30, 0.842);
     -fx-background-color: rgba(30, 30, 30, 0.842);
     border-color: #4377cb;

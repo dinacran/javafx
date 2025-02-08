@@ -1,46 +1,40 @@
-.root{    
-    /* -fx-font-family:  monospace; */
+.root {
+    -fx-font-family: monospace;
     -fx-font-size: 16;
 
 }
 
-#inputHeader{
+#inputHeader {
     -fx-padding: 10;
-    padding: 10;
     -fx-font-family: 'Courier New', monospace;
 
 }
 
-.input{
+.input {
     -fx-pref-width: 300px;
     -fx-pref-height: 40px;
     -fx-background-color: #1e1e1ed7;
     -fx-text-fill: rgb(116, 116, 116);
-    -fx-prompt-text-fill: rgb(116, 116, 116);
-    border-color: #5c5c5c;
+    -fx-prompt-text-fill: #747474;
     -fx-border-color: #5c5c5c;
     -fx-border-width: 1;
-    border-width: 1;
-    border-radius: 4;
     -fx-border-radius: 4;
     -fx-background-radius: 4;
+    -fx-font-family: monospace;
+
 }
 
-#comboBox{
+#comboBox {
     -fx-pref-height: 40px;
     -fx-background-color: #1e1e1ed7;
-     border-color: #5c5c5c;
     -fx-border-color: #5c5c5c;
     -fx-border-width: 1;
-    border-width: 1;
-    border-radius: 4;
     -fx-border-radius: 4;
     -fx-background-radius: 4;
 }
 
-.arrow-button{
+.arrow-button {
     -fx-background-color: #1e1e1ed7;
-
 }
 
 .combo-box .text-field {
@@ -54,7 +48,7 @@
 
 .combo-box .list-cell:selected {
     -fx-text-fill: white;
-    -fx-background-color: #4377cb; 
+    -fx-background-color: #4377cb;
 }
 
 .combo-box-popup {
@@ -64,25 +58,23 @@
     -fx-border-radius: 4;
     -fx-background-radius: 4;
 }
-.combo-box .list{
+
+.combo-box .list {
     -fx-background-color: #1e1e1ed7;
     -fx-border-color: #5c5c5c;
     -fx-border-width: 1;
-    border-width: 1;
-    border-radius: 4;
     -fx-border-radius: 4;
     -fx-background-radius: 4;
 }
 
 
-#fetchButton{
+#fetchButton {
+    -fx-font-family: monospace;
     -fx-pref-height: 38px;
     -fx-background-color: #4377cb;
     -fx-text-fill: white;
     -fx-border-color: #4377cb;
     -fx-border-width: 1;
-    border-width: 1;
-    border-radius: 4;
     -fx-border-radius: 4;
     -fx-background-radius: 4;
 }
@@ -92,17 +84,18 @@
     -fx-border-width: 2px;
     -fx-border-radius: 4px;
     -fx-padding: 2px;
-    -fx-display: inline-flex; 
+    -fx-display: inline-flex;
     -fx-max-height: 30px;
 }
 
 .custom-radio-button {
-    -fx-padding: 7px;
-    -fx-background-color: transparent; 
+    -fx-padding: 5px 5px 5px 0px;
+    -fx-background-color: transparent;
     -fx-cursor: pointer;
-    -fx-border-radius: 2px; 
+    -fx-border-radius: 2px;
     -fx-background-radius: 2px;
-    -fx-text-fill: #5c5c5c; 
+    -fx-text-fill: #5c5c5c;
+    -fx-font-family: monospace;
 }
 
 .custom-radio-button:selected {
@@ -111,7 +104,7 @@
 }
 
 .custom-radio-button .radio-button {
-    -fx-opacity: 0; 
+    -fx-opacity: 0;
     -fx-max-height: 30;
 }
 
@@ -126,13 +119,13 @@
     -fx-focus-traversable: false;
 }
 
-.arrow-button{
-    -fx-background-color: #1e1e1ed7;    
+.arrow-button {
+    -fx-background-color: #1e1e1ed7;
 }
 
 
 
-.arrow-button .arrow{
+.arrow-button .arrow {
     -fx-shape: "M16 10L12 14L8 10";
     -fx-stroke: #000000;
     -fx-stroke-width: 0.672;
@@ -144,12 +137,12 @@
     -fx-background-color: #6a6a6ad7;
 }
 
-.dot{
+.dot {
     -fx-opacity: 0;
 }
 
-.radio{
-    -fx-preferred-height: 0; 
+.radio {
+    -fx-preferred-height: 0;
     -fx-preferred-width: 0;
     -fx-max-height: 0;
     -fx-max-width: 0;
@@ -162,12 +155,13 @@
     -fx-focus-traversable: false;
 }
 
-#dataContainer{
+#dataContainer {
     -fx-padding: 10;
     -fx-font-family: 'Courier New', monospace;
     -fx-text-fill: rgb(119, 119, 119);
 
 }
+
 .selected-highlight {
     -fx-background-color: rgba(0, 89, 255, 0.474);
 
@@ -175,7 +169,7 @@
 
 }
 
-.codeArea{
+.codeArea {
     -fx-padding: 10;
     -fx-font-size: 14;
     -fx-background-color: #1e1e1ed7;
@@ -184,15 +178,13 @@
     -fx-border-radius: 4;
     -fx-background-radius: 4;
     -fx-pref-height: 1000;
-
-
 }
 
-.codeArea .content{
+.codeArea .content {
     -fx-background-color: #c1c1c1d7;
 }
 
-.codeArea .text{
+.codeArea .text {
     -fx-font-size: 14;
 }
 
@@ -204,21 +196,57 @@
     -fx-fill: #16b887;
 }
 
-.boolean, .null, .keyword {
-    -fx-fill: #3273ffab; 
+.boolean,
+.null,
+.keyword {
+    -fx-fill: #4086ac;
 }
 
-.brace, .comma, .colon {
+.brace,
+.comma,
+.colon {
     -fx-fill: #9b9b9b;
 }
 
 .jsonKey {
-    -fx-fill: #51b7ee; 
+    -fx-fill: #51b7ee;
 }
 
 .highlight {
     -fx-padding: 3;
     -fx-fill: #73d92f;
-    -fx-background-color: rgb(99, 99, 99); 
-    
+    -fx-background-color: rgb(99, 99, 99);
+}
+
+#findHeader {
+    -fx-pref-height: 40px;
+    -fx-padding: 0 10 0 0;
+    -fx-padding-right: 5;
+    -fx-background-color: #1e1e1ed7;
+    -fx-border-color: #5c5c5c;
+    -fx-border-width: 1;
+    -fx-border-radius: 2;
+    -fx-background-radius: 2;
+    -fx-alignment: CENTER;
+
+}
+
+#findTextFieldContainer {
+    -fx-alignment: CENTER;
+}
+
+#findField {
+    -fx-background-color: #1e1e1ed7;
+
+}
+
+.matchButton {
+    -fx-background-color: #1e1e1ed7;
+    -fx-text-fill: #747474;
+    -fx-width: 2px;
+    -fx-padding: 6;
+}
+
+#findCountLabel {
+    -fx-text-fill: #747474;
 }

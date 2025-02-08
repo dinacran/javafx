@@ -16,11 +16,11 @@ public class HomeController {
     @FXML
     private ImageView visualizeResponseImage;
 
-    @FXML
-    private VBox openXmindBox;
+    // @FXML
+    // private VBox openXmindBox;
 
-    @FXML
-    private ImageView openXmindImage;
+    // @FXML
+    // private ImageView openXmindImage;
 
     @FXML
     private VBox searchCodeBox;
@@ -28,11 +28,11 @@ public class HomeController {
     @FXML
     private ImageView searchCodeImage;
 
-    @FXML
-    private VBox testRuleBox;
+    // @FXML
+    // private VBox testRuleBox;
     
-    @FXML
-    private ImageView testRuleImage;
+    // @FXML
+    // private ImageView testRuleImage;
 
     private Stage homeStage;
     private VisualizeResponse visulaizeResponse = new VisualizeResponse();
@@ -40,9 +40,9 @@ public class HomeController {
     @FXML
     public void initialize() {
         visualizeResponseImage.setImage(new Image(getClass().getResourceAsStream("/img/api.png")));
-        openXmindImage.setImage(new Image(getClass().getResourceAsStream("/img/xmind.png")));
+        // openXmindImage.setImage(new Image(getClass().getResourceAsStream("/img/xmind.png")));
         searchCodeImage.setImage(new Image(getClass().getResourceAsStream("/img/search.png")));
-        testRuleImage.setImage(new Image(getClass().getResourceAsStream("/img/test.png")));
+        // testRuleImage.setImage(new Image(getClass().getResourceAsStream("/img/test.png")));
     }
 
     @FXML

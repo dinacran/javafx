@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.TextField?>
@@ -19,44 +20,51 @@
 
 <VBox xmlns:fx="http://javafx.com/fxml" fx:id="page" spacing="10" fx:controller="com.newapp.controller.VisualizeResponseController" stylesheets="@css/visualizeResponse.css">
     <HBox fx:id="inputHeader" spacing="10">
-    <TextField styleClass="input" fx:id="docIdField" promptText="Enter DocId" />
-    <ComboBox fx:id="comboBox" promptText="Select Client" editable="true" >
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-               <String fx:value="auto find"/>      <String fx:value="accGen/385386"/>      <String fx:value="acmic/176516"/>  
-            </FXCollections>
-        </items>
-    </ComboBox>
-    <Button fx:id="fetchButton" text="Fetch Data" onAction="#fetchData"/>
+        <TextField styleClass="input" fx:id="docIdField" promptText="Enter DocId" />
+        <ComboBox fx:id="comboBox" promptText="Select Client" editable="true">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="auto find"/>
+                    <String fx:value="accGen/385386"/>
+                    <String fx:value="acmic/176516"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Button fx:id="fetchButton" text="Fetch Data" onAction="#fetchData"/>
 
-    <HBox fx:id="viewModeContainer" styleClass="radio-container" >
-        <RadioButton fx:id="jsonView" mnemonicParsing="false" selected="true" text="JSON" styleClass="custom-radio-button" onAction="#switchData">
-            <toggleGroup>
-                <ToggleGroup fx:id="viewModeGroup"/>
-            </toggleGroup>
-        </RadioButton>
-        <RadioButton fx:id="tableView" mnemonicParsing="false" text="Table" styleClass="custom-radio-button" toggleGroup="$viewModeGroup" onAction="#switchData"/>
-    </HBox>
+        <HBox fx:id="viewModeContainer" styleClass="radio-container">
+            <RadioButton fx:id="jsonView" mnemonicParsing="false" selected="true" text="JSON" styleClass="custom-radio-button" onAction="#switchData">
+                <toggleGroup>
+                    <ToggleGroup fx:id="viewModeGroup"/>
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="tableView" mnemonicParsing="false" text="Table" styleClass="custom-radio-button" toggleGroup="$viewModeGroup" onAction="#switchData"/>
+        </HBox>
 
-    <HBox fx:id="dataToViewContainer" styleClass="radio-container">
-        <RadioButton fx:id="responseRadio" mnemonicParsing="false" selected="true" text="Response" styleClass="custom-radio-button" onAction="#switchData">
-            <toggleGroup>
-                <ToggleGroup fx:id="dataToViewGroup"/>
-            </toggleGroup>
-        </RadioButton>
-        <RadioButton fx:id="requestRadio" mnemonicParsing="false" text="Request" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup" onAction="#switchData"/>
-        <RadioButton fx:id="bundlerRadio" mnemonicParsing="false" text="Bundler" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup" onAction="#switchData"/>
-    </HBox>
+        <HBox fx:id="dataToViewContainer" styleClass="radio-container">
+            <RadioButton fx:id="responseRadio" mnemonicParsing="false" selected="true" text="Response" styleClass="custom-radio-button" onAction="#switchData">
+                <toggleGroup>
+                    <ToggleGroup fx:id="dataToViewGroup"/>
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="requestRadio" mnemonicParsing="false" text="Request" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup" onAction="#switchData"/>
+            <RadioButton fx:id="bundlerRadio" mnemonicParsing="false" text="Bundler" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup" onAction="#switchData"/>
+        </HBox>
 
-        <HBox fx:id="searchHeader" spacing="10">
-        <TextField fx:id="searchField" promptText="Search..." />
-        <Button fx:id="searchButton" text="Search" onAction="#handleSearch"/>
-    </HBox>
+        <HBox fx:id="findHeader" spacing="10">
+            <HBox spacing="0" fx:id="findTextFieldContainer">
+                <TextField fx:id="findField" promptText="Find" onKeyReleased="#handleSearch"/>
+                <Button fx:id="prevMatchButton" styleClass="matchButton" text="↑" onAction="#handlePrevMatch"/>
+                <Button fx:id="nextMatchButton" styleClass="matchButton" text="↓" onAction="#handleNextMatch"/>
+            </HBox>
+            <Label fx:id="findCountLabel" text="0/0" />
+            
+        </HBox>
     </HBox>
 
     <VBox fx:id="dataContainer" spacing="10">
-    <CodeArea fx:id="codeArea" styleClass="codeArea" style="-fx-text-fill: gray;" />
+        <CodeArea fx:id="codeArea" styleClass="codeArea" style="-fx-text-fill: gray;" />
     </VBox>
-    
+
 </VBox>
 
