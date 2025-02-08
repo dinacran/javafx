@@ -168,6 +168,12 @@
     -fx-text-fill: rgb(119, 119, 119);
 
 }
+.selected-highlight {
+    -fx-background-color: rgba(0, 89, 255, 0.474);
+
+    -fx-highlight-fill: rgb(53, 53, 53);
+
+}
 
 .codeArea{
     -fx-padding: 10;
@@ -178,6 +184,7 @@
     -fx-border-radius: 4;
     -fx-background-radius: 4;
     -fx-pref-height: 1000;
+
 
 }
 
@@ -210,6 +217,8 @@
 }
 
 .highlight {
-    -fx-fill: yellow;
-    -fx-background-color: black; 
+    -fx-padding: 3;
+    -fx-fill: #73d92f;
+    -fx-background-color: rgb(99, 99, 99); 
+    
 }

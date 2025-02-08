@@ -30,22 +30,22 @@
     <Button fx:id="fetchButton" text="Fetch Data" onAction="#fetchData"/>
 
     <HBox fx:id="viewModeContainer" styleClass="radio-container" >
-        <RadioButton fx:id="jsonView" mnemonicParsing="false" selected="true" text="JSON" styleClass="custom-radio-button">
+        <RadioButton fx:id="jsonView" mnemonicParsing="false" selected="true" text="JSON" styleClass="custom-radio-button" onAction="#switchData">
             <toggleGroup>
                 <ToggleGroup fx:id="viewModeGroup"/>
             </toggleGroup>
         </RadioButton>
-        <RadioButton fx:id="tableView" mnemonicParsing="false" text="Table" styleClass="custom-radio-button" toggleGroup="$viewModeGroup"/>
+        <RadioButton fx:id="tableView" mnemonicParsing="false" text="Table" styleClass="custom-radio-button" toggleGroup="$viewModeGroup" onAction="#switchData"/>
     </HBox>
 
     <HBox fx:id="dataToViewContainer" styleClass="radio-container">
-        <RadioButton fx:id="responseRadio" mnemonicParsing="false" selected="true" text="Response" styleClass="custom-radio-button">
+        <RadioButton fx:id="responseRadio" mnemonicParsing="false" selected="true" text="Response" styleClass="custom-radio-button" onAction="#switchData">
             <toggleGroup>
                 <ToggleGroup fx:id="dataToViewGroup"/>
             </toggleGroup>
         </RadioButton>
-        <RadioButton fx:id="requestRadio" mnemonicParsing="false" text="Request" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup"/>
-        <RadioButton fx:id="bundlerRadio" mnemonicParsing="false" text="Bundler" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup"/>
+        <RadioButton fx:id="requestRadio" mnemonicParsing="false" text="Request" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup" onAction="#switchData"/>
+        <RadioButton fx:id="bundlerRadio" mnemonicParsing="false" text="Bundler" styleClass="custom-radio-button" toggleGroup="$dataToViewGroup" onAction="#switchData"/>
     </HBox>
 
         <HBox fx:id="searchHeader" spacing="10">

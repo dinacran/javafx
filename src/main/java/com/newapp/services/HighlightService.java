@@ -16,12 +16,13 @@ public class HighlightService  {
     private static final String KEYWORD_PATTERN = "\\b(" + String.join("|", KEYWORDS) + ")\\b";
     private static final String STRING_PATTERN = "\"([^\"\\\\]*(\\\\.[^\"\\\\]*)*)\"";
     private static final String NUMBER_PATTERN = "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b";
-    private static final String BOOLEAN_PATTERN = KEYWORD_PATTERN;  // Reuse keyword pattern
-    private static final String NULL_PATTERN = KEYWORD_PATTERN;     // Reuse keyword pattern
+    private static final String BOOLEAN_PATTERN = KEYWORD_PATTERN;
+    private static final String NULL_PATTERN = KEYWORD_PATTERN;   
     private static final String BRACE_PATTERN = "[\\{\\}\\[\\]]";
     private static final String COMMA_PATTERN = ",";
     private static final String COLON_PATTERN = ":";
     private static final String JSONKEYSTRING = "\"([^\"]|\\.)*\"\\s*:";
+
 
     private static Pattern PATTERN = Pattern.compile(
             "(?<KEYWORD>" + KEYWORD_PATTERN + ")"
@@ -63,9 +64,12 @@ public class HighlightService  {
 
     public static  StyleSpans<Collection<String>> highlightSearchText(String content, String searchText) {
 
+        String escapedText = Pattern.quote(searchText);
+        String SEARCHTEXT = "\"(" + escapedText + ")\"";
+
         Pattern SEARCHPATTTERN = Pattern.compile(
-                        "(?<SEARCHTEXT>" + searchText + ")"
-                        + "(?<KEYWORD>" + KEYWORD_PATTERN + ")"
+                "(?<KEYWORD>" + KEYWORD_PATTERN + ")"
+                        + "|(?<SEARCHTEXT>" + SEARCHTEXT + ")"
                         + "|(?<JSONKEYSTRING>" + JSONKEYSTRING + ")"
                         + "|(?<STRING>" + STRING_PATTERN + ")"
                         + "|(?<NUMBER>" + NUMBER_PATTERN + ")"
@@ -73,14 +77,15 @@ public class HighlightService  {
                         + "|(?<NULL>" + NULL_PATTERN + ")"
                         + "|(?<BRACE>" + BRACE_PATTERN + ")"
                         + "|(?<COMMA>" + COMMA_PATTERN + ")"
-                        + "|(?<COLON>" + COLON_PATTERN + ")"
+                        + "|(?<COLON>" + COLON_PATTERN + ")",
+                        Pattern.CASE_INSENSITIVE
         );
+
         Matcher matcher = SEARCHPATTTERN.matcher(content);
         StyleSpansBuilder<Collection<String>> builder = new StyleSpansBuilder<>();
         int lastKwEnd = 0;
         while (matcher.find()) {
             String styleClass =
-                matcher.group("SEARCHTEXT") != null ? "highlight" :
                         matcher.group("JSONKEYSTRING") != null ? "jsonKey" :
                                 matcher.group("KEYWORD") != null ? "keyword" :
                                         matcher.group("STRING") != null ? "string" :
@@ -89,7 +94,9 @@ public class HighlightService  {
                                                                 matcher.group("NULL") != null ? "null" :
                                                                         matcher.group("BRACE") != null ? "brace" :
                                                                                 matcher.group("COMMA") != null ? "comma" :
-                                                                                        matcher.group("COLON") != null ? "colon" : null;
+                                                                                        matcher.group("COLON") != null ? "colon" :
+                                                                                                matcher.group("SEARCHTEXT") != null ? "highlight" :
+                                                                                        null;
 
             assert styleClass != null;
 
