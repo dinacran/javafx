@@ -1,6 +1,6 @@
 package com.newapp;
 
-import org.scenicview.ScenicView;
+// import org.scenicview.ScenicView;
 
 import com.newapp.controller.HomeController;
 
@@ -31,13 +31,12 @@ public class App extends Application {
         HomeController controller = loader.getController();
         controller.setHomeStage(homeStage);
         Scene sceneFromFxml = new Scene(root, 800, 600);
-        sceneFromFxml.getStylesheets().add("/css/dark-theme.css");
 
         homeStage.setScene(sceneFromFxml);
         homeStage.setMaximized(true);
 
         homeStage.setTitle("JavaFX Application");
-        ScenicView.show(sceneFromFxml);
+        // ScenicView.show(sceneFromFxml);
         homeStage.show();
     }
     public static void main(String[] args) {

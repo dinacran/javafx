@@ -26,8 +26,6 @@ public class VisualizeResponse {
 
         Scene scene = new Scene(root, 800, 600);
 
-        scene.getStylesheets().add("/css/dark-theme.css");
-
         return scene;
 
     }

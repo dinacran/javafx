@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml" styleClass="homeGrid" fx:controller="com.newapp.controller.HomeController" alignment="CENTER" hgap="100" vgap="100" prefWidth="800" prefHeight="600">
+<GridPane xmlns:fx="http://javafx.com/fxml" styleClass="homeGrid" fx:controller="com.newapp.controller.HomeController" alignment="CENTER" hgap="100" vgap="100" prefWidth="800" prefHeight="600" stylesheets="@css/home.css">
     <VBox fx:id="visualizeResponseBox" onMouseClicked="#handleVisualizeResponseClick" GridPane.columnIndex="0" GridPane.rowIndex="0" minWidth="165" styleClass="tile">
         <ImageView fx:id="visualizeResponseImage" fitWidth="64" fitHeight="64" preserveRatio="true"/>
         <Label text="Visualize Response" />

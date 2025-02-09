@@ -1,13 +1,26 @@
 .root {
     -fx-font-family: monospace;
     -fx-font-size: 16;
+    -fx-background-color: rgb(0, 0, 0);
+    -fx-hgap: 100;
+    -fx-vgap: 100;
+}
 
+.label {
+    -fx-text-fill: rgb(116, 116, 116);
+}
+
+.text-field {
+    -fx-text-fill: rgb(116, 116, 116);
+    -fx-background-color: rgba(30, 30, 30, 0.842);
+    -fx-prompt-text-fill: rgb(116, 116, 116);
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
 }
 
 #inputHeader {
     -fx-padding: 10;
     -fx-font-family: 'Courier New', monospace;
-
 }
 
 .input {
@@ -123,10 +136,8 @@
     -fx-background-color: #1e1e1ed7;
 }
 
-
-
 .arrow-button .arrow {
-    -fx-shape: "M16 10L12 14L8 10";
+    -fx-shape: "M481-350q-8 0-14.5-2.5T455-361L255-561q-11-10-10.5-25.5T256-613q11-10 26-10t26 10l173 174 173-174q11-10 25.5-9.5T705-612q11 11 11 26.5T705-560L506-361q-5 6-11.5 8.5T481-350Z";
     -fx-stroke: #000000;
     -fx-stroke-width: 0.672;
     -fx-stroke-linecap: round;
@@ -218,6 +229,10 @@
     -fx-background-color: rgb(99, 99, 99);
 }
 
+#findContainer {
+
+}
+
 #findHeader {
     -fx-pref-height: 40px;
     -fx-padding: 0 10 0 0;
@@ -228,7 +243,6 @@
     -fx-border-radius: 2;
     -fx-background-radius: 2;
     -fx-alignment: CENTER;
-
 }
 
 #findTextFieldContainer {
@@ -237,7 +251,6 @@
 
 #findField {
     -fx-background-color: #1e1e1ed7;
-
 }
 
 .matchButton {
@@ -249,4 +262,27 @@
 
 #findCountLabel {
     -fx-text-fill: #747474;
+}
+
+#toggleSearchButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #747474;
+    -fx-padding: 6;
+    -fx-pref-height: 32;
+    -fx-pref-width: 30;
+    -fx-max-height: 32;
+    -fx-max-width: 30;
+    -fx-min-width: 30;
+    -fx-min-height: 32;
+}
+
+#toggleSearchButton:hover {
+    -fx-background-color: #1e1e1ed7;
+}
+
+#findSvg {
+    -fx-fill: #7a7a7a96;
+    -fx-stroke-width: 400; /* Increase the stroke width */
+    -fx-scale-x: 0.035;
+    -fx-scale-y: 0.035;
 }
