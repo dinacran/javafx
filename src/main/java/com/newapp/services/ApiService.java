@@ -17,9 +17,9 @@ public class ApiService {
 
     }
 
-    public static BufferedReader getResponse(String doc, String client, String token) throws Exception {
+    public static String getResponse(String doc, String client, String token) throws Exception {
 
-        BufferedReader in = null;
+        StringBuilder responseBuilder = new StringBuilder();
         try {
 
             URL url = new URL("http://127.0.0.1:5000/response/" + client + "/" + token);
@@ -31,17 +31,23 @@ public class ApiService {
             con.setRequestProperty("Authorization",
                     "Bearer " + token);
 
-            in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            BufferedReader r = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
-            return in;
+            r.lines().forEach(line -> {
+                responseBuilder.append(line).append('\n');
+            });
+
+            r.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return in;
+        return responseBuilder.toString();
     }
 
-    public static BufferedReader getRequest(String doc, String client, String token) throws Exception {
-        BufferedReader in = null;
+    public static String getRequest(String doc, String client, String token) throws Exception {
+        StringBuilder requestBuilder = new StringBuilder();
+
         try {
 
             URL url = new URL("http://127.0.0.1:5000/request/" + token);
@@ -53,19 +59,23 @@ public class ApiService {
             con.setRequestProperty("Authorization",
                     "Bearer " + token);
 
-            in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            BufferedReader r = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
-            return in;
+            r.lines().forEach(line -> {
+                requestBuilder.append(line).append('\n');
+            });
+
+            r.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return in;
-
+        return requestBuilder.toString();
     }
 
-    public static BufferedReader getBundler(String doc, String client, String token) throws Exception {
+    public static String getBundler(String doc, String client, String token) throws Exception {
 
-        BufferedReader in = null;
+        StringBuilder bundlerBuilder = new StringBuilder();
         try {
 
             URL url = new URL("http://127.0.0.1:5000/bundler/" + token);
@@ -77,13 +87,18 @@ public class ApiService {
             con.setRequestProperty("Authorization",
                     "Bearer " + token);
 
-            in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            BufferedReader r = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
-            return in;
+            r.lines().forEach(line -> {
+                bundlerBuilder.append(line).append('\n');
+            });
+
+            r.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return in;
+        return bundlerBuilder.toString();
     }
 
 }

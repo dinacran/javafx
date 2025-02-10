@@ -22,7 +22,7 @@
 
 <VBox xmlns:fx="http://javafx.com/fxml" fx:id="page" spacing="10" fx:controller="com.newapp.controller.VisualizeResponseController" stylesheets="@css/visualizeResponse.css">
     <HBox fx:id="inputHeader" spacing="10">
-        <TextField styleClass="input" fx:id="docIdField" promptText="Enter DocId" />
+        <TextField styleClass="input" fx:id="docIdField" promptText="Enter DocId..." />
         <ComboBox fx:id="comboBox" promptText="Select Client" editable="true">
             <items>
                 <FXCollections fx:factory="observableArrayList">
@@ -74,7 +74,7 @@
     </HBox>
 
     <VBox fx:id="dataContainer" spacing="10">
-        <CodeArea fx:id="codeArea" styleClass="codeArea" style="-fx-text-fill: gray;" />
+        <CodeArea fx:id="codeArea" styleClass="codeArea" style="-fx-font-family: 'Consolas';" />
     </VBox>
 
 </VBox>

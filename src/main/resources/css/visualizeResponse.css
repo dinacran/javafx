@@ -1,5 +1,5 @@
 .root {
-    -fx-font-family: monospace;
+    -fx-font-family: 'Consolas';
     -fx-font-size: 16;
     -fx-background-color: rgb(0, 0, 0);
     -fx-hgap: 100;
@@ -20,7 +20,7 @@
 
 #inputHeader {
     -fx-padding: 10;
-    -fx-font-family: 'Courier New', monospace;
+    /* -fx-font-family: 'Courier New', monospace; */
 }
 
 .input {
@@ -33,11 +33,13 @@
     -fx-border-width: 1;
     -fx-border-radius: 4;
     -fx-background-radius: 4;
-    -fx-font-family: monospace;
+    /* -fx-font-family: monospace; */
 
 }
 
 #comboBox {
+    /* -fx-font-family: monospace; */
+
     -fx-pref-height: 40px;
     -fx-background-color: #1e1e1ed7;
     -fx-border-color: #5c5c5c;
@@ -82,7 +84,7 @@
 
 
 #fetchButton {
-    -fx-font-family: monospace;
+    /* -fx-font-family: monospace; */
     -fx-pref-height: 38px;
     -fx-background-color: #4377cb;
     -fx-text-fill: white;
@@ -108,7 +110,7 @@
     -fx-border-radius: 2px;
     -fx-background-radius: 2px;
     -fx-text-fill: #5c5c5c;
-    -fx-font-family: monospace;
+    /* -fx-font-family: monospace; */
 }
 
 .custom-radio-button:selected {
@@ -168,7 +170,7 @@
 
 #dataContainer {
     -fx-padding: 10;
-    -fx-font-family: 'Courier New', monospace;
+    /* -fx-font-family: 'Courier New', monospace; */
     -fx-text-fill: rgb(119, 119, 119);
 
 }
