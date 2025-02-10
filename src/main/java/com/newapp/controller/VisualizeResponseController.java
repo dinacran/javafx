@@ -82,13 +82,9 @@ public class VisualizeResponseController {
     @FXML
     private Button toggleSearchButton;
 
-    public StringBuilder response;
-
-    public StringBuilder bundler;
-
-    public StringBuilder request;
-
-    StyleSpans<Collection<String>> styleSpans;
+    private String response;
+    private String request;
+    private String bundler;
 
     private List<Integer> matchPositions = new ArrayList<>();
     private int currentMatchIndex = 0;
@@ -122,13 +118,12 @@ public class VisualizeResponseController {
                 event.consume();
             }
         });
-
     }
 
     @FXML
     private void fetchData() throws Exception {
-        request = null;
         response = null;
+        request = null;
         bundler = null;
 
         String doc = docIdField.getText();
@@ -153,36 +148,32 @@ public class VisualizeResponseController {
             return;
         }
 
-        BufferedReader responseReader = ApiService.getResponse(doc, client, token);
-        BufferedReader requestReader = ApiService.getRequest(doc, client, token);
-        BufferedReader bundlerReader = ApiService.getBundler(doc, client, token);
+        try (BufferedReader responseReader = ApiService.getResponse(doc, client, token);
+             BufferedReader requestReader = ApiService.getRequest(doc, client, token);
+             BufferedReader bundlerReader = ApiService.getBundler(doc, client, token)) {
 
-        String line;
+            StringBuilder responseBuilder = new StringBuilder();
+            StringBuilder requestBuilder = new StringBuilder();
+            StringBuilder bundlerBuilder = new StringBuilder();
 
-        response = new StringBuilder();
-        request = new StringBuilder();
-        bundler = new StringBuilder();
+            String line;
+            while ((line = responseReader.readLine()) != null) {
+                responseBuilder.append(line).append('\n');
+            }
+            response = responseBuilder.toString();
 
-        while ((line = responseReader.readLine()) != null) {
-            response.append(line + "\n");
+            while ((line = requestReader.readLine()) != null) {
+                requestBuilder.append(line).append('\n');
+            }
+            request = requestBuilder.toString();
+
+            while ((line = bundlerReader.readLine()) != null) {
+                bundlerBuilder.append(line).append('\n');
+            }
+            bundler = bundlerBuilder.toString();
         }
-
-        while ((line = requestReader.readLine()) != null) {
-            request.append(line + "\n");
-        }
-
-        while ((line = bundlerReader.readLine()) != null) {
-            bundler.append(line + "\n");
-        }
-
-        responseReader.close();
-        requestReader.close();
-        bundlerReader.close();
-
-        styleSpans = HighlightService.computeHighlighting(response.toString());
 
         switchData();
-
     }
 
     @FXML
@@ -214,22 +205,19 @@ public class VisualizeResponseController {
                 break;
         }
         handleSearch();
-
     }
 
-    private void setDataToContainer(StringBuilder jsonData, String viewMode) throws Exception {
+    private void setDataToContainer(String jsonData, String viewMode) throws Exception {
+        // Clear previous style spans
+        // codeArea.setStyleSpans(0, new StyleSpansBuilder<Collection<String>>().create());
 
-        String temp = jsonData.toString();
-
-        codeArea.replaceText(temp);
-
-        codeArea.setStyleSpans(0, HighlightService.computeHighlighting(temp));
-
+        // Replace text and set new style spans
+        codeArea.replaceText(jsonData);
+        codeArea.setStyleSpans(0, HighlightService.computeHighlighting(jsonData));
     }
 
     @FXML
     private void toggleSearch() {
-
         boolean isVisible = findHeader.isVisible();
         if (isVisible) { // hide
             TranslateTransition slideOut = new TranslateTransition(Duration.millis(300), findContainer);
@@ -244,7 +232,6 @@ public class VisualizeResponseController {
             });
             slideOut.play();
         } else { // show
-
             findSvg.setContent(
                     "M535.85-481.23 360.54-657.31q-7.16-6.38-7.04-15.11.12-8.73 7.27-15.12 6.15-7.15 15.11-7.15 8.97 0 16.12 7.15l182.85 182.85q4.23 4.23 7.61 10.34 3.39 6.12 3.39 13.12 0 7.23-3.39 13.73-3.38 6.5-7.61 10.73L391.77-273.69q-6.39 6.38-15.62 6.65-9.23.27-15.38-6.88-7.15-7.16-7.15-15.62 0-8.46 7.15-15.61l175.08-176.08Z");
             TranslateTransition slideIn = new TranslateTransition(Duration.millis(300), findContainer);
@@ -307,7 +294,6 @@ public class VisualizeResponseController {
             currentMatchIndex = 0;
             scrollToCurrentMatch();
             updatefindCountLabel();
-
         }
     }
 
@@ -335,7 +321,8 @@ public class VisualizeResponseController {
     private void scrollToCurrentMatch() {
         if (currentMatchIndex >= 0 && currentMatchIndex < matchPositions.size()) {
             int position = matchPositions.get(currentMatchIndex);
-            codeArea.showParagraphAtTop(codeArea.offsetToPosition(position, null).getMajor());
+            int paragraph = codeArea.offsetToPosition(position, null).getMajor();
+            codeArea.showParagraphAtTop(paragraph);
             codeArea.selectRange(position, position + findField.getText().length());
         }
     }
