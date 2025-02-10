@@ -74,7 +74,7 @@
     </HBox>
 
     <VBox fx:id="dataContainer" spacing="10">
-        <CodeArea fx:id="codeArea" styleClass="codeArea" style="-fx-font-family: 'Consolas';" />
+        <CodeArea fx:id="codeArea" styleClass="codeArea" style="-fx-font-family: monospace;" />
     </VBox>
 
 </VBox>

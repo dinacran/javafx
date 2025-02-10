@@ -33,9 +33,7 @@ public class ApiService {
 
             BufferedReader r = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
-            r.lines().forEach(line -> {
-                responseBuilder.append(line).append('\n');
-            });
+            r.lines().forEach(line -> responseBuilder.append(line).append('\n'));
 
             r.close();
 
@@ -61,9 +59,7 @@ public class ApiService {
 
             BufferedReader r = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
-            r.lines().forEach(line -> {
-                requestBuilder.append(line).append('\n');
-            });
+            r.lines().forEach(line -> requestBuilder.append(line).append('\n'));
 
             r.close();
 
@@ -89,9 +85,7 @@ public class ApiService {
 
             BufferedReader r = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
-            r.lines().forEach(line -> {
-                bundlerBuilder.append(line).append('\n');
-            });
+            r.lines().forEach(line -> bundlerBuilder.append(line).append('\n'));
 
             r.close();
 
