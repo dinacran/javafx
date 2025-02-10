@@ -2,42 +2,26 @@ package com.newapp;
 
 // import org.scenicview.ScenicView;
 
-import com.newapp.controller.HomeController;
+import com.newapp.scenes.HomeScene;
+import com.newapp.scenes.VisualizeResponseScene;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+
 import javafx.stage.Stage;
 
 public class App extends Application {
 
-    Stage homeStage;
+    public static Stage primaryStage;
 
     @Override
-    public void start(Stage homeStage) {
+    public void start(Stage primaryStage) {
+        App.primaryStage = primaryStage;
 
-        this.homeStage = homeStage;
-
-        Parent root = null;
-        FXMLLoader loader = new FXMLLoader();
-        try {
-            loader = new FXMLLoader(getClass().getResource("/home.fxml"));
-            root = loader.load();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        HomeController controller = loader.getController();
-        controller.setHomeStage(homeStage);
-        Scene sceneFromFxml = new Scene(root, 800, 600);
-
-        homeStage.setScene(sceneFromFxml);
-        homeStage.setMaximized(true);
-
-        homeStage.setTitle("JavaFX Application");
-        // ScenicView.show(sceneFromFxml);
-        homeStage.show();
+        HomeScene.build();
+        VisualizeResponseScene.build();
+        HomeScene.switchScene();
+        primaryStage.setMaximized(true);
+        primaryStage.show();        
     }
     public static void main(String[] args) {
         launch(args);

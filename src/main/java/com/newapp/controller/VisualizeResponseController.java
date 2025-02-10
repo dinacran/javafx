@@ -1,6 +1,5 @@
 package com.newapp.controller;
 
-import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -82,19 +81,12 @@ public class VisualizeResponseController {
     @FXML
     private Button toggleSearchButton;
 
-    public StringBuilder response;
-
-    public StringBuilder bundler;
-
-    public StringBuilder request;
-
-    StyleSpans<Collection<String>> styleSpans;
+    private String response;
+    private String request;
+    private String bundler;
 
     private List<Integer> matchPositions = new ArrayList<>();
     private int currentMatchIndex = 0;
-
-    public VisualizeResponseController() {
-    }
 
     @FXML
     public void initialize() {
@@ -116,19 +108,18 @@ public class VisualizeResponseController {
                 if (!selectedText.isEmpty()) {
                     findField.setText(selectedText);
                 }
-                if (!findHeader.isVisible())
+                if (!findHeader.isVisible() || (findHeader.isVisible() && selectedText.isEmpty()))
                     toggleSearch();
                 handleSearch();
                 event.consume();
             }
         });
-
     }
 
     @FXML
     private void fetchData() throws Exception {
-        request = null;
         response = null;
+        request = null;
         bundler = null;
 
         String doc = docIdField.getText();
@@ -153,85 +144,52 @@ public class VisualizeResponseController {
             return;
         }
 
-        BufferedReader responseReader = ApiService.getResponse(doc, client, token);
-        BufferedReader requestReader = ApiService.getRequest(doc, client, token);
-        BufferedReader bundlerReader = ApiService.getBundler(doc, client, token);
-
-        String line;
-
-        response = new StringBuilder();
-        request = new StringBuilder();
-        bundler = new StringBuilder();
-
-        while ((line = responseReader.readLine()) != null) {
-            response.append(line + "\n");
-        }
-
-        while ((line = requestReader.readLine()) != null) {
-            request.append(line + "\n");
-        }
-
-        while ((line = bundlerReader.readLine()) != null) {
-            bundler.append(line + "\n");
-        }
-
-        responseReader.close();
-        requestReader.close();
-        bundlerReader.close();
-
-        styleSpans = HighlightService.computeHighlighting(response.toString());
+        response = ApiService.getResponse(doc, client, token);
+        request = ApiService.getRequest(doc, client, token);
+        bundler = ApiService.getBundler(doc, client, token);
 
         switchData();
-
     }
 
     @FXML
     public void switchData() throws Exception {
-        String selectedViewMode = ((RadioButton) viewModeGroup.getSelectedToggle()).getText();
-        String selectedDataToView = ((RadioButton) dataToViewGroup.getSelectedToggle()).getText();
 
-        switch (selectedDataToView) {
+        switch (((RadioButton)dataToViewGroup.getSelectedToggle()).getText()) {
             case "Response":
                 if (response == null) {
-                    showAlert(selectedDataToView + " is empty");
+                    showAlert( "Response data is empty");
                     return;
                 }
-                setDataToContainer(response, selectedViewMode);
+                setDataToContainer(response);
                 break;
             case "Request":
                 if (request == null) {
-                    showAlert(selectedDataToView + " is empty");
+                    showAlert("Request data is empty");
                     return;
                 }
-                setDataToContainer(request, selectedViewMode);
+                setDataToContainer(request);
                 break;
             case "Bundler":
                 if (bundler == null) {
-                    showAlert(selectedDataToView + " is empty");
+                    showAlert("Bundler data is empty");
                     return;
                 }
-                setDataToContainer(bundler, selectedViewMode);
+                setDataToContainer(bundler);
                 break;
         }
         handleSearch();
-
     }
 
-    private void setDataToContainer(StringBuilder jsonData, String viewMode) throws Exception {
+    private void setDataToContainer(String jsonData) throws Exception {
 
-        String temp = jsonData.toString();
-
-        codeArea.replaceText(temp);
-
-        codeArea.setStyleSpans(0, HighlightService.computeHighlighting(temp));
-
+        codeArea.replaceText(jsonData);
+        codeArea.setStyleSpans(0, HighlightService.computeHighlighting(jsonData));
     }
 
     @FXML
     private void toggleSearch() {
-
         boolean isVisible = findHeader.isVisible();
-        if (isVisible) { // hide
+        if (isVisible) {
             TranslateTransition slideOut = new TranslateTransition(Duration.millis(300), findContainer);
             slideOut.setFromX(0);
             slideOut.setToX(300);
@@ -243,8 +201,7 @@ public class VisualizeResponseController {
                         "M643.31-142.39 701.69-84h-466q-28.25 0-49.47-21.22T165-154.69v-650.62q0-28.25 21.22-49.47T235.69-876h356.39L795-639.69v482.84q0 12.8-6.46 26.4-6.46 13.6-18.16 23.06L560.23-316.92q-19.23 12.38-38.87 17.19-19.63 4.81-41.35 4.81-60.13 0-102.3-41.78-42.17-41.78-42.17-102.18 0-60.41 42.12-102.69 42.12-42.27 102.18-42.27 60.06 0 102.34 42.2 42.28 42.21 42.28 102.26 0 21.24-6.31 42.12-6.31 20.87-18.54 37.49l137 138.39v-398.93l-168.83-197.3H235.69q-4.61 0-8.46 3.84-3.84 3.85-3.84 8.46v650.62q0 4.61 3.84 8.46 3.85 3.84 8.46 3.84h407.62ZM480.12-353.31q36.73 0 61.34-27.97 24.62-27.98 24.62-65.74 0-33.29-25.86-55.86-25.85-22.58-60.34-22.58-34.5 0-60.23 22.49-25.73 22.49-25.73 56.08 0 38.04 24.74 65.81 24.74 27.77 61.46 27.77Zm-.12-104Zm0 0Z");
             });
             slideOut.play();
-        } else { // show
-
+        } else { 
             findSvg.setContent(
                     "M535.85-481.23 360.54-657.31q-7.16-6.38-7.04-15.11.12-8.73 7.27-15.12 6.15-7.15 15.11-7.15 8.97 0 16.12 7.15l182.85 182.85q4.23 4.23 7.61 10.34 3.39 6.12 3.39 13.12 0 7.23-3.39 13.73-3.38 6.5-7.61 10.73L391.77-273.69q-6.39 6.38-15.62 6.65-9.23.27-15.38-6.88-7.15-7.16-7.15-15.62 0-8.46 7.15-15.61l175.08-176.08Z");
             TranslateTransition slideIn = new TranslateTransition(Duration.millis(300), findContainer);
@@ -307,7 +264,6 @@ public class VisualizeResponseController {
             currentMatchIndex = 0;
             scrollToCurrentMatch();
             updatefindCountLabel();
-
         }
     }
 
@@ -335,7 +291,8 @@ public class VisualizeResponseController {
     private void scrollToCurrentMatch() {
         if (currentMatchIndex >= 0 && currentMatchIndex < matchPositions.size()) {
             int position = matchPositions.get(currentMatchIndex);
-            codeArea.showParagraphAtTop(codeArea.offsetToPosition(position, null).getMajor());
+            int paragraph = codeArea.offsetToPosition(position, null).getMajor();
+            codeArea.showParagraphAtTop(paragraph);
             codeArea.selectRange(position, position + findField.getText().length());
         }
     }

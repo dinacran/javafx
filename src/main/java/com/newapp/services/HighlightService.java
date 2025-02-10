@@ -43,14 +43,14 @@ public class HighlightService  {
         while (matcher.find()) {
             String styleClass =
                 matcher.group("JSONKEYSTRING") != null ? "jsonKey" :
-                    matcher.group("KEYWORD") != null ? "keyword" :
-                            matcher.group("STRING") != null ? "string" :
-                                    matcher.group("NUMBER") != null ? "number" :
-                                            matcher.group("BOOLEAN") != null ? "boolean" :
-                                                    matcher.group("NULL") != null ? "null" :
-                                                            matcher.group("BRACE") != null ? "brace" :
-                                                                    matcher.group("COMMA") != null ? "comma" :
-                                                                            matcher.group("COLON") != null ? "colon" : null;
+                        matcher.group("KEYWORD") != null ? "keyword" :
+                                matcher.group("STRING") != null ? "string" :
+                                        matcher.group("NUMBER") != null ? "number" :
+                                                matcher.group("BOOLEAN") != null ? "boolean" :
+                                        matcher.group("NULL") != null ? "null" :
+                                matcher.group("BRACE") != null ? "brace" :
+                        matcher.group("COMMA") != null ? "comma" :
+                matcher.group("COLON") != null ? "colon" : null;
 
             assert styleClass != null;
 
@@ -85,18 +85,17 @@ public class HighlightService  {
         StyleSpansBuilder<Collection<String>> builder = new StyleSpansBuilder<>();
         int lastKwEnd = 0;
         while (matcher.find()) {
-            String styleClass =
+                String styleClass =
                         matcher.group("JSONKEYSTRING") != null ? "jsonKey" :
                                 matcher.group("KEYWORD") != null ? "keyword" :
                                         matcher.group("STRING") != null ? "string" :
                                                 matcher.group("NUMBER") != null ? "number" :
                                                         matcher.group("BOOLEAN") != null ? "boolean" :
-                                                                matcher.group("NULL") != null ? "null" :
-                                                                        matcher.group("BRACE") != null ? "brace" :
-                                                                                matcher.group("COMMA") != null ? "comma" :
-                                                                                        matcher.group("COLON") != null ? "colon" :
-                                                                                                matcher.group("SEARCHTEXT") != null ? "highlight" :
-                                                                                        null;
+                                                matcher.group("NULL") != null ? "null" :
+                                        matcher.group("BRACE") != null ? "brace" :
+                                matcher.group("COMMA") != null ? "comma" :
+                        matcher.group("COLON") != null ? "colon" :
+                matcher.group("SEARCHTEXT") != null ? "highlight" : null;
 
             assert styleClass != null;
 
